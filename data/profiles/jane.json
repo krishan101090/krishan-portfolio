@@ -1,0 +1,113 @@
+{
+  "slug": "jane",
+  "seo": {
+    "siteUrl": "https://krishanmohan.dev",
+    "title": "Jane Doe — AI-Native Full-Stack Engineer",
+    "description": "Full-stack engineer shipping AI-native SaaS. Hire me for product engineering, AI integrations, and cloud architecture.",
+    "keywords": "Full-Stack Engineer, AI Native, SaaS, Node.js, TypeScript",
+    "twitter": "@janedoe"
+  },
+  "person": {
+    "name": "Jane Doe",
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "jobTitle": "AI-Native Full-Stack Engineer",
+    "initials": "JD",
+    "handle": "jane",
+    "email": "jane@example.com",
+    "phone": "+10000000000",
+    "phoneDisplay": "+1 (000) 000-0000",
+    "linkedin": "https://linkedin.com/in/janedoe",
+    "linkedinHandle": "janedoe",
+    "location": "San Francisco, USA",
+    "locality": "San Francisco",
+    "country": "US",
+    "currentCompany": "Acme Inc.",
+    "availability": "ONLINE · TAKING 1–2 PROJECTS"
+  },
+  "boot": {
+    "title": "SESSION_001.boot",
+    "commands": [
+      { "cmd": "$ whoami", "out": "jane.doe — full-stack engineer" },
+      { "cmd": "$ uptime", "out": "6 years · 12 shipped products" },
+      { "cmd": "$ cat ./mode.txt", "out": "ai_native // saas // dev_tools" },
+      { "cmd": "$ ./init --scroll-to-story", "out": "booting narrative engine..." }
+    ],
+    "tagline": "I ship AI-native products for teams moving faster than their headcount.",
+    "scrollHint": "BEGIN STORY"
+  },
+  "chapters": [
+    {
+      "num": "01",
+      "label": "ORIGIN",
+      "year": "2019",
+      "title": "Silicon Valley, first startup.",
+      "paragraphs": [
+        "Joined a 3-person startup as engineer #2. Built the MVP in React and Node. Scaled to $1M ARR.",
+        "Learned that shipping beats perfection every time."
+      ],
+      "meta": { "role": "Senior Engineer", "stack": ["React", "Node", "Postgres"] }
+    },
+    {
+      "num": "02",
+      "label": "NOW",
+      "year": "2023 → Present",
+      "title": "Staff Engineer at Acme Inc.",
+      "paragraphs": [
+        "Leading platform engineering for a B2B SaaS with 500+ customers.",
+        "Reduced infra costs by 40% through architecture and rebuilt the AI features with spec-driven workflows."
+      ],
+      "artifact": {
+        "kind": "highlights",
+        "items": [
+          { "label": "role", "value": "Staff Engineer" },
+          { "label": "company", "value": "Acme Inc." },
+          { "label": "location", "value": "San Francisco" }
+        ]
+      }
+    }
+  ],
+  "specWorkflow": {
+    "heading": "How I Work",
+    "description": "Spec-driven from day one.",
+    "steps": [
+      { "n": "01", "name": "SPEC", "desc": "Write the intent." },
+      { "n": "02", "name": "PROMPT", "desc": "Hand it to the AI." },
+      { "n": "03", "name": "GENERATE", "desc": "Draft code, tests, docs." },
+      { "n": "04", "name": "VERIFY", "desc": "Review, refactor, test." },
+      { "n": "05", "name": "SHIP", "desc": "Merge, deploy, iterate." }
+    ]
+  },
+  "aiStack": [
+    { "name": "Cursor AI", "role": "primary IDE", "tag": "CODE" },
+    { "name": "Claude", "role": "reasoning", "tag": "THINK" },
+    { "name": "GPT-4", "role": "drafts", "tag": "DRAFT" }
+  ],
+  "timeline": [
+    { "year": "2019", "event": "Joined Startup Labs as engineer #2" },
+    { "year": "2023", "event": "Staff Engineer at Acme Inc." },
+    { "year": "2024", "event": "Shipped AI features in production" }
+  ],
+  "services": [
+    {
+      "cmd": "build --stack=saas",
+      "title": "Full-Stack SaaS Development",
+      "desc": "End-to-end product builds with Node, TypeScript, Postgres, React.",
+      "tags": ["Node.js", "TypeScript", "React"]
+    },
+    {
+      "cmd": "architect --cloud=aws",
+      "title": "Cloud Architecture on AWS",
+      "desc": "Serverless or container-based, cost-optimised.",
+      "tags": ["AWS", "Terraform", "Docker"]
+    }
+  ],
+  "contact": {
+    "prompt": "describe_your_project",
+    "placeholder": "> e.g. 'Scale our SaaS infra on AWS'",
+    "ctaText": "Transmit",
+    "headline": ["open", "a", "channel."],
+    "description": "Available for freelance engineering and consulting.",
+    "serviceOptions": ["Full-Stack Development", "Cloud Architecture", "AI Integration", "Other"]
+  }
+}

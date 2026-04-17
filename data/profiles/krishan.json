@@ -1,0 +1,239 @@
+{
+  "slug": "krishan",
+  "seo": {
+    "siteUrl": "https://krishanmohan.dev",
+    "title": "Krishan Mohan — AI-Native Software Engineer",
+    "description": "The story of a software engineer going from typing every character by hand to directing an AI fleet through spec-driven development. Hire me for React, Next.js, and AI-augmented product engineering.",
+    "keywords": "AI-Native Engineer, Spec-Driven Development, React, Next.js, Cursor AI, Claude, LangChain, Micro-frontend, Krishan Mohan, Hire AI Engineer",
+    "twitter": "@krishanmohan"
+  },
+  "person": {
+    "name": "Krishan Mohan",
+    "firstName": "Krishan",
+    "lastName": "Mohan",
+    "jobTitle": "AI-Native Software Engineer",
+    "initials": "KM",
+    "handle": "krishan",
+    "email": "krishan101090@gmail.com",
+    "phone": "+919873429311",
+    "phoneDisplay": "+91 98734 29311",
+    "linkedin": "https://linkedin.com/in/krishan-mohan-4755239b",
+    "linkedinHandle": "krishan-mohan-4755239b",
+    "location": "Gurugram, India",
+    "locality": "Gurugram",
+    "country": "IN",
+    "currentCompany": "McKinsey & Company",
+    "availability": "ONLINE · OPEN FOR PROJECTS"
+  },
+  "boot": {
+    "title": "SESSION_001.boot",
+    "commands": [
+      { "cmd": "$ whoami", "out": "krishan.mohan — senior software engineer" },
+      { "cmd": "$ uptime", "out": "9.5 years · 5 companies · 1 mission" },
+      { "cmd": "$ cat ./mode.txt", "out": "ai_native // spec_driven // ship_faster" },
+      { "cmd": "$ ./init --scroll-to-story", "out": "booting narrative engine..." }
+    ],
+    "tagline": "This is the story of an engineer who stopped typing every character — and started directing an AI fleet.",
+    "scrollHint": "BEGIN STORY"
+  },
+  "chapters": [
+    {
+      "num": "01",
+      "label": "GENESIS",
+      "year": "2016",
+      "title": "It started with a curly brace.",
+      "paragraphs": [
+        "New Delhi. A cold morning. My first checked-in commit at ProntoItlab. The code was ugly. The deploy was scary. I loved every second of it.",
+        "Back then, shipping anything meant typing every character by hand. Stack Overflow in one tab, docs in the other. A feature was three days of work — one day to think, two to debug."
+      ],
+      "artifact": {
+        "kind": "code",
+        "lang": "jsx",
+        "code": "function Hello() {\n  return <h1>shipping my first line...</h1>;\n}\n// build: ✓  tests: ?  confidence: nervous"
+      },
+      "meta": { "role": "UI Engineer", "stack": ["React", "Redux", "AngularJS"] }
+    },
+    {
+      "num": "02",
+      "label": "CRAFT",
+      "year": "2016 → 2022",
+      "title": "Six years of shipping, mostly manual.",
+      "paragraphs": [
+        "Keurig checkout flow from Hybris → React. Flyrobe end-to-end, ₹5M funded on Shark Tank. Preqin dashboards for hedge funds. IDFC Bank's DataHive in an Nx mono-repo.",
+        "I learned that code isn't the bottleneck — context is. I started obsessing over architecture: micro-frontends, SSR, composable component systems. The craft was satisfying. But it was slow."
+      ],
+      "artifact": {
+        "kind": "stats",
+        "items": [
+          { "label": "projects shipped", "value": "40+" },
+          { "label": "teams led", "value": "4" },
+          { "label": "lines typed", "value": "∞" }
+        ]
+      },
+      "meta": { "role": "Senior / Lead Engineer", "stack": ["React", "Next.js", "GraphQL", "Nx"] }
+    },
+    {
+      "num": "03",
+      "label": "SIGNALS",
+      "year": "2022 → 2023",
+      "title": "The first strange signal.",
+      "paragraphs": [
+        "ChatGPT dropped. Copilot became useful. At first I dismissed it — a toy. A stochastic parrot. I wrote snark in Slack and kept shipping the old way.",
+        "Then a junior dev on my team wrote a feature in 4 hours that would have taken me 2 days. Same quality. I stopped laughing.",
+        "Something was happening. I didn't fully understand it yet — but I had to find out."
+      ],
+      "artifact": {
+        "kind": "transcript",
+        "lines": [
+          { "by": "me", "text": "this is just autocomplete, right?" },
+          { "by": "ai", "text": "it is autocomplete for thoughts." },
+          { "by": "me", "text": "…wait." }
+        ]
+      },
+      "meta": { "mood": "skeptical → curious" }
+    },
+    {
+      "num": "04",
+      "label": "AWAKENING",
+      "year": "2024",
+      "title": "I stopped writing code. I started directing it.",
+      "paragraphs": [
+        "Cursor. Claude. GPT-4. Devin. I went deep. Not just as tools — as a new interface for engineering itself.",
+        "I rewrote my daily loop. Instead of typing, I described. Instead of debugging line-by-line, I gave the model the failing test. Instead of reading docs, I asked. The velocity went from 1x to 3x to 5x.",
+        "And something deeper changed: my attention moved up the stack. Away from syntax. Toward intent, contracts, constraints, and taste."
+      ],
+      "artifact": {
+        "kind": "code",
+        "lang": "spec",
+        "code": "# 2016 mindset\nwrite every character.\ncompile mental model of the codebase.\ndebug in your head.\n\n# 2024 mindset\nwrite the spec.\ndirect the agent.\nreview the diff.\nship."
+      },
+      "meta": { "unlock": "AI_NATIVE" }
+    },
+    {
+      "num": "05",
+      "label": "METHOD",
+      "year": "NOW",
+      "title": "Spec-Driven Development.",
+      "paragraphs": [
+        "Here is the loop I live in every day. Write a spec — precise, typed, edge-cases spelled out. Hand it to the AI with context. Review the generated code ruthlessly. Test, iterate, ship.",
+        "The engineer's superpower is no longer typing speed. It is taste, context, and clarity of intent. The AI handles the rest."
+      ],
+      "artifact": { "kind": "spec-flow" },
+      "meta": { "paradigm": "SPEC → PROMPT → GENERATE → VERIFY → SHIP" }
+    },
+    {
+      "num": "06",
+      "label": "FLEET",
+      "year": "2025 →",
+      "title": "The AI stack I run.",
+      "paragraphs": [
+        "I don't have favorites anymore. I route tasks to the model that fits. Coding in Cursor, reasoning with Claude, quick drafts with GPT, autonomy via Devin, chains through LangChain, embeddings through OpenAI APIs.",
+        "Each is a specialist. My job is to orchestrate them."
+      ],
+      "artifact": { "kind": "ai-stack" }
+    },
+    {
+      "num": "07",
+      "label": "NOW",
+      "year": "2025 — Present",
+      "title": "McKinsey. Micro-frontends. AI co-pilots.",
+      "paragraphs": [
+        "Senior Software Engineer I at McKinsey & Company, Gurugram. I lead frontend architecture for enterprise-scale products — pioneering micro-frontends, setting up CI/CD, running code reviews.",
+        "But the way I work today has very little in common with 2016. I write specs. The AI writes the code. Together, we ship faster than any team I've ever been on."
+      ],
+      "artifact": {
+        "kind": "highlights",
+        "items": [
+          { "label": "role", "value": "Sr. Software Engineer I" },
+          { "label": "company", "value": "McKinsey & Company" },
+          { "label": "location", "value": "Gurugram, India" },
+          { "label": "speciality", "value": "Micro-frontends · SSR · AI workflows" }
+        ]
+      }
+    }
+  ],
+  "specWorkflow": {
+    "heading": "The Spec-Driven Loop",
+    "description": "Every feature I ship moves through this five-step loop. The AI does the grunt work. I do the thinking.",
+    "steps": [
+      { "n": "01", "name": "SPEC", "desc": "Write the intent. Types, contracts, edge cases, acceptance criteria. If a human can't read it, an AI can't build it." },
+      { "n": "02", "name": "PROMPT", "desc": "Feed the spec to the model with context — repo, conventions, prior art, constraints." },
+      { "n": "03", "name": "GENERATE", "desc": "The AI drafts the implementation, tests, and docs. Often in parallel, across multiple files." },
+      { "n": "04", "name": "VERIFY", "desc": "Read every diff. Run the tests. Refactor for taste. Loop until it's correct and clean." },
+      { "n": "05", "name": "SHIP", "desc": "Merge. Deploy. Observe. Feed learnings back into the next spec." }
+    ]
+  },
+  "aiStack": [
+    { "name": "Cursor AI", "role": "primary IDE", "tag": "CODE" },
+    { "name": "Claude", "role": "reasoning partner", "tag": "THINK" },
+    { "name": "GPT-4 / o1", "role": "rapid drafts", "tag": "DRAFT" },
+    { "name": "Devin AI", "role": "autonomous agent", "tag": "AGENT" },
+    { "name": "LangChain", "role": "LLM orchestration", "tag": "CHAIN" },
+    { "name": "OpenAI APIs", "role": "production integration", "tag": "API" },
+    { "name": "GitHub Copilot", "role": "inline autocomplete", "tag": "AUTO" },
+    { "name": "Vector DBs", "role": "memory & RAG", "tag": "MEM" }
+  ],
+  "timeline": [
+    { "year": "2016", "event": "First production commit · ProntoItlab" },
+    { "year": "2019", "event": "Senior Engineer · McKinsey (via EronMicro)" },
+    { "year": "2020", "event": "Senior Engineer · Preqin" },
+    { "year": "2022", "event": "Lead Frontend · Arts Consolidated (Operabase, CueTV)" },
+    { "year": "2023", "event": "First serious AI co-pilot workflows" },
+    { "year": "2024", "event": "Full shift to spec-driven development" },
+    { "year": "2025", "event": "AWS SAA certified · Sr. Software Engineer I @ McKinsey" }
+  ],
+  "services": [
+    {
+      "cmd": "build --stack=next.js --mode=ai-augmented",
+      "title": "AI-Augmented Product Engineering",
+      "desc": "Full-stack Next.js / React apps built with a spec-driven AI loop. 3–5x faster delivery with higher test coverage.",
+      "tags": ["Next.js", "React", "Spec-Driven", "TypeScript"]
+    },
+    {
+      "cmd": "run --workflow=llm --integration=true",
+      "title": "LLM Integration & AI Features",
+      "desc": "Ship chatbots, copilots, RAG pipelines, and agentic workflows into production. OpenAI, Claude, LangChain, vector DBs.",
+      "tags": ["OpenAI", "LangChain", "RAG", "Agents"]
+    },
+    {
+      "cmd": "architect --pattern=microfrontend",
+      "title": "Micro-frontend Architecture",
+      "desc": "Design scalable systems with Module Federation, Nx mono-repos, and independent deploys. Battle-tested at enterprise scale.",
+      "tags": ["Module Federation", "Nx", "Webpack 5", "CI/CD"]
+    },
+    {
+      "cmd": "audit --target=performance --depth=core-web-vitals",
+      "title": "Performance Audits",
+      "desc": "Deep-dive audits on Core Web Vitals, bundle splits, caching, and render paths. Measurable wins in days.",
+      "tags": ["LCP", "INP", "CLS", "Lighthouse"]
+    },
+    {
+      "cmd": "onboard --team --method=spec-driven",
+      "title": "Team Onboarding to Spec-Driven Dev",
+      "desc": "Workshops, playbooks, and hands-on coaching to transform your team's AI workflow from messy prompting to disciplined shipping.",
+      "tags": ["Workshops", "Playbooks", "Coaching"]
+    },
+    {
+      "cmd": "consult --fractional --duration=flex",
+      "title": "Fractional AI-Native CTO",
+      "desc": "Architecture reviews, hiring support, roadmap, and technical due diligence. Especially for AI-first startups.",
+      "tags": ["Consulting", "Due Diligence", "Roadmap"]
+    }
+  ],
+  "contact": {
+    "prompt": "describe_your_project",
+    "placeholder": "> e.g. 'Ship a RAG chatbot on our docs by end of quarter'",
+    "ctaText": "Transmit",
+    "headline": ["open", "a", "channel."],
+    "description": "I reply in human or code, usually within 24 hours. Projects kick off within a week.",
+    "serviceOptions": [
+      "AI-Augmented Engineering",
+      "LLM Integration",
+      "Micro-frontend Architecture",
+      "Performance Audit",
+      "Team Onboarding",
+      "Fractional CTO",
+      "Other"
+    ]
+  }
+}
