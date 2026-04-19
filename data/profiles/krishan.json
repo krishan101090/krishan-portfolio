@@ -77,7 +77,7 @@
     },
     {
       "q": "How long has Krishan been building web products?",
-      "a": "9+ years of production experience across retail, fintech, SaaS, and media — currently Frontend Architect at Alshaya Group (via Yallo Group), previously at Arts Consolidated (Operabase, CueTV), Preqin, and IDFC Bank."
+      "a": "10 years of production experience across retail, fintech, SaaS, consulting, and media — currently Frontend Architect at Alshaya Group (via Yallo Group). Previously Sr. Frontend Developer at Arts Consolidated (Operabase, Denmark), Sr. Engineer at Preqin, Sr. Frontend Developer at McKinsey & Company, Sr. Associate at Publicis Sapient, and UI/UX Developer at ProntoItlab."
     },
     {
       "q": "What is spec-driven development?",
@@ -100,7 +100,7 @@
     "title": "SESSION_001.boot",
     "commands": [
       { "cmd": "$ whoami", "out": "krishan.mohan — senior software engineer" },
-      { "cmd": "$ uptime", "out": "9.5 years · 5 companies · 1 mission" },
+      { "cmd": "$ uptime", "out": "10 years · 6 companies · 1 mission" },
       { "cmd": "$ cat ./mode.txt", "out": "ai_native // spec_driven // ship_faster" },
       { "cmd": "$ ./init --scroll-to-story", "out": "booting narrative engine..." }
     ],
@@ -130,7 +130,7 @@
       "year": "2016 → 2022",
       "title": "Six years of shipping, mostly manual.",
       "paragraphs": [
-        "Keurig checkout flow from Hybris → React. Flyrobe end-to-end, ₹5M funded on Shark Tank. Preqin dashboards for hedge funds. IDFC Bank's DataHive in an Nx mono-repo.",
+        "Publicis Sapient meant Fortune-500 clients with enterprise scale. McKinsey's internal tooling demanded consulting-grade rigor — React Hooks, Redux, Saga, Hapi.js. Preqin put me on a two-year journey migrating a monolith into a React micro-frontend fleet for Deals, Fundraising, and ESG — used by institutional investors worldwide.",
         "I learned that code isn't the bottleneck — context is. I started obsessing over architecture: micro-frontends, SSR, composable component systems. The craft was satisfying. But it was slow."
       ],
       "artifact": {
@@ -245,13 +245,14 @@
     { "name": "Vector DBs", "role": "memory & RAG", "tag": "MEM" }
   ],
   "timeline": [
-    { "year": "2016", "event": "First production commit · ProntoItlab" },
-    { "year": "2019", "event": "Senior Engineer · Preqin" },
-    { "year": "2020", "event": "Senior Engineer · McKinsey (via EronMicro)" },
-    { "year": "2022", "event": "Lead Frontend · Arts Consolidated (Operabase, CueTV)" },
+    { "year": "2016", "event": "UI/UX Developer · ProntoItlab · New Delhi", "range": "Feb 2016 — Oct 2017" },
+    { "year": "2017", "event": "Sr. Associate Experience Technology · Publicis Sapient · Noida", "range": "Oct 2017 — Aug 2019" },
+    { "year": "2019", "event": "Sr. Frontend Developer · McKinsey & Company · Bengaluru", "range": "Oct 2019 — Nov 2020" },
+    { "year": "2020", "event": "Sr. Engineer Frontend · Preqin · Bengaluru (React micro-frontends for alt-assets)", "range": "Nov 2020 — Oct 2022" },
+    { "year": "2022", "event": "Sr. Frontend Developer · Arts Consolidated (Operabase) · Denmark · Remote — +30% revenue via SEO, paywall & Stripe/Chargebee", "range": "Oct 2022 — Apr 2025" },
     { "year": "2023", "event": "First serious AI co-pilot workflows" },
-    { "year": "2024", "event": "Full shift to spec-driven development" },
-    { "year": "2025", "event": "AWS SAA certified · Frontend Architect @ Alshaya Group (via Yallo Group)" }
+    { "year": "2024", "event": "Full shift to spec-driven development · AWS SAA certified" },
+    { "year": "2025", "event": "Frontend Architect · Alshaya Group (via Yallo Group) · Gurugram", "range": "May 2025 — Present" }
   ],
   "services": [
     {
