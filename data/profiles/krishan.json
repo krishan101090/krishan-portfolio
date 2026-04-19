@@ -99,7 +99,7 @@
   "boot": {
     "title": "SESSION_001.boot",
     "commands": [
-      { "cmd": "$ whoami", "out": "krishan.mohan — senior software engineer" },
+      { "cmd": "$ whoami", "out": "krishan.mohan — frontend architect" },
       { "cmd": "$ uptime", "out": "10 years · 6 companies · 1 mission" },
       { "cmd": "$ cat ./mode.txt", "out": "ai_native // spec_driven // ship_faster" },
       { "cmd": "$ ./init --scroll-to-story", "out": "booting narrative engine..." }
