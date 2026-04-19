@@ -1,0 +1,16 @@
+/* TEAM */
+Engineer: Krishan Mohan
+Site: https://krishanmohan.dev
+Contact: krishan101090 [at] gmail.com
+GitHub: https://github.com/krishan101090
+LinkedIn: https://linkedin.com/in/krishan-mohan-4755239b
+Location: Gurugram, India
+
+/* THANKS */
+Next.js, React, Vercel, the open-source web.
+
+/* SITE */
+Language: English
+Standards: HTML5, CSS3, ES2023
+Components: Next.js 14 App Router
+Software: Cursor AI, spec-driven development

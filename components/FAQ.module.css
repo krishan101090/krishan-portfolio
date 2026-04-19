@@ -1,0 +1,156 @@
+.section {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 120px 24px 80px;
+}
+
+.header {
+  margin-bottom: 48px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  color: var(--cyan);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  opacity: 0.8;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 6vw, 64px);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin: 0 0 18px;
+}
+
+.dot {
+  color: var(--lime);
+}
+
+.lead {
+  max-width: 640px;
+  color: #9aa3b2;
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.item {
+  border: 1px solid rgba(200, 240, 255, 0.08);
+  background: rgba(12, 14, 26, 0.6);
+  backdrop-filter: blur(8px);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.item:hover {
+  border-color: rgba(0, 229, 255, 0.35);
+}
+
+.details {
+  width: 100%;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 26px;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-body);
+  font-size: 18px;
+  color: #e8ecff;
+  transition: color 0.2s ease;
+}
+
+.summary::-webkit-details-marker {
+  display: none;
+}
+
+.summary:hover {
+  color: #fff;
+}
+
+.qMark {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  color: var(--cyan);
+  padding: 4px 10px;
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+.qText {
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.chev {
+  font-family: var(--font-mono);
+  font-size: 24px;
+  color: var(--lime);
+  transition: transform 0.25s ease;
+  line-height: 1;
+}
+
+.details[open] .chev {
+  transform: rotate(45deg);
+}
+
+.answer {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  padding: 4px 26px 24px 26px;
+  color: #b2b9c8;
+  line-height: 1.65;
+  font-size: 16px;
+  border-top: 1px dashed rgba(200, 240, 255, 0.06);
+  padding-top: 20px;
+  margin-top: 2px;
+}
+
+.aMark {
+  color: var(--magenta);
+  font-family: var(--font-mono);
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+.answer p {
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 80px 18px 60px;
+  }
+  .summary {
+    padding: 18px 20px;
+    gap: 12px;
+    font-size: 16px;
+  }
+  .answer {
+    padding: 18px 20px 20px 20px;
+    font-size: 15px;
+  }
+}

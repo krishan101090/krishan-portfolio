@@ -2,16 +2,38 @@
   "slug": "krishan",
   "seo": {
     "siteUrl": "https://krishanmohan.dev",
-    "title": "Krishan Mohan — AI-Native Software Engineer",
-    "description": "The story of a software engineer going from typing every character by hand to directing an AI fleet through spec-driven development. Hire me for React, Next.js, and AI-augmented product engineering.",
-    "keywords": "AI-Native Engineer, Spec-Driven Development, React, Next.js, Cursor AI, Claude, LangChain, Micro-frontend, Krishan Mohan, Hire AI Engineer",
-    "twitter": "@krishanmohan"
+    "title": "Krishan Mohan — Hire AI-Native Next.js & React Engineer | 9+ yrs, India",
+    "shortTitle": "Krishan Mohan · AI Engineer",
+    "description": "Hire Krishan Mohan — a senior AI-native software engineer (9+ years, ex-McKinsey) shipping React, Next.js and LLM-powered products 3–5× faster with spec-driven development. Available for contracts & fractional CTO work worldwide.",
+    "keywords": [
+      "hire AI engineer",
+      "hire Next.js developer India",
+      "hire React developer",
+      "AI-native software engineer",
+      "spec-driven development consultant",
+      "LLM integration developer",
+      "RAG chatbot developer",
+      "micro-frontend architect",
+      "fractional AI CTO",
+      "Cursor AI engineer",
+      "LangChain developer India",
+      "Core Web Vitals audit",
+      "Next.js performance expert",
+      "Krishan Mohan",
+      "Krishan Mohan portfolio",
+      "senior frontend engineer Gurugram"
+    ],
+    "twitter": "@krishanmohan",
+    "ogAlt": "Krishan Mohan — AI-Native Software Engineer. 9+ years. Ships with spec-driven AI workflows.",
+    "locale": "en_US"
   },
   "person": {
     "name": "Krishan Mohan",
+    "alternateName": "Krishan",
     "firstName": "Krishan",
     "lastName": "Mohan",
     "jobTitle": "AI-Native Software Engineer",
+    "tagline": "Senior software engineer shipping AI-native products with spec-driven development.",
     "initials": "KM",
     "handle": "krishan",
     "email": "krishan101090@gmail.com",
@@ -19,12 +41,61 @@
     "phoneDisplay": "+91 98734 29311",
     "linkedin": "https://linkedin.com/in/krishan-mohan-4755239b",
     "linkedinHandle": "krishan-mohan-4755239b",
+    "github": "https://github.com/krishan101090",
+    "githubHandle": "krishan101090",
     "location": "Gurugram, India",
     "locality": "Gurugram",
+    "region": "Haryana",
     "country": "IN",
-    "currentCompany": "McKinsey & Company",
-    "availability": "ONLINE · OPEN FOR PROJECTS"
+    "countryName": "India",
+    "currentCompany": "Alshaya Group",
+    "currentCompanyUrl": "https://www.alshaya.com",
+    "currentRole": "Frontend Architect",
+    "previousCompany": "McKinsey & Company",
+    "yearsExperience": 9,
+    "availability": "ONLINE · OPEN FOR PROJECTS",
+    "languages": ["English", "Hindi"],
+    "skills": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "LangChain",
+      "OpenAI",
+      "Claude",
+      "RAG",
+      "Module Federation",
+      "Micro-frontends",
+      "Core Web Vitals",
+      "Spec-Driven Development"
+    ]
   },
+  "faqs": [
+    {
+      "q": "What services does Krishan Mohan offer?",
+      "a": "Full-stack Next.js and React development, LLM and RAG integration, micro-frontend architecture, Core Web Vitals performance audits, team onboarding to spec-driven development, and fractional AI-native CTO engagements."
+    },
+    {
+      "q": "How long has Krishan been building web products?",
+      "a": "9+ years of production experience across retail, fintech, SaaS, and media — currently Frontend Architect at Alshaya Group, previously at McKinsey & Company, Arts Consolidated (Operabase, CueTV), and IDFC Bank."
+    },
+    {
+      "q": "What is spec-driven development?",
+      "a": "Spec-driven development is a workflow where you write a precise, reviewable specification first, then let AI agents implement and test against it. It produces 3–5× faster delivery with higher test coverage than traditional prompt-by-prompt coding."
+    },
+    {
+      "q": "Does Krishan take international contracts?",
+      "a": "Yes — fully remote engagements worldwide across time zones. Short-term sprints, multi-month builds, and fractional CTO retainers are all available."
+    },
+    {
+      "q": "How fast can a project start?",
+      "a": "Projects typically kick off within a week of the first call. Most engagements begin with a paid 1–2 week discovery & spec phase before full build."
+    },
+    {
+      "q": "What AI stack does Krishan specialize in?",
+      "a": "OpenAI GPT-4/4o, Anthropic Claude, LangChain & LangGraph agents, pgvector / Pinecone / Weaviate for RAG, Cursor AI for spec-driven engineering, and Vercel AI SDK for production deployments."
+    }
+  ],
   "boot": {
     "title": "SESSION_001.boot",
     "commands": [
@@ -136,16 +207,16 @@
       "num": "07",
       "label": "NOW",
       "year": "2025 — Present",
-      "title": "McKinsey. Micro-frontends. AI co-pilots.",
+      "title": "Alshaya. Micro-frontends. AI co-pilots.",
       "paragraphs": [
-        "Senior Software Engineer I at McKinsey & Company, Gurugram. I lead frontend architecture for enterprise-scale products — pioneering micro-frontends, setting up CI/CD, running code reviews.",
+        "Frontend Architect at Alshaya Group, Gurugram. I own frontend architecture across a multi-brand retail ecosystem — micro-frontends, design-system governance, CI/CD, code reviews, and an engineering culture built around AI-augmented delivery.",
         "But the way I work today has very little in common with 2016. I write specs. The AI writes the code. Together, we ship faster than any team I've ever been on."
       ],
       "artifact": {
         "kind": "highlights",
         "items": [
-          { "label": "role", "value": "Sr. Software Engineer I" },
-          { "label": "company", "value": "McKinsey & Company" },
+          { "label": "role", "value": "Frontend Architect" },
+          { "label": "company", "value": "Alshaya Group" },
           { "label": "location", "value": "Gurugram, India" },
           { "label": "speciality", "value": "Micro-frontends · SSR · AI workflows" }
         ]
@@ -179,8 +250,8 @@
     { "year": "2020", "event": "Senior Engineer · Preqin" },
     { "year": "2022", "event": "Lead Frontend · Arts Consolidated (Operabase, CueTV)" },
     { "year": "2023", "event": "First serious AI co-pilot workflows" },
-    { "year": "2024", "event": "Full shift to spec-driven development" },
-    { "year": "2025", "event": "AWS SAA certified · Sr. Software Engineer I @ McKinsey" }
+    { "year": "2024", "event": "Full shift to spec-driven development · Sr. Software Engineer I @ McKinsey" },
+    { "year": "2025", "event": "AWS SAA certified · Frontend Architect @ Alshaya Group" }
   ],
   "services": [
     {

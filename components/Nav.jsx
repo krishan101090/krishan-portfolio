@@ -17,7 +17,7 @@ export default function Nav({ person }) {
         <li><a href="#chapter-01">STORY</a></li>
         <li><a href="#chapter-05">METHOD</a></li>
         <li><a href="#services">SERVICES</a></li>
-        <li><a href="#timeline">TIMELINE</a></li>
+        <li><a href="#faq">FAQ</a></li>
       </ul>
       <a href="#console" className={styles.cta}>
         <span className={styles.ctaDot} />

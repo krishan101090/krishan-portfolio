@@ -2,16 +2,28 @@
   "slug": "jane",
   "seo": {
     "siteUrl": "https://krishanmohan.dev",
-    "title": "Jane Doe — AI-Native Full-Stack Engineer",
-    "description": "Full-stack engineer shipping AI-native SaaS. Hire me for product engineering, AI integrations, and cloud architecture.",
-    "keywords": "Full-Stack Engineer, AI Native, SaaS, Node.js, TypeScript",
-    "twitter": "@janedoe"
+    "title": "Jane Doe — Hire AI-Native Full-Stack Engineer | Staff Eng, SF",
+    "shortTitle": "Jane Doe · Full-Stack Engineer",
+    "description": "Hire Jane Doe — AI-native staff engineer shipping SaaS products with spec-driven workflows. Full-stack TypeScript, Node.js, React, AWS, and LLM integrations.",
+    "keywords": [
+      "hire full-stack engineer",
+      "AI-native SaaS engineer",
+      "TypeScript developer",
+      "Node.js consultant",
+      "AWS cloud architect",
+      "Jane Doe"
+    ],
+    "twitter": "@janedoe",
+    "ogAlt": "Jane Doe — AI-Native Full-Stack Engineer",
+    "locale": "en_US"
   },
   "person": {
     "name": "Jane Doe",
+    "alternateName": "Jane",
     "firstName": "Jane",
     "lastName": "Doe",
     "jobTitle": "AI-Native Full-Stack Engineer",
+    "tagline": "Staff engineer building AI-native SaaS.",
     "initials": "JD",
     "handle": "jane",
     "email": "jane@example.com",
@@ -19,12 +31,30 @@
     "phoneDisplay": "+1 (000) 000-0000",
     "linkedin": "https://linkedin.com/in/janedoe",
     "linkedinHandle": "janedoe",
+    "github": "https://github.com/janedoe",
+    "githubHandle": "janedoe",
     "location": "San Francisco, USA",
     "locality": "San Francisco",
+    "region": "CA",
     "country": "US",
+    "countryName": "United States",
     "currentCompany": "Acme Inc.",
-    "availability": "ONLINE · TAKING 1–2 PROJECTS"
+    "currentCompanyUrl": "https://example.com",
+    "yearsExperience": 6,
+    "availability": "ONLINE · TAKING 1–2 PROJECTS",
+    "languages": ["English"],
+    "skills": ["TypeScript", "Node.js", "React", "AWS", "Postgres"]
   },
+  "faqs": [
+    {
+      "q": "What kind of projects does Jane take on?",
+      "a": "Full-stack SaaS builds, AI integrations, and cloud architecture engagements from 2-week sprints to 6-month retainers."
+    },
+    {
+      "q": "Where is Jane based?",
+      "a": "San Francisco, USA — available for remote work worldwide."
+    }
+  ],
   "boot": {
     "title": "SESSION_001.boot",
     "commands": [
