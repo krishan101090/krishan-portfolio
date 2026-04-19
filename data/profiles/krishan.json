@@ -4,7 +4,7 @@
     "siteUrl": "https://krishanmohan.dev",
     "title": "Krishan Mohan — Hire AI-Native Next.js & React Engineer | 9+ yrs, India",
     "shortTitle": "Krishan Mohan · AI Engineer",
-    "description": "Hire Krishan Mohan — a senior AI-native software engineer (9+ years, ex-McKinsey) shipping React, Next.js and LLM-powered products 3–5× faster with spec-driven development. Available for contracts & fractional CTO work worldwide.",
+    "description": "Hire Krishan Mohan — Frontend Architect at Alshaya Group with 9+ years shipping React, Next.js and LLM-powered products 3–5× faster through spec-driven development. Available for contracts, consulting, and fractional CTO work worldwide.",
     "keywords": [
       "hire AI engineer",
       "hire Next.js developer India",
@@ -51,7 +51,6 @@
     "currentCompany": "Alshaya Group",
     "currentCompanyUrl": "https://www.alshaya.com",
     "currentRole": "Frontend Architect",
-    "previousCompany": "McKinsey & Company",
     "yearsExperience": 9,
     "availability": "ONLINE · OPEN FOR PROJECTS",
     "languages": ["English", "Hindi"],
@@ -77,7 +76,7 @@
     },
     {
       "q": "How long has Krishan been building web products?",
-      "a": "9+ years of production experience across retail, fintech, SaaS, and media — currently Frontend Architect at Alshaya Group, previously at McKinsey & Company, Arts Consolidated (Operabase, CueTV), and IDFC Bank."
+      "a": "9+ years of production experience across retail, fintech, SaaS, and media — currently Frontend Architect at Alshaya Group, previously at Arts Consolidated (Operabase, CueTV), Preqin, and IDFC Bank."
     },
     {
       "q": "What is spec-driven development?",
@@ -246,11 +245,11 @@
   ],
   "timeline": [
     { "year": "2016", "event": "First production commit · ProntoItlab" },
-    { "year": "2019", "event": "Senior Engineer · McKinsey (via EronMicro)" },
+    { "year": "2019", "event": "Senior Engineer · IDFC Bank (DataHive mono-repo)" },
     { "year": "2020", "event": "Senior Engineer · Preqin" },
     { "year": "2022", "event": "Lead Frontend · Arts Consolidated (Operabase, CueTV)" },
     { "year": "2023", "event": "First serious AI co-pilot workflows" },
-    { "year": "2024", "event": "Full shift to spec-driven development · Sr. Software Engineer I @ McKinsey" },
+    { "year": "2024", "event": "Full shift to spec-driven development" },
     { "year": "2025", "event": "AWS SAA certified · Frontend Architect @ Alshaya Group" }
   ],
   "services": [
