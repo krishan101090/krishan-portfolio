@@ -245,8 +245,8 @@
   ],
   "timeline": [
     { "year": "2016", "event": "First production commit · ProntoItlab" },
-    { "year": "2019", "event": "Senior Engineer · IDFC Bank (DataHive mono-repo)" },
-    { "year": "2020", "event": "Senior Engineer · Preqin" },
+    { "year": "2019", "event": "Senior Engineer · Preqin" },
+    { "year": "2020", "event": "Senior Engineer · McKinsey (via EronMicro)" },
     { "year": "2022", "event": "Lead Frontend · Arts Consolidated (Operabase, CueTV)" },
     { "year": "2023", "event": "First serious AI co-pilot workflows" },
     { "year": "2024", "event": "Full shift to spec-driven development" },
