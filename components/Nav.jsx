@@ -10,18 +10,19 @@ export default function Nav({ person }) {
           <span className={styles.logoDot} />
         </span>
         <span className={styles.logoText}>
-          {person.initials}<em>.dev</em>
+          {person.firstName}<em> Mohan</em>
         </span>
       </a>
       <ul className={styles.links} role="list">
-        <li><a href="#chapter-01">STORY</a></li>
-        <li><a href="#chapter-05">METHOD</a></li>
-        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#achievements">Wins</a></li>
+        <li><a href="#chapter-01">About</a></li>
+        <li><a href="#timeline">Experience</a></li>
+        <li><a href="#services">Services</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
-      <a href="#console" className={styles.cta}>
+      <a href="#contact" className={styles.cta}>
         <span className={styles.ctaDot} />
-        HIRE ME
+        Contact me
       </a>
     </nav>
   )

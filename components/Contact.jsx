@@ -13,20 +13,20 @@ export default function Contact({ person, contact }) {
 
   function send(e) {
     e.preventDefault()
-    const subject = encodeURIComponent(`[TRANSMIT] ${form.service || 'Project'} // ${form.name}`)
+    const subject = encodeURIComponent(`${form.service || 'Project inquiry'} — ${form.name}`)
     const body = encodeURIComponent(
-      `NAME: ${form.name}\nEMAIL: ${form.email}\nSERVICE: ${form.service}\n\n---\n\n${form.message}`,
+      `Name: ${form.name}\nEmail: ${form.email}\nService: ${form.service}\n\n${form.message}`,
     )
     window.location.href = `mailto:${person.email}?subject=${subject}&body=${body}`
     setSubmitted(true)
   }
 
   return (
-    <section id="console" className={styles.section} aria-labelledby="console-title">
+    <section id="contact" className={styles.section} aria-labelledby="contact-title">
       <div className={styles.grid}>
         <div className={`${styles.left} reveal`}>
-          <span className="kicker">// CHANNEL 01</span>
-          <h2 className={styles.headline} id="console-title">
+          <span className="kicker">Get in touch</span>
+          <h2 className={styles.headline} id="contact-title">
             {contact.headline[0]}<br />
             <span>{contact.headline[1]}</span>
             <br />
@@ -36,11 +36,11 @@ export default function Contact({ person, contact }) {
 
           <div className={styles.links}>
             <a href={`mailto:${person.email}`} className={styles.link}>
-              <span className={styles.linkKey}>EMAIL</span>
+              <span className={styles.linkKey}>Email</span>
               <span className={styles.linkVal}>{person.email}</span>
             </a>
             <a href={`tel:${person.phone}`} className={styles.link}>
-              <span className={styles.linkKey}>PHONE</span>
+              <span className={styles.linkKey}>Phone</span>
               <span className={styles.linkVal}>{person.phoneDisplay}</span>
             </a>
             <a
@@ -49,7 +49,7 @@ export default function Contact({ person, contact }) {
               rel="noopener noreferrer"
               className={styles.link}
             >
-              <span className={styles.linkKey}>LINKEDIN</span>
+              <span className={styles.linkKey}>LinkedIn</span>
               <span className={styles.linkVal}>{person.linkedinHandle}</span>
             </a>
           </div>
@@ -57,14 +57,6 @@ export default function Contact({ person, contact }) {
 
         <div className={`${styles.right} reveal`}>
           <div className={styles.console}>
-            <div className={styles.consoleBar}>
-              <span className={styles.cDot} style={{ background: '#ff5f56' }} />
-              <span className={styles.cDot} style={{ background: '#ffbd2e' }} />
-              <span className={styles.cDot} style={{ background: '#27c93f' }} />
-              <span className={styles.cTitle}>transmit.sh — {contact.prompt}</span>
-              <span className={styles.statusDot} />
-            </div>
-
             {submitted ? (
               <div className={styles.success}>
                 <div className={styles.successArt} aria-hidden="true">
@@ -72,45 +64,39 @@ export default function Contact({ person, contact }) {
                   <span className={styles.ring} />
                   <span className={styles.ring2} />
                 </div>
-                <div className={styles.successTitle}>TRANSMISSION SENT</div>
+                <div className={styles.successTitle}>Ready to send</div>
                 <p className={styles.successText}>
-                  Your mail client just opened. Hit send — I reply within 24 hours.
+                  Your email app should open with your message. Hit send and I will reply within 24 hours.
                 </p>
                 <button className={styles.resetBtn} onClick={() => setSubmitted(false)}>
-                  SEND ANOTHER
+                  Send another message
                 </button>
               </div>
             ) : (
               <form onSubmit={send} className={styles.form} noValidate>
-                <div className={styles.formHeader}>
-                  <span className={styles.prompt}>{'>'}</span>
-                  <span className={styles.promptText}>{contact.prompt}</span>
-                  <span className={styles.caret} />
-                </div>
-
                 <div className={styles.row}>
                   <div className={styles.field}>
-                    <label htmlFor="name">NAME</label>
+                    <label htmlFor="name">Your name</label>
                     <input
                       id="name"
                       name="name"
                       type="text"
                       value={form.name}
                       onChange={update}
-                      placeholder="your name"
+                      placeholder="John Smith"
                       autoComplete="name"
                       required
                     />
                   </div>
                   <div className={styles.field}>
-                    <label htmlFor="email">EMAIL</label>
+                    <label htmlFor="email">Email address</label>
                     <input
                       id="email"
                       name="email"
                       type="email"
                       value={form.email}
                       onChange={update}
-                      placeholder="you@domain.com"
+                      placeholder="you@company.com"
                       autoComplete="email"
                       required
                     />
@@ -118,7 +104,7 @@ export default function Contact({ person, contact }) {
                 </div>
 
                 <div className={styles.field}>
-                  <label htmlFor="service">SERVICE</label>
+                  <label htmlFor="service">What do you need help with?</label>
                   <select
                     id="service"
                     name="service"
@@ -127,7 +113,7 @@ export default function Contact({ person, contact }) {
                     required
                   >
                     <option value="" disabled>
-                      select_service()
+                      Choose a service
                     </option>
                     {contact.serviceOptions.map((opt) => (
                       <option key={opt} value={opt}>
@@ -138,7 +124,7 @@ export default function Contact({ person, contact }) {
                 </div>
 
                 <div className={styles.field}>
-                  <label htmlFor="message">PROJECT BRIEF</label>
+                  <label htmlFor="message">Tell me about your project</label>
                   <textarea
                     id="message"
                     name="message"
@@ -152,7 +138,7 @@ export default function Contact({ person, contact }) {
 
                 <button type="submit" className={styles.transmit}>
                   <span>{contact.ctaText}</span>
-                  <span className={styles.transmitArrow}>⟶</span>
+                  <span className={styles.transmitArrow}>→</span>
                 </button>
               </form>
             )}

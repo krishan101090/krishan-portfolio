@@ -1,3 +1,4 @@
+import Achievements from './Achievements'
 import Nav from './Nav'
 import Hero from './Hero'
 import Chapter from './Chapter'
@@ -19,6 +20,8 @@ export default function Portfolio({ profile, path = '/' }) {
     chapters,
     specWorkflow,
     aiStack,
+    achievements,
+    certifications,
     timeline,
     services,
     contact,
@@ -26,12 +29,13 @@ export default function Portfolio({ profile, path = '/' }) {
   } = profile
 
   const railItems = [
-    { id: 'boot', num: '00', label: 'BOOT' },
+    { id: 'boot', num: '•', label: 'Home' },
+    { id: 'achievements', num: '★', label: 'Wins' },
     ...chapters.map((c) => ({ id: `chapter-${c.num}`, num: c.num, label: c.label })),
-    { id: 'timeline', num: 'T', label: 'TIMELINE' },
-    { id: 'services', num: 'S', label: 'SERVICES' },
-    { id: 'faq', num: 'Q', label: 'FAQ' },
-    { id: 'console', num: 'X', label: 'CONSOLE' },
+    { id: 'timeline', num: '•', label: 'Experience' },
+    { id: 'services', num: '•', label: 'Services' },
+    { id: 'faq', num: '•', label: 'FAQ' },
+    { id: 'contact', num: '•', label: 'Contact' },
   ]
 
   const schemas = buildSchemas(profile, { path })
@@ -45,6 +49,9 @@ export default function Portfolio({ profile, path = '/' }) {
       <ScrollRail items={railItems} />
       <main id="main-content">
         <Hero person={person} boot={boot} />
+        {achievements ? (
+          <Achievements achievements={achievements} certifications={certifications} />
+        ) : null}
         {chapters.map((chapter) => (
           <Chapter
             key={chapter.num}

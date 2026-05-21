@@ -4,12 +4,12 @@ export default function FAQ({ faqs }) {
   return (
     <section id="faq" className={styles.section} aria-labelledby="faq-title">
       <header className={styles.header}>
-        <span className={styles.eyebrow}>$ cat ./faq.md</span>
+        <span className={styles.eyebrow}>Common questions</span>
         <h2 id="faq-title" className={styles.title}>
           Frequently asked<span className={styles.dot}>.</span>
         </h2>
         <p className={styles.lead}>
-          Answers to the questions clients and collaborators ask most often.
+          Straight answers to what clients and hiring managers usually want to know.
         </p>
       </header>
 
@@ -23,7 +23,6 @@ export default function FAQ({ faqs }) {
                 <span className={styles.chev} aria-hidden="true">+</span>
               </summary>
               <div className={styles.answer}>
-                <span className={styles.aMark}>→</span>
                 <p>{f.a}</p>
               </div>
             </details>

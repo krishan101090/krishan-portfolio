@@ -2,9 +2,9 @@
   "slug": "krishan",
   "seo": {
     "siteUrl": "https://krishanmohan.dev",
-    "title": "Krishan Mohan — Hire AI-Native Next.js & React Engineer | 10+ yrs, India",
+    "title": "Krishan Mohan — Frontend Architect | 10+ Years Building Web Products",
     "shortTitle": "Krishan Mohan · Frontend Architect",
-    "description": "Hire Krishan Mohan — Frontend Architect at McKinsey & Company (Periscope) with 10+ years shipping React, Next.js and LLM-powered products 3–5× faster through spec-driven development. Available for contracts, consulting, and fractional CTO work worldwide.",
+    "description": "Krishan Mohan is a Frontend Architect with 10+ years building fast, reliable web products for McKinsey, BlackRock, and global brands. Available for product builds, AI features, and consulting.",
     "keywords": [
       "hire AI engineer",
       "hire Next.js developer India",
@@ -24,7 +24,7 @@
       "senior frontend engineer Gurugram"
     ],
     "twitter": "@krishanmohan",
-    "ogAlt": "Krishan Mohan — Frontend Architect. 10+ years. Ships with spec-driven AI workflows.",
+    "ogAlt": "Krishan Mohan — Frontend Architect with 10+ years building web products for global companies.",
     "locale": "en_US"
   },
   "person": {
@@ -33,7 +33,7 @@
     "firstName": "Krishan",
     "lastName": "Mohan",
     "jobTitle": "Frontend Architect",
-    "tagline": "Frontend architect shipping AI-integrated web platforms for global enterprises.",
+    "tagline": "I help companies build web products that are fast, easy to use, and ready for the AI era.",
     "initials": "KM",
     "handle": "krishan",
     "email": "krishan101090@gmail.com",
@@ -53,7 +53,7 @@
     "currentCompanyVia": "Periscope",
     "currentRole": "Senior Software Engineer",
     "yearsExperience": 10,
-    "availability": "ONLINE · OPEN FOR PROJECTS",
+    "availability": "Available for new projects",
     "languages": ["English", "Hindi"],
     "skills": [
       "React",
@@ -76,240 +76,359 @@
   },
   "faqs": [
     {
-      "q": "What services does Krishan Mohan offer?",
-      "a": "Full-stack Next.js and React development, LLM and RAG integration, micro-frontend architecture, Core Web Vitals performance audits, team onboarding to spec-driven development, and fractional AI-native CTO engagements."
+      "q": "What does Krishan do?",
+      "a": "He builds and improves web products — from customer-facing apps to internal business tools. That includes new product development, adding AI features like smart search and assistants, fixing slow websites, and helping teams work faster with modern tools."
     },
     {
-      "q": "How long has Krishan been building web products?",
-      "a": "10+ years of production experience across alternative assets, management consulting, banking, and digital media — currently Senior Software Engineer at McKinsey & Company (Periscope), architecting pricing and discount optimization platforms for Fortune 100 clients. Previously Sr. Frontend Developer at Arts Consolidated (Operabase, Denmark), Sr. Engineer at Preqin (acquired by BlackRock), Sr. Frontend Developer at McKinsey & Company, Sr. Associate at Publicis Sapient, and UI/UX Developer at Pronto IT Labs (Rent It Bae)."
+      "q": "How much experience does he have?",
+      "a": "Over 10 years building production web products for companies including McKinsey & Company, Preqin (now part of BlackRock), Publicis Sapient, and Arts Consolidated in Denmark. He is currently a Senior Software Engineer at McKinsey, working on pricing and analytics platforms for Fortune 100 clients."
     },
     {
-      "q": "What is spec-driven development?",
-      "a": "Spec-driven development is a workflow where you write a precise, reviewable specification first, then let AI agents implement and test against it. It produces 3–5× faster delivery with higher test coverage than traditional prompt-by-prompt coding."
+      "q": "What kind of results has he delivered?",
+      "a": "At Operabase, he drove 30% revenue growth through SEO, paywall redesign, and better onboarding across 130+ countries — plus 20% faster product decisions via analytics dashboards. At Preqin (BlackRock), he led a full platform rebuild used by thousands of institutional investors. At McKinsey, he builds pricing tools supporting multi-billion-dollar decisions for Fortune 100 clients, and previously built credit analysis tools for major banking engagements."
     },
     {
-      "q": "Does Krishan take international contracts?",
-      "a": "Yes — fully remote engagements worldwide across time zones. Short-term sprints, multi-month builds, and fractional CTO retainers are all available."
+      "q": "Does he work with international clients?",
+      "a": "Yes. He has worked remotely with teams in Denmark, the US, and across Europe and Asia. He is comfortable collaborating across time zones on short projects or longer engagements."
     },
     {
-      "q": "How fast can a project start?",
-      "a": "Projects typically kick off within a week of the first call. Most engagements begin with a paid 1–2 week discovery & spec phase before full build."
+      "q": "How quickly can a project start?",
+      "a": "Usually within a week of an initial call. He typically starts with a short discovery phase to understand the goal, then moves into building."
     },
     {
-      "q": "What AI stack does Krishan specialize in?",
-      "a": "OpenAI GPT-4/4o, Anthropic Claude, LangChain & LangGraph agents, pgvector / Pinecone / Weaviate for RAG, Cursor AI for spec-driven engineering, and Vercel AI SDK for production deployments."
+      "q": "Does he use AI in his work?",
+      "a": "Yes — thoughtfully. He uses AI tools to speed up development and testing, but always reviews the output carefully. The goal is faster delivery without sacrificing quality."
     }
   ],
   "boot": {
-    "title": "SESSION_001.boot",
-    "commands": [
-      { "cmd": "$ whoami", "out": "krishan.mohan — frontend architect" },
-      { "cmd": "$ uptime", "out": "10 years · 6 companies · 1 mission" },
-      { "cmd": "$ cat ./mode.txt", "out": "ai_native // spec_driven // ship_faster" },
-      { "cmd": "$ ./init --scroll-to-story", "out": "booting narrative engine..." }
+    "intro": "I build fast, reliable web products for global companies — from e-commerce and finance to consulting and media. Today I work at McKinsey & Company, and I use modern tech plus AI to deliver more, without cutting corners.",
+    "highlights": [
+      { "value": "10+", "label": "Years building web products" },
+      { "value": "30%", "label": "Revenue growth at Operabase" },
+      { "value": "130+", "label": "Countries reached (Operabase)" }
     ],
-    "tagline": "This is the story of an engineer who stopped typing every character — and started directing an AI fleet.",
-    "scrollHint": "BEGIN STORY"
+    "tagline": "Trusted by teams at McKinsey, BlackRock, and global brands.",
+    "scrollHint": "See my wins"
   },
+  "achievements": {
+    "metrics": [
+      { "value": "30%", "label": "Revenue growth at Operabase" },
+      { "value": "20%", "label": "Faster product decisions via analytics" },
+      { "value": "130+", "label": "Countries served globally" },
+      { "value": "40+", "label": "Products & platforms delivered" }
+    ],
+    "items": [
+      {
+        "metric": "+30%",
+        "title": "Revenue growth through product improvements",
+        "company": "Operabase · Arts Consolidated",
+        "period": "2022 — 2025",
+        "description": "Led frontend for Operabase — the world's leading opera platform used in 130+ countries. Improved SEO, redesigned the paywall and onboarding, and integrated secure payments to grow revenue significantly.",
+        "highlights": [
+          "Redesigned registration and onboarding — higher activation across international markets",
+          "Built secure paywall with Stripe and Chargebee — reduced subscription churn",
+          "Added fingerprint-based session validation for account protection",
+          "Expanded globally with multi-language localization (Lokalise)",
+          "Improved site speed and Core Web Vitals through SSR and code-splitting"
+        ]
+      },
+      {
+        "metric": "+20%",
+        "title": "Better product decisions with real-time analytics",
+        "company": "Operabase & CueTV · Arts Consolidated",
+        "period": "2022 — 2025",
+        "description": "Built analytics dashboards connecting Google Analytics and Metabase so product and leadership teams could see what was working — and act on it faster.",
+        "highlights": [
+          "Real-time dashboards for product and business teams",
+          "Data-driven decisions on SEO, paywall, and user flows",
+          "Shared component library serving both Operabase and CueTV"
+        ]
+      },
+      {
+        "metric": "Platform rebuild",
+        "title": "Led micro-frontend migration at Preqin (BlackRock)",
+        "company": "Preqin · acquired by BlackRock",
+        "period": "2020 — 2022",
+        "description": "Migrated a legacy monolithic frontend to a modern React micro-frontend architecture — enabling independent deployments across multiple product teams at a global alternative-assets data company.",
+        "highlights": [
+          "Built Deals, Fundraising, and ESG dashboards used by thousands of institutional investors",
+          "Established a shared UI library and design tokens across applications",
+          "Integrated GraphQL and Redux Toolkit for real-time KPI visualizations",
+          "Faster release cycles and independent team deployments"
+        ]
+      },
+      {
+        "metric": "Fortune 100",
+        "title": "Pricing platform for a global technology leader",
+        "company": "McKinsey & Company (Periscope)",
+        "period": "2025 — Present",
+        "description": "Architecting the frontend for a pricing and discount optimization platform that powers multi-billion-dollar B2B and B2C decisions for one of the world's largest technology companies.",
+        "highlights": [
+          "Complex pricing workflows and discount simulations at enterprise scale",
+          "AI-powered features — natural-language queries and ML-driven recommendations in the UI",
+          "Analytics dashboards connected to Apache Spark and data lake pipelines",
+          "WCAG 2.1 accessibility and Core Web Vitals targets on all customer-facing surfaces",
+          "Pioneering AI-assisted delivery — shipping faster while maintaining production quality"
+        ]
+      },
+      {
+        "metric": "Banking",
+        "title": "Credit analysis & data tools for McKinsey banking clients",
+        "company": "McKinsey & Company",
+        "period": "2019 — 2020",
+        "description": "Built internal banking products including a Credit Bureau Analyzer that ingests and analyzes credit reports for underwriting — plus centralized data lake interfaces for customer and transactional insights.",
+        "highlights": [
+          "Credit Bureau Analyzer supporting underwriting and risk assessment workflows",
+          "Centralized data lake UI consolidating customer, transaction, and credit data",
+          "Reusable React component libraries across multiple banking products",
+          "Full-stack delivery with Node.js (Hapi.js) and MySQL where needed"
+        ]
+      },
+      {
+        "metric": "60+ brands",
+        "title": "Enterprise e-commerce for global clients",
+        "company": "Publicis Sapient",
+        "period": "2017 — 2019",
+        "description": "Delivered large-scale digital experiences for Fortune 500 clients including Keurig — responsive e-commerce supporting 60+ brands with performance optimization and modern React architecture.",
+        "highlights": [
+          "Responsive applications with React, Redux, and Webpack",
+          "Code-splitting and lazy loading for faster page loads",
+          "Mentored junior developers on React best practices"
+        ]
+      },
+      {
+        "metric": "From zero",
+        "title": "Founding frontend engineer — Rent It Bae",
+        "company": "Pronto IT Labs",
+        "period": "2016 — 2017",
+        "description": "Owned end-to-end frontend for Rent It Bae, a premium fashion rental platform, during its founding phase — catalog, search, booking, payments, and order management across Indian cities.",
+        "highlights": [
+          "Full e-commerce flows built from scratch",
+          "Rent It Bae later acquired competitor Flyrobe (2019)",
+          "Featured on Shark Tank India — Season 3 (2024)"
+        ]
+      },
+      {
+        "metric": "3–5×",
+        "title": "Faster delivery with AI-assisted engineering",
+        "company": "Personal methodology · All engagements",
+        "period": "2024 — Present",
+        "description": "Developed a plan-first workflow using AI tools (Cursor, Claude, Spec-Kit) that speeds up feature delivery while keeping code quality and test coverage high — without cutting corners on review and testing.",
+        "highlights": [
+          "Clear specifications before any code is written",
+          "AI drafts implementation — engineer reviews every change",
+          "Consistent quality at significantly higher velocity"
+        ]
+      }
+    ]
+  },
+  "certifications": [
+    {
+      "name": "AWS Certified Solutions Architect — Associate",
+      "issuer": "Amazon Web Services",
+      "valid": "Issued Jan 2025 · Valid through Jan 2028"
+    }
+  ],
   "chapters": [
     {
       "num": "01",
-      "label": "GENESIS",
+      "label": "The start",
       "year": "2016",
-      "title": "It started with a curly brace.",
+      "title": "Where it all began.",
       "paragraphs": [
-        "New Delhi. A cold morning. My first checked-in commit at Pronto IT Labs, building Rent It Bae — a premium fashion rental platform from the ground up. The code was ugly. The deploy was scary. I loved every second of it.",
-        "Back then, shipping anything meant typing every character by hand. Stack Overflow in one tab, docs in the other. A feature was three days of work — one day to think, two to debug."
-      ],
-      "artifact": {
-        "kind": "code",
-        "lang": "jsx",
-        "code": "function Hello() {\n  return <h1>shipping my first line...</h1>;\n}\n// build: ✓  tests: ?  confidence: nervous"
-      },
-      "meta": { "role": "UI Engineer", "stack": ["React", "Redux", "AngularJS"] }
-    },
-    {
-      "num": "02",
-      "label": "CRAFT",
-      "year": "2016 → 2022",
-      "title": "Six years of shipping, mostly manual.",
-      "paragraphs": [
-        "Publicis Sapient meant Fortune-500 clients with enterprise scale — Keurig e-commerce across 60+ brands. McKinsey's banking tooling demanded consulting-grade rigor: Credit Bureau Analyzer, centralized data lake UIs, React component libraries, Node.js (Hapi.js) + MySQL. Preqin (now BlackRock) put me on a two-year journey migrating a monolith into a React micro-frontend fleet for Deals, Fundraising, and ESG — used by institutional investors worldwide.",
-        "I learned that code isn't the bottleneck — context is. I started obsessing over architecture: micro-frontends, SSR, composable component systems. The craft was satisfying. But it was slow."
+        "In New Delhi, I joined Pronto IT Labs and helped build Rent It Bae — a fashion rental platform — from the ground up. Catalog, search, booking, payments. Everything a customer sees and clicks.",
+        "That is where I learned the craft: how to turn ideas into products people actually use."
       ],
       "artifact": {
         "kind": "stats",
         "items": [
-          { "label": "projects shipped", "value": "40+" },
-          { "label": "teams led", "value": "4" },
-          { "label": "lines typed", "value": "∞" }
+          { "label": "First product", "value": "Rent It Bae" },
+          { "label": "What I built", "value": "Full e-commerce UX" },
+          { "label": "Markets served", "value": "India" }
         ]
       },
-      "meta": { "role": "Senior / Lead Engineer", "stack": ["React", "Next.js", "GraphQL", "Nx"] }
+      "meta": { "role": "UI Developer", "focus": "E-commerce · Product design" }
+    },
+    {
+      "num": "02",
+      "label": "Growing",
+      "year": "2017 → 2022",
+      "title": "Six years of building for big companies.",
+      "paragraphs": [
+        "At Publicis Sapient, I built digital experiences for global brands like Keurig. At McKinsey, I worked on banking tools — credit analysis, data dashboards, and internal products used by teams every day.",
+        "At Preqin (now part of BlackRock), I spent two years rebuilding a large financial platform into a modern, modular system — dashboards for deals, fundraising, and ESG used by investors worldwide.",
+        "I learned that great products are not just about code. They are about clarity, speed, and trust."
+      ],
+      "artifact": {
+        "kind": "stats",
+        "items": [
+          { "label": "Projects delivered", "value": "40+" },
+          { "label": "Teams led", "value": "4" },
+          { "label": "Industries", "value": "Finance · Retail · Consulting" }
+        ]
+      },
+      "meta": { "role": "Senior Frontend Engineer", "focus": "Enterprise products" }
     },
     {
       "num": "03",
-      "label": "SIGNALS",
+      "label": "A shift",
       "year": "2022 → 2023",
-      "title": "The first strange signal.",
+      "title": "When AI changed how we build.",
       "paragraphs": [
-        "ChatGPT dropped. Copilot became useful. At first I dismissed it — a toy. A stochastic parrot. I wrote snark in Slack and kept shipping the old way.",
-        "Then a junior dev on my team wrote a feature in 4 hours that would have taken me 2 days. Same quality. I stopped laughing.",
-        "Something was happening. I didn't fully understand it yet — but I had to find out."
+        "When ChatGPT and Copilot arrived, I was skeptical. I had spent years mastering my craft the hard way.",
+        "Then I watched a teammate finish in hours what used to take days — with the same quality. That got my attention.",
+        "I started experimenting seriously. Not to replace thinking, but to remove the busywork and focus on what matters."
       ],
       "artifact": {
         "kind": "transcript",
         "lines": [
-          { "by": "me", "text": "this is just autocomplete, right?" },
-          { "by": "ai", "text": "it is autocomplete for thoughts." },
-          { "by": "me", "text": "…wait." }
+          { "by": "me", "text": "Is this just a shortcut?" },
+          { "by": "ai", "text": "It is a lever — if you know where to pull." },
+          { "by": "me", "text": "Show me how." }
         ]
       },
-      "meta": { "mood": "skeptical → curious" }
+      "meta": { "mood": "Curious → committed" }
     },
     {
       "num": "04",
-      "label": "AWAKENING",
+      "label": "A new way",
       "year": "2024",
-      "title": "I stopped writing code. I started directing it.",
+      "title": "Working smarter, not just harder.",
       "paragraphs": [
-        "Cursor. Claude. GPT-4. Devin. I went deep. Not just as tools — as a new interface for engineering itself.",
-        "I rewrote my daily loop. Instead of typing, I described. Instead of debugging line-by-line, I gave the model the failing test. Instead of reading docs, I asked. The velocity went from 1x to 3x to 5x.",
-        "And something deeper changed: my attention moved up the stack. Away from syntax. Toward intent, contracts, constraints, and taste."
+        "I rebuilt how I work. Instead of writing every line by hand, I write a clear plan first — what the feature should do, how it should behave, what success looks like.",
+        "Then I use AI tools to draft the implementation. I review everything carefully, test it, and refine until it is right.",
+        "The result: I ship faster, with fewer mistakes, and spend more time on architecture and user experience — the parts that actually matter."
       ],
       "artifact": {
-        "kind": "code",
-        "lang": "spec",
-        "code": "# 2016 mindset\nwrite every character.\ncompile mental model of the codebase.\ndebug in your head.\n\n# 2024 mindset\nwrite the spec.\ndirect the agent.\nreview the diff.\nship."
+        "kind": "stats",
+        "items": [
+          { "label": "Delivery speed", "value": "3–5× faster" },
+          { "label": "Focus shifted to", "value": "Design & quality" },
+          { "label": "Approach", "value": "Plan first, build second" }
+        ]
       },
-      "meta": { "unlock": "AI_NATIVE" }
+      "meta": { "unlock": "Modern workflow" }
     },
     {
       "num": "05",
-      "label": "METHOD",
-      "year": "NOW",
-      "title": "Spec-Driven Development.",
+      "label": "My method",
+      "year": "Today",
+      "title": "How I deliver every project.",
       "paragraphs": [
-        "Here is the loop I live in every day. Write a spec — precise, typed, edge-cases spelled out. Hand it to the AI with context. Review the generated code ruthlessly. Test, iterate, ship.",
-        "The engineer's superpower is no longer typing speed. It is taste, context, and clarity of intent. The AI handles the rest."
+        "Every feature goes through the same five steps: understand the goal, write a clear plan, build with AI assistance, test thoroughly, and ship.",
+        "This keeps projects predictable for clients and high-quality for users. No surprises, no shortcuts on what matters."
       ],
       "artifact": { "kind": "spec-flow" },
-      "meta": { "paradigm": "SPEC → PROMPT → GENERATE → VERIFY → SHIP" }
+      "meta": { "paradigm": "Plan → Build → Test → Ship" }
     },
     {
       "num": "06",
-      "label": "FLEET",
-      "year": "2025 →",
-      "title": "The AI stack I run.",
+      "label": "Tools",
+      "year": "2025",
+      "title": "The tools behind the work.",
       "paragraphs": [
-        "I don't have favorites anymore. I route tasks to the model that fits. Coding in Cursor, reasoning with Claude, quick drafts with GPT, autonomy via Devin, chains through LangChain, embeddings through OpenAI APIs.",
-        "Each is a specialist. My job is to orchestrate them."
+        "I use the best tool for each job — AI assistants for drafting code, modern frameworks like React and Next.js for the product, and cloud platforms like AWS for reliability.",
+        "The tools change. The standard does not: fast, accessible, and built to last."
       ],
       "artifact": { "kind": "ai-stack" }
     },
     {
       "num": "07",
-      "label": "NOW",
+      "label": "Today",
       "year": "2025 — Present",
-      "title": "McKinsey. Periscope. Pricing at scale.",
+      "title": "Building at McKinsey.",
       "paragraphs": [
-        "Senior Software Engineer at McKinsey & Company (Periscope), Gurugram. I architect modular React + Next.js + TypeScript frontends for a pricing and discount optimization platform powering multi-billion-dollar B2B and B2C decisions for a Fortune 100 global technology client.",
-        "Complex pricing workflows, discount simulations, ML-driven analytics dashboards, and AI-powered UI features — LLM recommendations, natural-language pricing queries, explainable insights. All shipped through spec-driven, AI-paired engineering with Cursor, Claude, and Spec-Kit."
+        "I am a Senior Software Engineer at McKinsey & Company in Gurugram, working on Periscope — a pricing and discount platform used by a Fortune 100 global technology company.",
+        "I design the interfaces for complex pricing workflows, analytics dashboards, and AI-powered features that help business teams make better decisions faster.",
+        "It is the most demanding work I have done — and the kind of problem I love solving."
       ],
       "artifact": {
         "kind": "highlights",
         "items": [
-          { "label": "role", "value": "Senior Software Engineer" },
-          { "label": "company", "value": "McKinsey & Company (Periscope)" },
-          { "label": "location", "value": "Gurugram, India" },
-          { "label": "speciality", "value": "Pricing UX · ML analytics · AI workflows" }
+          { "label": "Role", "value": "Senior Software Engineer" },
+          { "label": "Company", "value": "McKinsey & Company (Periscope)" },
+          { "label": "Location", "value": "Gurugram, India" },
+          { "label": "Focus", "value": "Pricing · Analytics · AI features" }
         ]
       }
     }
   ],
   "specWorkflow": {
-    "heading": "The Spec-Driven Loop",
-    "description": "Every feature I ship moves through this five-step loop. The AI does the grunt work. I do the thinking.",
+    "heading": "My delivery process",
+    "description": "A simple, repeatable process that keeps projects on track and quality high.",
     "steps": [
-      { "n": "01", "name": "SPEC", "desc": "Write the intent. Types, contracts, edge cases, acceptance criteria. If a human can't read it, an AI can't build it." },
-      { "n": "02", "name": "PROMPT", "desc": "Feed the spec to the model with context — repo, conventions, prior art, constraints." },
-      { "n": "03", "name": "GENERATE", "desc": "The AI drafts the implementation, tests, and docs. Often in parallel, across multiple files." },
-      { "n": "04", "name": "VERIFY", "desc": "Read every diff. Run the tests. Refactor for taste. Loop until it's correct and clean." },
-      { "n": "05", "name": "SHIP", "desc": "Merge. Deploy. Observe. Feed learnings back into the next spec." }
+      { "n": "01", "name": "Understand", "desc": "Clarify the goal, the users, and what success looks like. No building until everyone agrees." },
+      { "n": "02", "name": "Plan", "desc": "Write a clear specification — what to build, edge cases, and how we will know it works." },
+      { "n": "03", "name": "Build", "desc": "Implement using modern tools and AI assistance. Move fast, but never skip the details." },
+      { "n": "04", "name": "Test", "desc": "Check every flow, fix issues, and make sure it works on all devices and browsers." },
+      { "n": "05", "name": "Ship", "desc": "Deploy, monitor, and learn. Every project makes the next one better." }
     ]
   },
   "aiStack": [
-    { "name": "Cursor AI", "role": "primary IDE", "tag": "CODE" },
-    { "name": "Claude", "role": "reasoning partner", "tag": "THINK" },
-    { "name": "GPT-4 / o1", "role": "rapid drafts", "tag": "DRAFT" },
-    { "name": "Devin AI", "role": "autonomous agent", "tag": "AGENT" },
-    { "name": "LangChain", "role": "LLM orchestration", "tag": "CHAIN" },
-    { "name": "OpenAI APIs", "role": "production integration", "tag": "API" },
-    { "name": "GitHub Copilot", "role": "inline autocomplete", "tag": "AUTO" },
-    { "name": "Vector DBs", "role": "memory & RAG", "tag": "MEM" }
+    { "name": "Cursor", "role": "AI-powered coding", "tag": "Build" },
+    { "name": "Claude", "role": "Complex problem solving", "tag": "Think" },
+    { "name": "ChatGPT", "role": "Quick drafts & ideas", "tag": "Draft" },
+    { "name": "React & Next.js", "role": "Product development", "tag": "Core" },
+    { "name": "TypeScript", "role": "Reliable code", "tag": "Core" },
+    { "name": "AWS", "role": "Cloud & deployment", "tag": "Cloud" },
+    { "name": "OpenAI", "role": "AI features in products", "tag": "AI" },
+    { "name": "GitHub Copilot", "role": "Day-to-day assistance", "tag": "Assist" }
   ],
   "timeline": [
-    { "year": "2016", "event": "UI/UX Developer · Pronto IT Labs (Rent It Bae) · New Delhi", "range": "Feb 2016 — Oct 2017" },
-    { "year": "2017", "event": "Sr. Associate Experience Technology · Publicis Sapient · Noida", "range": "Oct 2017 — Aug 2019" },
-    { "year": "2019", "event": "Sr. Frontend Developer · McKinsey & Company · Bengaluru — Credit Bureau Analyzer & banking data lake UIs", "range": "Oct 2019 — Nov 2020" },
-    { "year": "2020", "event": "Sr. Engineer Frontend · Preqin (acquired by BlackRock) · Bengaluru — React micro-frontends for alt-assets", "range": "Nov 2020 — Oct 2022" },
-    { "year": "2022", "event": "Sr. Frontend Developer · Arts Consolidated (Operabase) · Denmark · Remote — +30% revenue via SEO, paywall & Stripe/Chargebee", "range": "Oct 2022 — Apr 2025" },
-    { "year": "2023", "event": "First serious AI co-pilot workflows" },
-    { "year": "2024", "event": "Full shift to spec-driven development" },
-    { "year": "2025", "event": "AWS Certified Solutions Architect — Associate" },
-    { "year": "2025", "event": "Senior Software Engineer · McKinsey & Company (Periscope) · Gurugram — pricing & discount optimization platform", "range": "Jul 2025 — Present" }
+    { "year": "2016", "event": "UI Developer · Pronto IT Labs (Rent It Bae) · New Delhi", "range": "Feb 2016 — Oct 2017" },
+    { "year": "2017", "event": "Senior Associate · Publicis Sapient · Noida — global brand e-commerce", "range": "Oct 2017 — Aug 2019" },
+    { "year": "2019", "event": "Senior Frontend Developer · McKinsey & Company · Bengaluru — banking & credit tools", "range": "Oct 2019 — Nov 2020" },
+    { "year": "2020", "event": "Senior Engineer · Preqin (BlackRock) · Bengaluru — investor dashboards", "range": "Nov 2020 — Oct 2022" },
+    { "year": "2022", "event": "Senior Frontend Developer · Arts Consolidated (Operabase) · Denmark · Remote — +30% revenue growth", "range": "Oct 2022 — Apr 2025" },
+    { "year": "2023", "event": "Started using AI tools seriously in daily development" },
+    { "year": "2024", "event": "Adopted plan-first, AI-assisted delivery workflow" },
+    { "year": "2025", "event": "AWS Certified Solutions Architect" },
+    { "year": "2025", "event": "Senior Software Engineer · McKinsey & Company (Periscope) · Gurugram", "range": "Jul 2025 — Present" }
   ],
   "services": [
     {
-      "cmd": "build --stack=next.js --mode=ai-augmented",
-      "title": "AI-Augmented Product Engineering",
-      "desc": "Full-stack Next.js / React apps built with a spec-driven AI loop. 3–5x faster delivery with higher test coverage.",
-      "tags": ["Next.js", "React", "Spec-Driven", "TypeScript"]
+      "title": "Web Product Development",
+      "desc": "End-to-end builds with React and Next.js — from idea to launch. Fast, accessible, and built to scale.",
+      "tags": ["React", "Next.js", "TypeScript", "Full-stack"]
     },
     {
-      "cmd": "run --workflow=llm --integration=true",
-      "title": "LLM Integration & AI Features",
-      "desc": "Ship chatbots, copilots, RAG pipelines, and agentic workflows into production. OpenAI, Claude, LangChain, vector DBs.",
-      "tags": ["OpenAI", "LangChain", "RAG", "Agents"]
+      "title": "AI Features for Your Product",
+      "desc": "Add smart search, assistants, and automation to your existing product — safely and in production.",
+      "tags": ["OpenAI", "Smart search", "Chatbots", "Automation"]
     },
     {
-      "cmd": "architect --pattern=microfrontend",
-      "title": "Micro-frontend Architecture",
-      "desc": "Design scalable systems with Module Federation, Nx mono-repos, and independent deploys. Battle-tested at enterprise scale.",
-      "tags": ["Module Federation", "Nx", "Webpack 5", "CI/CD"]
+      "title": "Platform & Architecture",
+      "desc": "Design systems that grow with your team — modular, maintainable, and ready for multiple products.",
+      "tags": ["Scalable design", "Team workflows", "Modern stack"]
     },
     {
-      "cmd": "audit --target=performance --depth=core-web-vitals",
-      "title": "Performance Audits",
-      "desc": "Deep-dive audits on Core Web Vitals, bundle splits, caching, and render paths. Measurable wins in days.",
-      "tags": ["LCP", "INP", "CLS", "Lighthouse"]
+      "title": "Website Performance",
+      "desc": "Make your site faster and more reliable. Better speed means better user experience and search rankings.",
+      "tags": ["Speed", "SEO", "Mobile", "Accessibility"]
     },
     {
-      "cmd": "onboard --team --method=spec-driven",
-      "title": "Team Onboarding to Spec-Driven Dev",
-      "desc": "Workshops, playbooks, and hands-on coaching to transform your team's AI workflow from messy prompting to disciplined shipping.",
-      "tags": ["Workshops", "Playbooks", "Coaching"]
+      "title": "Team Coaching",
+      "desc": "Help your team adopt modern development practices and AI tools — with hands-on workshops and playbooks.",
+      "tags": ["Workshops", "Best practices", "AI workflows"]
     },
     {
-      "cmd": "consult --fractional --duration=flex",
-      "title": "Fractional AI-Native CTO",
-      "desc": "Architecture reviews, hiring support, roadmap, and technical due diligence. Especially for AI-first startups.",
-      "tags": ["Consulting", "Due Diligence", "Roadmap"]
+      "title": "Technical Consulting",
+      "desc": "Architecture reviews, hiring support, and roadmap guidance — especially for startups building their first product.",
+      "tags": ["Strategy", "Reviews", "Roadmap"]
     }
   ],
   "contact": {
-    "prompt": "describe_your_project",
-    "placeholder": "> e.g. 'Ship a RAG chatbot on our docs by end of quarter'",
-    "ctaText": "Transmit",
-    "headline": ["open", "a", "channel."],
-    "description": "I reply in human or code, usually within 24 hours. Projects kick off within a week.",
+    "placeholder": "Tell me about your project — what you are building, your timeline, and what success looks like.",
+    "ctaText": "Send message",
+    "headline": ["Let's", "build", "something great."],
+    "description": "Tell me about your project and I will reply within 24 hours. Most projects start within a week.",
     "serviceOptions": [
-      "AI-Augmented Engineering",
-      "LLM Integration",
-      "Micro-frontend Architecture",
-      "Performance Audit",
-      "Team Onboarding",
-      "Fractional CTO",
+      "Web Product Development",
+      "AI Features",
+      "Platform & Architecture",
+      "Website Performance",
+      "Team Coaching",
+      "Technical Consulting",
       "Other"
     ]
   }

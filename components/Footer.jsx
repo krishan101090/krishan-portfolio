@@ -12,11 +12,11 @@ export default function Footer({ person }) {
             <span className={styles.dot} />
           </span>
           <p className={styles.copy}>
-            © {year} <span>{person.name}</span> · end of transmission
+            © {year} <span>{person.name}</span> · {person.jobTitle}
           </p>
         </div>
         <p className={styles.note}>
-          Built with <span>Next.js</span> + <span>AI</span> // deployed on the edge
+          Designed and built by Krishan using Next.js
         </p>
       </div>
       <div className={styles.bigText} aria-hidden="true">

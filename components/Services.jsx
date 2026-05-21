@@ -4,28 +4,23 @@ export default function Services({ services, email }) {
   return (
     <section id="services" className={styles.section} aria-labelledby="services-title">
       <div className={styles.head}>
-        <span className="kicker">RUN // SERVICES</span>
+        <span className="kicker">What I do</span>
         <h2 className={styles.title} id="services-title">
-          Services you can <span className={styles.emphasis}>execute</span>.
+          Services built for <span className={styles.emphasis}>real business outcomes</span>.
         </h2>
         <p className={styles.subtitle}>
-          Each service is a command. Run one, and I'll kick off within a week.
+          From new product builds to AI features and performance fixes — here is how I can help.
         </p>
       </div>
 
       <div className={styles.grid}>
         {services.map((s, i) => (
           <article
-            key={s.cmd}
+            key={s.title}
             className={`${styles.card} reveal`}
             style={{ '--i': i }}
             aria-label={s.title}
           >
-            <div className={styles.cmdBar}>
-              <span className={styles.prompt}>{'>'}</span>
-              <code className={styles.cmd}>{s.cmd}</code>
-              <span className={styles.run}>⏎</span>
-            </div>
             <h3 className={styles.cardTitle}>{s.title}</h3>
             <p className={styles.cardDesc}>{s.desc}</p>
             <div className={styles.tags}>
@@ -35,9 +30,9 @@ export default function Services({ services, email }) {
                 </span>
               ))}
             </div>
-            <a href="#console" className={styles.cardCta}>
-              RUN COMMAND
-              <span aria-hidden="true">↗</span>
+            <a href="#contact" className={styles.cardCta}>
+              Get in touch
+              <span aria-hidden="true">→</span>
             </a>
           </article>
         ))}
@@ -45,17 +40,17 @@ export default function Services({ services, email }) {
 
       <div className={`${styles.banner} reveal`}>
         <div>
-          <span className={styles.bannerLabel}>READY?</span>
+          <span className={styles.bannerLabel}>Ready to start?</span>
           <p className={styles.bannerText}>
-            Most projects kick off within <strong>a week</strong>. Describe yours below.
+            Most projects begin within <strong>a week</strong> of our first conversation.
           </p>
         </div>
         <div className={styles.bannerCtas}>
-          <a href="#console" className={styles.bannerPrimary}>
-            OPEN CONSOLE ↗
+          <a href="#contact" className={styles.bannerPrimary}>
+            Send a message
           </a>
           <a href={`mailto:${email}`} className={styles.bannerSecondary}>
-            EMAIL DIRECT
+            Email me directly
           </a>
         </div>
       </div>

@@ -4,8 +4,8 @@ export default function AIStack({ stack }) {
   return (
     <div className={styles.stack}>
       <div className={styles.header}>
-        <span className={styles.title}>ai-stack.yml</span>
-        <span className={styles.count}>{stack.length} MODELS</span>
+        <span className={styles.title}>Tools I use daily</span>
+        <span className={styles.count}>{stack.length} tools</span>
       </div>
       <div className={styles.grid}>
         {stack.map((model, i) => (

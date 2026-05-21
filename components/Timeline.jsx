@@ -4,9 +4,9 @@ export default function Timeline({ timeline }) {
   return (
     <section id="timeline" className={styles.section} aria-labelledby="timeline-title">
       <div className={styles.head}>
-        <span className="kicker">MEMORY DUMP</span>
+        <span className="kicker">Experience</span>
         <h2 className={styles.title} id="timeline-title">
-          The arc, compressed.
+          A decade of building for global teams.
         </h2>
       </div>
       <ol className={styles.list}>

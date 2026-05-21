@@ -8,7 +8,7 @@ export default function Chapter({ chapter, specWorkflow, aiStack }) {
   return (
     <section id={`chapter-${num}`} className={styles.chapter} aria-label={`Chapter ${num}: ${title}`}>
       <div className={styles.marker}>
-        <span className={styles.chapterNum}>CH {num}</span>
+        <span className={styles.chapterNum}>{num}</span>
         <span className={styles.divider} />
         <span className={styles.year}>{year}</span>
         <span className={styles.divider} />
@@ -27,7 +27,9 @@ export default function Chapter({ chapter, specWorkflow, aiStack }) {
             <div className={`${styles.meta} reveal`}>
               {Object.entries(meta).map(([k, v]) => (
                 <div key={k} className={styles.metaItem}>
-                  <span className={styles.metaKey}>{k}</span>
+                  <span className={styles.metaKey}>
+                    {k.charAt(0).toUpperCase() + k.slice(1)}
+                  </span>
                   <span className={styles.metaVal}>
                     {Array.isArray(v) ? v.join(' · ') : v}
                   </span>

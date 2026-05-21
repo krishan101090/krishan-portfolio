@@ -5,7 +5,7 @@ export default function SpecFlow({ workflow }) {
     <div className={styles.flow}>
       {workflow.heading && (
         <div className={styles.head}>
-          <span className={styles.headLabel}>THE LOOP</span>
+          <span className={styles.headLabel}>How I work</span>
           <h3 className={styles.heading}>{workflow.heading}</h3>
         </div>
       )}
