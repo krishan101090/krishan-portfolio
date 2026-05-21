@@ -1,6 +1,7 @@
 import styles from './Hero.module.css'
 
 export default function Hero({ person, boot }) {
+  const highlights = boot?.highlights ?? []
   return (
     <section id="boot" className={styles.hero} aria-labelledby="hero-heading">
       <div className={styles.bgGrid} aria-hidden="true" />
@@ -18,11 +19,11 @@ export default function Hero({ person, boot }) {
           <span className={styles.role}>{person.jobTitle}</span>
         </h1>
 
-        <p className={styles.intro}>{boot.intro}</p>
-        <p className={styles.tagline}>{boot.tagline}</p>
+        <p className={styles.intro}>{boot?.intro}</p>
+        <p className={styles.tagline}>{boot?.tagline}</p>
 
-        <a href="#chapter-01" className={styles.scrollCta}>
-          <span>{boot.scrollHint}</span>
+        <a href="#achievements" className={styles.scrollCta}>
+          <span>{boot?.scrollHint ?? 'See my wins'}</span>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M12 4v16m0 0l-6-6m6 6l6-6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
@@ -30,7 +31,7 @@ export default function Hero({ person, boot }) {
       </div>
 
       <div className={styles.highlights} aria-label="Key highlights">
-        {boot.highlights.map((item) => (
+        {highlights.map((item) => (
           <div key={item.label} className={styles.highlightCard}>
             <div className={styles.highlightValue}>{item.value}</div>
             <div className={styles.highlightLabel}>{item.label}</div>
