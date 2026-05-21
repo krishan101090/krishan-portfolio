@@ -2,9 +2,9 @@
   "slug": "krishan",
   "seo": {
     "siteUrl": "https://krishanmohan.dev",
-    "title": "Krishan Mohan — Hire AI-Native Next.js & React Engineer | 9+ yrs, India",
-    "shortTitle": "Krishan Mohan · AI Engineer",
-    "description": "Hire Krishan Mohan — Frontend Architect at Alshaya Group with 9+ years shipping React, Next.js and LLM-powered products 3–5× faster through spec-driven development. Available for contracts, consulting, and fractional CTO work worldwide.",
+    "title": "Krishan Mohan — Hire AI-Native Next.js & React Engineer | 10+ yrs, India",
+    "shortTitle": "Krishan Mohan · Frontend Architect",
+    "description": "Hire Krishan Mohan — Frontend Architect at McKinsey & Company (Periscope) with 10+ years shipping React, Next.js and LLM-powered products 3–5× faster through spec-driven development. Available for contracts, consulting, and fractional CTO work worldwide.",
     "keywords": [
       "hire AI engineer",
       "hire Next.js developer India",
@@ -24,7 +24,7 @@
       "senior frontend engineer Gurugram"
     ],
     "twitter": "@krishanmohan",
-    "ogAlt": "Krishan Mohan — AI-Native Software Engineer. 9+ years. Ships with spec-driven AI workflows.",
+    "ogAlt": "Krishan Mohan — Frontend Architect. 10+ years. Ships with spec-driven AI workflows.",
     "locale": "en_US"
   },
   "person": {
@@ -32,41 +32,45 @@
     "alternateName": "Krishan",
     "firstName": "Krishan",
     "lastName": "Mohan",
-    "jobTitle": "AI-Native Software Engineer",
-    "tagline": "Senior software engineer shipping AI-native products with spec-driven development.",
+    "jobTitle": "Frontend Architect",
+    "tagline": "Frontend architect shipping AI-integrated web platforms for global enterprises.",
     "initials": "KM",
     "handle": "krishan",
     "email": "krishan101090@gmail.com",
     "phone": "+919873429311",
     "phoneDisplay": "+91 98734 29311",
-    "linkedin": "https://linkedin.com/in/krishan-mohan-4755239b",
-    "linkedinHandle": "krishan-mohan-4755239b",
+    "linkedin": "https://linkedin.com/in/krishan-m-4755239b",
+    "linkedinHandle": "krishan-m-4755239b",
     "github": "https://github.com/krishan101090",
     "githubHandle": "krishan101090",
-    "location": "Gurugram, India",
-    "locality": "Gurugram",
+    "location": "New Delhi, India",
+    "locality": "New Delhi",
     "region": "Haryana",
     "country": "IN",
     "countryName": "India",
-    "currentCompany": "Alshaya Group",
-    "currentCompanyUrl": "https://www.alshaya.com",
-    "currentCompanyVia": "Yallo Group",
-    "currentRole": "Frontend Architect",
-    "yearsExperience": 9,
+    "currentCompany": "McKinsey & Company",
+    "currentCompanyUrl": "https://www.mckinsey.com",
+    "currentCompanyVia": "Periscope",
+    "currentRole": "Senior Software Engineer",
+    "yearsExperience": 10,
     "availability": "ONLINE · OPEN FOR PROJECTS",
     "languages": ["English", "Hindi"],
     "skills": [
-      "Next.js",
       "React",
+      "Next.js",
       "TypeScript",
-      "Node.js",
+      "GraphQL",
+      "Tailwind CSS",
+      "Micro-frontends",
+      "Module Federation",
+      "Redux Toolkit",
       "LangChain",
       "OpenAI",
       "Claude",
       "RAG",
-      "Module Federation",
-      "Micro-frontends",
+      "AWS",
       "Core Web Vitals",
+      "WCAG 2.1",
       "Spec-Driven Development"
     ]
   },
@@ -77,7 +81,7 @@
     },
     {
       "q": "How long has Krishan been building web products?",
-      "a": "10 years of production experience across retail, fintech, SaaS, consulting, and media — currently Frontend Architect at Alshaya Group (via Yallo Group). Previously Sr. Frontend Developer at Arts Consolidated (Operabase, Denmark), Sr. Engineer at Preqin, Sr. Frontend Developer at McKinsey & Company, Sr. Associate at Publicis Sapient, and UI/UX Developer at ProntoItlab."
+      "a": "10+ years of production experience across alternative assets, management consulting, banking, and digital media — currently Senior Software Engineer at McKinsey & Company (Periscope), architecting pricing and discount optimization platforms for Fortune 100 clients. Previously Sr. Frontend Developer at Arts Consolidated (Operabase, Denmark), Sr. Engineer at Preqin (acquired by BlackRock), Sr. Frontend Developer at McKinsey & Company, Sr. Associate at Publicis Sapient, and UI/UX Developer at Pronto IT Labs (Rent It Bae)."
     },
     {
       "q": "What is spec-driven development?",
@@ -114,7 +118,7 @@
       "year": "2016",
       "title": "It started with a curly brace.",
       "paragraphs": [
-        "New Delhi. A cold morning. My first checked-in commit at ProntoItlab. The code was ugly. The deploy was scary. I loved every second of it.",
+        "New Delhi. A cold morning. My first checked-in commit at Pronto IT Labs, building Rent It Bae — a premium fashion rental platform from the ground up. The code was ugly. The deploy was scary. I loved every second of it.",
         "Back then, shipping anything meant typing every character by hand. Stack Overflow in one tab, docs in the other. A feature was three days of work — one day to think, two to debug."
       ],
       "artifact": {
@@ -130,7 +134,7 @@
       "year": "2016 → 2022",
       "title": "Six years of shipping, mostly manual.",
       "paragraphs": [
-        "Publicis Sapient meant Fortune-500 clients with enterprise scale. McKinsey's internal tooling demanded consulting-grade rigor — React Hooks, Redux, Saga, Hapi.js. Preqin put me on a two-year journey migrating a monolith into a React micro-frontend fleet for Deals, Fundraising, and ESG — used by institutional investors worldwide.",
+        "Publicis Sapient meant Fortune-500 clients with enterprise scale — Keurig e-commerce across 60+ brands. McKinsey's banking tooling demanded consulting-grade rigor: Credit Bureau Analyzer, centralized data lake UIs, React component libraries, Node.js (Hapi.js) + MySQL. Preqin (now BlackRock) put me on a two-year journey migrating a monolith into a React micro-frontend fleet for Deals, Fundraising, and ESG — used by institutional investors worldwide.",
         "I learned that code isn't the bottleneck — context is. I started obsessing over architecture: micro-frontends, SSR, composable component systems. The craft was satisfying. But it was slow."
       ],
       "artifact": {
@@ -207,18 +211,18 @@
       "num": "07",
       "label": "NOW",
       "year": "2025 — Present",
-      "title": "Alshaya. Micro-frontends. AI co-pilots.",
+      "title": "McKinsey. Periscope. Pricing at scale.",
       "paragraphs": [
-        "Frontend Architect at Alshaya Group (via Yallo Group), Gurugram. I own frontend architecture across a multi-brand retail ecosystem — micro-frontends, design-system governance, CI/CD, code reviews, and an engineering culture built around AI-augmented delivery.",
-        "But the way I work today has very little in common with 2016. I write specs. The AI writes the code. Together, we ship faster than any team I've ever been on."
+        "Senior Software Engineer at McKinsey & Company (Periscope), Gurugram. I architect modular React + Next.js + TypeScript frontends for a pricing and discount optimization platform powering multi-billion-dollar B2B and B2C decisions for a Fortune 100 global technology client.",
+        "Complex pricing workflows, discount simulations, ML-driven analytics dashboards, and AI-powered UI features — LLM recommendations, natural-language pricing queries, explainable insights. All shipped through spec-driven, AI-paired engineering with Cursor, Claude, and Spec-Kit."
       ],
       "artifact": {
         "kind": "highlights",
         "items": [
-          { "label": "role", "value": "Frontend Architect" },
-          { "label": "company", "value": "Alshaya Group (via Yallo Group)" },
+          { "label": "role", "value": "Senior Software Engineer" },
+          { "label": "company", "value": "McKinsey & Company (Periscope)" },
           { "label": "location", "value": "Gurugram, India" },
-          { "label": "speciality", "value": "Micro-frontends · SSR · AI workflows" }
+          { "label": "speciality", "value": "Pricing UX · ML analytics · AI workflows" }
         ]
       }
     }
@@ -245,14 +249,15 @@
     { "name": "Vector DBs", "role": "memory & RAG", "tag": "MEM" }
   ],
   "timeline": [
-    { "year": "2016", "event": "UI/UX Developer · ProntoItlab · New Delhi", "range": "Feb 2016 — Oct 2017" },
+    { "year": "2016", "event": "UI/UX Developer · Pronto IT Labs (Rent It Bae) · New Delhi", "range": "Feb 2016 — Oct 2017" },
     { "year": "2017", "event": "Sr. Associate Experience Technology · Publicis Sapient · Noida", "range": "Oct 2017 — Aug 2019" },
-    { "year": "2019", "event": "Sr. Frontend Developer · McKinsey & Company · Bengaluru", "range": "Oct 2019 — Nov 2020" },
-    { "year": "2020", "event": "Sr. Engineer Frontend · Preqin · Bengaluru (React micro-frontends for alt-assets)", "range": "Nov 2020 — Oct 2022" },
+    { "year": "2019", "event": "Sr. Frontend Developer · McKinsey & Company · Bengaluru — Credit Bureau Analyzer & banking data lake UIs", "range": "Oct 2019 — Nov 2020" },
+    { "year": "2020", "event": "Sr. Engineer Frontend · Preqin (acquired by BlackRock) · Bengaluru — React micro-frontends for alt-assets", "range": "Nov 2020 — Oct 2022" },
     { "year": "2022", "event": "Sr. Frontend Developer · Arts Consolidated (Operabase) · Denmark · Remote — +30% revenue via SEO, paywall & Stripe/Chargebee", "range": "Oct 2022 — Apr 2025" },
     { "year": "2023", "event": "First serious AI co-pilot workflows" },
-    { "year": "2024", "event": "Full shift to spec-driven development · AWS SAA certified" },
-    { "year": "2025", "event": "Frontend Architect · Alshaya Group (via Yallo Group) · Gurugram", "range": "May 2025 — Present" }
+    { "year": "2024", "event": "Full shift to spec-driven development" },
+    { "year": "2025", "event": "AWS Certified Solutions Architect — Associate" },
+    { "year": "2025", "event": "Senior Software Engineer · McKinsey & Company (Periscope) · Gurugram — pricing & discount optimization platform", "range": "Jul 2025 — Present" }
   ],
   "services": [
     {

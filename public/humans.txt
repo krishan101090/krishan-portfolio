@@ -3,7 +3,7 @@ Engineer: Krishan Mohan
 Site: https://krishanmohan.dev
 Contact: krishan101090 [at] gmail.com
 GitHub: https://github.com/krishan101090
-LinkedIn: https://linkedin.com/in/krishan-mohan-4755239b
+LinkedIn: https://linkedin.com/in/krishan-m-4755239b
 Location: Gurugram, India
 
 /* THANKS */

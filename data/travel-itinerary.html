@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0A0A0A">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Krishan × Europe 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+/* ════════════════════════════════════
+   DESIGN TOKENS
+════════════════════════════════════ */
+:root {
+  --bg:      #0A0A0A;
+  --s1:      #111111;
+  --s2:      #191919;
+  --s3:      #222222;
+  --s4:      #2C2C2C;
+  --br:      rgba(255,255,255,0.08);
+  --br2:     rgba(255,255,255,0.05);
+  --t1:      #F4F4F4;
+  --t2:      #9A9A9A;
+  --t3:      #555555;
+  --white:   #FFFFFF;
+  --green:   #2ECC71;
+
+  --c-kit:   #5DB83A;
+  --c-mun:   #E09A2A;
+  --c-prg:   #D94F7A;
+  --c-ber:   #4A8FD4;
+  --c-ams:   #2ECC71;
+  --c-par:   #9B6DD6;
+  --c-ind:   #E8A825;
+
+  --r:      14px;
+  --rsm:    10px;
+  --pad-x:  24px;
+}
+
+/* ════════════════════════════════════
+   RESET & BASE
+════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+body {
+  background: var(--bg);
+  color: var(--t1);
+  font-family: 'Manrope', -apple-system, system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ════════════════════════════════════
+   HERO — DESKTOP OPTIMISED
+════════════════════════════════════ */
+.hero {
+  width: 100%;
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  padding:
+    max(env(safe-area-inset-top), 80px)
+    var(--pad-x)
+    60px;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.hero-glow {
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(60% 70% at 0% 100%, rgba(93,184,58,0.12) 0%, transparent 60%),
+    radial-gradient(50% 60% at 100% 0%,  rgba(74,143,212,0.09) 0%, transparent 60%),
+    radial-gradient(30% 40% at 60% 60%,  rgba(155,109,214,0.05) 0%, transparent 60%);
+}
+
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0;
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hero-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--t3);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.hero-label::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--t3);
+  flex-shrink: 0;
+}
+
+.hero-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  line-height: 0.85;
+  letter-spacing: -3px;
+  color: var(--white);
+  margin-bottom: 32px;
+  font-size: clamp(4.5rem, 12vw, 10rem);
+}
+
+.hero-title .outline {
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(255,255,255,0.15);
+  display: block;
+}
+
+.hero-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.hero-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hero-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.09);
+  color: var(--t2);
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+.chip-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.hero-route {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.route-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  row-gap: 6px;
+}
+
+.r-city {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+.r-arrow { color: var(--t3); font-size: 12px; }
+.route-div { width: 100%; height: 1px; background: var(--br); }
+
+/* ════════════════════════════════════
+   STICKY PROGRESS
+════════════════════════════════════ */
+.progress-bar {
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  background: rgba(10,10,10,0.92);
+  backdrop-filter: blur(28px) saturate(200%);
+  -webkit-backdrop-filter: blur(28px) saturate(200%);
+  border-bottom: 1px solid var(--br);
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--pad-x);
+  gap: 16px;
+}
+
+.pb-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--t3);
+  white-space: nowrap;
+}
+
+.pb-track {
+  flex: 1;
+  height: 2px;
+  background: var(--s4);
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+.pb-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--green), #7AEAAB);
+  border-radius: 1px;
+  width: 0%;
+  transition: width 0.5s cubic-bezier(.4,0,.2,1);
+}
+
+.pb-count {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--green);
+  white-space: nowrap;
+  min-width: 56px;
+  text-align: right;
+}
+
+/* ════════════════════════════════════
+   MAIN LAYOUT — DESKTOP 2-COL
+════════════════════════════════════ */
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px var(--pad-x) 80px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+@media (min-width: 960px) {
+  .page {
+    grid-template-columns: 1fr 380px;
+    gap: 32px;
+    align-items: start;
+  }
+  .page-left { grid-column: 1; }
+  .page-right { grid-column: 2; grid-row: 1 / 10; position: sticky; top: 72px; }
+}
+
+/* ════════════════════════════════════
+   SECTION LABEL
+════════════════════════════════════ */
+.sec-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 36px 0 16px;
+}
+.sec-label:first-child { margin-top: 0; }
+.sec-label-line { flex: 1; height: 1px; background: var(--br); }
+.sec-label-text {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--t3);
+  white-space: nowrap;
+}
+
+/* ════════════════════════════════════
+   DAY BLOCK
+════════════════════════════════════ */
+.day-block {
+  background: var(--s1);
+  border: 1px solid var(--br);
+  border-radius: var(--r);
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.day-block:hover {
+  border-color: rgba(255,255,255,0.13);
+  box-shadow: 0 4px 32px rgba(0,0,0,0.3);
+}
+
+.day-block.open {
+  border-color: rgba(255,255,255,0.13);
+  box-shadow: 0 8px 48px rgba(0,0,0,0.4);
+}
+
+.day-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  min-height: 76px;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.day-num {
+  width: 72px;
+  flex-shrink: 0;
+  text-align: center;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 2.2rem;
+  line-height: 1;
+  letter-spacing: -2px;
+  padding: 0 0 2px 4px;
+}
+
+.day-content {
+  flex: 1;
+  padding: 16px 12px;
+  min-width: 0;
+}
+
+.day-weekday {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--t3);
+  margin-bottom: 5px;
+}
+
+.day-date, .day-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--t1);
+  line-height: 1.3;
+}
+
+.day-city, .day-sub {
+  font-size: 13px;
+  color: var(--t2);
+  margin-top: 3px;
+}
+
+.day-right {
+  padding: 0 18px 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.day-badge {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 100px;
+  border: 1px solid;
+  white-space: nowrap;
+}
+
+.badge-official   { background: rgba(93,184,58,0.1);  border-color: rgba(93,184,58,0.3);  color: var(--c-kit); }
+.badge-free       { background: rgba(232,168,37,0.1); border-color: rgba(232,168,37,0.3); color: var(--c-ind); }
+.badge-munich     { background: rgba(224,154,42,0.1); border-color: rgba(224,154,42,0.3); color: var(--c-mun); }
+.badge-prague     { background: rgba(217,79,122,0.1); border-color: rgba(217,79,122,0.3); color: var(--c-prg); }
+.badge-berlin     { background: rgba(74,143,212,0.1); border-color: rgba(74,143,212,0.3); color: var(--c-ber); }
+.badge-amsterdam  { background: rgba(46,204,113,0.1); border-color: rgba(46,204,113,0.3); color: var(--c-ams); }
+.badge-paris      { background: rgba(155,109,214,0.1);border-color: rgba(155,109,214,0.3);color: var(--c-par); }
+.badge-travel     { background: rgba(255,255,255,0.04);border-color: var(--br);            color: var(--t3); }
+
+.day-chevron {
+  color: var(--t3);
+  font-size: 12px;
+  transition: transform 0.25s ease;
+}
+.day-block.open .day-chevron { transform: rotate(180deg); }
+
+/* ════════════════════════════════════
+   CHECKLIST BODY
+════════════════════════════════════ */
+.checklist-body { display: none; border-top: 1px solid var(--br); }
+.day-block.open .checklist-body { display: block; }
+
+.cl-section {
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--br2);
+}
+.cl-section:last-child { border-bottom: none; }
+
+.cl-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--t3);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.cl-title::after { content: ''; flex: 1; height: 1px; background: var(--br2); }
+
+/* ════════════════════════════════════
+   CHECK ITEM
+════════════════════════════════════ */
+.ci {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.1s;
+  margin: 0 -10px;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+.ci:hover { background: rgba(255,255,255,0.03); }
+.ci:active { background: rgba(255,255,255,0.05); }
+.ci input { display: none; }
+
+.ci-box {
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--s4);
+  border-radius: 6px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.18s cubic-bezier(.4,0,.2,1);
+  background: var(--s2);
+}
+
+.ci.checked .ci-box {
+  background: var(--green);
+  border-color: var(--green);
+}
+
+.ci.checked .ci-box::after {
+  content: '';
+  width: 5px;
+  height: 9px;
+  border: 2.5px solid #0A0A0A;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg) translate(-1px,-2px);
+  display: block;
+}
+
+.ci-body { flex: 1; min-width: 0; }
+
+.ci-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--t1);
+  line-height: 1.45;
+  transition: color 0.15s;
+}
+
+.ci.checked .ci-title {
+  color: var(--t3);
+  text-decoration: line-through;
+  text-decoration-color: var(--s4);
+}
+
+.ci-note {
+  font-size: 13px;
+  color: var(--t2);
+  margin-top: 4px;
+  line-height: 1.5;
+}
+.ci.checked .ci-note { color: var(--t3); }
+
+.ci-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+
+.ct {
+  font-size: 9px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 100px;
+  border: 1px solid;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+.ct-must  { background: rgba(239,68,68,0.08);  border-color: rgba(239,68,68,0.22);  color: #F87171; }
+.ct-free  { background: rgba(46,204,113,0.08); border-color: rgba(46,204,113,0.22); color: var(--green); }
+.ct-book  { background: rgba(232,168,37,0.08); border-color: rgba(232,168,37,0.22); color: var(--c-ind); }
+.ct-food  { background: rgba(74,143,212,0.08); border-color: rgba(74,143,212,0.22); color: var(--c-ber); }
+.ct-night { background: rgba(155,109,214,0.08);border-color: rgba(155,109,214,0.22);color: var(--c-par); }
+
+/* ════════════════════════════════════
+   TRANSPORT STRIP
+════════════════════════════════════ */
+.transport {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--s2);
+  border-top: 1px solid var(--br);
+  padding: 14px 20px;
+}
+.transport-icon { font-size: 20px; flex-shrink: 0; }
+.transport-info { flex: 1; min-width: 0; }
+.transport-name { font-size: 14px; font-weight: 600; color: var(--t1); }
+.transport-detail { font-size: 12px; color: var(--t2); margin-top: 2px; }
+.transport-cost { font-size: 15px; font-weight: 700; color: var(--green); white-space: nowrap; }
+
+/* ════════════════════════════════════
+   CITY GUIDE — SIDEBAR ON DESKTOP
+════════════════════════════════════ */
+.city-section {
+  background: var(--s1);
+  border: 1px solid var(--br);
+  border-radius: var(--r);
+  overflow: hidden;
+}
+
+.city-tabs {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  border-bottom: 1px solid var(--br);
+  background: var(--s2);
+  -webkit-overflow-scrolling: touch;
+}
+.city-tabs::-webkit-scrollbar { display: none; }
+
+.ctab {
+  padding: 13px 14px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  border-bottom: 2.5px solid transparent;
+  color: var(--t3);
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: 'Manrope', sans-serif;
+  transition: all 0.2s;
+  flex-shrink: 0;
+  min-height: 48px;
+  -webkit-tap-highlight-color: transparent;
+}
+.ctab:hover { color: var(--t2); }
+.ctab.act-austria     { color: var(--c-kit); border-bottom-color: var(--c-kit); }
+.ctab.act-munich      { color: var(--c-mun); border-bottom-color: var(--c-mun); }
+.ctab.act-czech       { color: var(--c-prg); border-bottom-color: var(--c-prg); }
+.ctab.act-germany     { color: var(--c-ber); border-bottom-color: var(--c-ber); }
+.ctab.act-netherlands { color: var(--c-ams); border-bottom-color: var(--c-ams); }
+.ctab.act-france      { color: var(--c-par); border-bottom-color: var(--c-par); }
+.ctab.act-india       { color: var(--c-ind); border-bottom-color: var(--c-ind); }
+
+.city-panel { display: none; padding: 18px; }
+.city-panel.active { display: block; }
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.info-card {
+  background: var(--s2);
+  border: 1px solid var(--br);
+  border-radius: var(--rsm);
+  padding: 14px;
+}
+
+.info-card-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.info-card-body {
+  font-size: 12.5px;
+  color: var(--t2);
+  line-height: 1.9;
+}
+
+.city-cl {
+  background: var(--s2);
+  border: 1px solid var(--br);
+  border-radius: var(--rsm);
+  padding: 16px;
+  margin-bottom: 10px;
+}
+.city-cl:last-child { margin-bottom: 0; }
+
+.alert {
+  border-radius: var(--rsm);
+  padding: 13px 15px;
+  margin-bottom: 14px;
+}
+.alert-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.alert-amber {
+  background: rgba(232,168,37,0.07);
+  border: 1px solid rgba(232,168,37,0.15);
+}
+.alert-amber .alert-label { color: var(--c-ind); }
+.alert-amber p { font-size: 13px; color: rgba(232,168,37,0.8); line-height: 1.5; }
+
+/* ════════════════════════════════════
+   SUMMARY
+════════════════════════════════════ */
+.summary {
+  background: var(--s1);
+  border: 1px solid var(--br);
+  border-radius: var(--r);
+  padding: 28px 24px;
+  margin-top: 32px;
+}
+
+.summary-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.summary-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  letter-spacing: -1px;
+  line-height: 1;
+  color: var(--white);
+}
+.summary-title em { font-style: italic; color: var(--green); }
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1px;
+  background: var(--br);
+  border: 1px solid var(--br);
+  border-radius: var(--rsm);
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.summary-stat {
+  background: var(--s2);
+  padding: 18px 12px;
+  text-align: center;
+  transition: background 0.2s;
+}
+.summary-stat:hover { background: var(--s3); }
+
+.summary-num {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  color: var(--white);
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.summary-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--t3);
+  margin-top: 6px;
+}
+
+.reset-btn {
+  width: 100%;
+  background: transparent;
+  border: 1px solid var(--br);
+  color: var(--t3);
+  padding: 14px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: var(--rsm);
+  font-family: 'Manrope', sans-serif;
+  transition: all 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+.reset-btn:hover {
+  border-color: rgba(255,255,255,0.18);
+  color: var(--t2);
+  background: rgba(255,255,255,0.03);
+}
+
+/* ════════════════════════════════════
+   SCROLLBAR
+════════════════════════════════════ */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--s4); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--t3); }
+
+/* ════════════════════════════════════
+   ANIMATIONS
+════════════════════════════════════ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-label   { animation: fadeUp .7s ease both; }
+.hero-title   { animation: fadeUp .7s .06s ease both; }
+.hero-bottom  { animation: fadeUp .7s .12s ease both; }
+
+/* ════════════════════════════════════
+   RESPONSIVE
+════════════════════════════════════ */
+/* Mobile small */
+@media (max-width: 390px) {
+  :root { --pad-x: 16px; }
+  .day-num { width: 58px; font-size: 1.8rem; }
+  .hero-title { font-size: 3.8rem; letter-spacing: -2px; }
+  .r-city { font-size: 15px; }
+  .summary-grid { grid-template-columns: repeat(2,1fr); }
+  .info-grid { grid-template-columns: 1fr; }
+}
+
+/* Mobile medium (iPhone 14/15/16/17) */
+@media (min-width: 390px) and (max-width: 430px) {
+  :root { --pad-x: 20px; }
+  .hero-title { font-size: 4.2rem; }
+}
+
+/* Mobile large (iPhone Plus/Max) */
+@media (min-width: 430px) and (max-width: 768px) {
+  :root { --pad-x: 22px; }
+  .hero-title { font-size: 4.8rem; }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 959px) {
+  :root { --pad-x: 32px; }
+  .hero-title { font-size: 7rem; }
+  .ci-title { font-size: 16px; }
+}
+
+/* Desktop */
+@media (min-width: 960px) {
+  :root { --pad-x: 48px; }
+  .hero-title { font-size: clamp(7rem, 10vw, 10rem); }
+  .hero { min-height: 100svh; }
+  .ci-title { font-size: 15px; }
+  .ci-note { font-size: 13px; }
+  .day-date, .day-name { font-size: 16px; }
+  .day-num { width: 80px; font-size: 2.4rem; }
+}
+
+/* Large desktop */
+@media (min-width: 1400px) {
+  :root { --pad-x: 64px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════ HERO ═══════ -->
+<div class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <p class="hero-label">Krishan Mohan · Solo Europe 2026</p>
+    <h1 class="hero-title">
+      EUROPE<br>
+      <span class="outline">SOLO</span>
+    </h1>
+    <div class="hero-bottom">
+      <div class="hero-meta">
+        <div class="hero-chips">
+          <span class="chip"><span class="chip-dot" style="background:var(--c-kit)"></span>20 Jun – 5 Jul 2026</span>
+          <span class="chip"><span class="chip-dot" style="background:var(--green)"></span>16 Days</span>
+          <span class="chip"><span class="chip-dot" style="background:var(--c-par)"></span>5 Countries</span>
+          <span class="chip"><span class="chip-dot" style="background:var(--c-ind)"></span>₹1.5L Budget</span>
+        </div>
+      </div>
+      <div class="hero-route">
+        <div class="route-row">
+          <span class="r-city" style="color:var(--c-kit)">Kitzbühel</span>
+          <span class="r-arrow">→</span>
+          <span class="r-city" style="color:var(--c-mun)">Munich</span>
+          <span class="r-arrow">→</span>
+          <span class="r-city" style="color:var(--c-prg)">Prague</span>
+        </div>
+        <div class="route-div"></div>
+        <div class="route-row">
+          <span class="r-city" style="color:var(--c-ber)">Berlin</span>
+          <span class="r-arrow">→</span>
+          <span class="r-city" style="color:var(--c-ams)">Amsterdam</span>
+          <span class="r-arrow">→</span>
+          <span class="r-city" style="color:var(--c-par)">Paris</span>
+          <span class="r-arrow">→</span>
+          <span class="r-city" style="color:var(--c-ind)">✈ India</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ STICKY PROGRESS ═══════ -->
+<div class="progress-bar">
+  <span class="pb-label">Trip Progress</span>
+  <div class="pb-track"><div class="pb-fill" id="fill"></div></div>
+  <span class="pb-count" id="cnt">0 / 0</span>
+</div>
+
+<!-- ═══════ MAIN PAGE ═══════ -->
+<div class="page">
+  <div class="page-left">
+
+<div class="wrap">
+  <div class="sec-label">
+    <div class="sec-label-line"></div>
+    <span class="sec-label-text">Official Training — Austria</span>
+    <div class="sec-label-line"></div>
+  </div>
+
+    <div class="day-block" id="day1">
+    <div class="day-header" onclick="tog('day1')">
+      <div class="day-num" style="color:var(--transit)">1</div>
+      <div class="day-content">
+        <div class="day-weekday">Saturday · 20 June 2026</div>
+        <div class="day-date">India → Munich → Kitzbühel</div>
+        <div class="day-city">Travel Day</div>
+      </div>
+      <span class="day-badge badge-transit">Travel</span>
+      <span class="day-chevron">▼</span>
+    </div>
+    <div class="checklist-body">
+      <div class="cl-section">
+        <div class="cl-title">Before departing India</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Passport + Schengen visa printout</div><div class="ci-note">Carry originals + 2 photocopies each</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Wise/Revolut card loaded with €800</div><div class="ci-note">Inform your bank to avoid card blocks</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Download Google Maps offline — Munich, Kitzbühel</div><div class="ci-note">Also download Google Translate — German pack</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Pack universal EU Type C/F adapter</div><div class="ci-note">European sockets are different from India</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Pack 20,000mAh power bank</div><div class="ci-note">Filming all day kills phone battery fast</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Neck pillow + eye mask for flight</div></div></label>
+      </div>
+      <div class="cl-section">
+        <div class="cl-title">On arrival</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">McKinsey car pickup at Munich Airport</div><div class="ci-note">Confirm pickup details with HR before travel</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">2.5hr scenic drive Munich → Kitzbühel</div><div class="ci-note">Film the Alpine scenery — great b-roll for Instagram</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Check in — Grand Hotel Kitzbühel</div><div class="ci-note">Rest after long flight</div></div></label>
+      </div>
+    </div>
+  </div>
+
+    <div class="day-block" id="day2">
+    <div class="day-header" onclick="tog('day2')">
+      <div class="day-num" style="color:var(--gold)">2</div>
+      <div class="day-content">
+        <div class="day-weekday">Sunday · 21 June 2026</div>
+        <div class="day-date">Free Day — Kitzbühel Explore</div>
+        <div class="day-city">Kitzbühel, Austria</div>
+      </div>
+      <span class="day-badge badge-free">Free Day</span>
+      <span class="day-chevron">▼</span>
+    </div>
+    <div class="checklist-body">
+      <div class="cl-section">
+        <div class="cl-title">Morning</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Hahnenkamm Cable Car ride to 1,665m</div><div class="ci-note">Stunning Alpine panorama — best first Europe shot</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Kitzbühel Old Town walk</div><div class="ci-note">Medieval cobblestone streets, colourful Austrian houses, flower balconies</div></div><span class="ct ct-free">Free</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">St. Andreas Church — gilded altar</div><div class="ci-note">Free entry, stunning baroque interior</div></div><span class="ct ct-free">Free</span></label>
+      </div>
+      <div class="cl-section">
+        <div class="cl-title">Afternoon</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Schwarzsee Lake swim</div><div class="ci-note">15 min walk from town. Warm Alpine lake (22–24°C in June). Very local vibe.</div></div><span class="ct ct-free">Free</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Hornweg trail walk</div><div class="ci-note">Easy flat path around town with mountain views — great for filming</div></div><span class="ct ct-free">Free</span></label>
+      </div>
+      <div class="cl-section">
+        <div class="cl-title">Evening</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Dinner at Huberbräu Stüberl</div><div class="ci-note">Traditional Austrian schnitzel or käsespätzle ~€15. Very authentic.</div></div><span class="ct ct-food">Food</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Film announcement Reel</div><div class="ci-note">"I just arrived in the Austrian Alps for McKinsey training" — your first viral content</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Early night — Training starts tomorrow</div></div></label>
+      </div>
+    </div>
+  </div>
+
+   DAYS 3-8
+  <div class="day-block" id="day3">
+    <div class="day-header" onclick="tog('day3')">
+      <div class="day-num" style="color:var(--kitzbuhel)">3–8</div>
+      <div class="day-content">
+        <div class="day-weekday">Monday–Saturday · 22–27 June 2026</div>
+        <div class="day-date">Official Training Programme</div>
+        <div class="day-city">Alpine University, Kitzbühel</div>
+      </div>
+      <span class="day-badge badge-official">Official</span>
+      <span class="day-chevron">▼</span>
+    </div>
+    <div class="checklist-body">
+      <div class="cl-section">
+        <div class="cl-title">Training checklist</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">McKinsey training programme — Alpine University</div><div class="ci-note">Organised by McKinsey & Company, Austria</div></div><span class="ct ct-must">Official</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">All meals covered at Grand Hotel Kitzbühel</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Film evening content daily — Kitzbühel at night</div><div class="ci-note">Short Stories of Alpine evenings, hotel, training vibes</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Pack and check out on Saturday 27th June</div><div class="ci-note">Train to Prague departs from Kitzbühel Hahnenkamm station</div></div></label>
+      </div>
+      <div class="cl-section">
+        <div class="cl-title">Book before leaving hotel on 27th</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Prague hostel — Czech Inn or Sir Toby's</div><div class="ci-note">Book at hostelworld.com — July fills fast</div></div><span class="ct ct-book">Book Now</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Berlin hostel — The Circus Hostel</div><div class="ci-note">Best in Berlin — book at hostelworld.com</div></div><span class="ct ct-book">Book Now</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Amsterdam hostel — The Elephant Hostel</div><div class="ci-note">4.8★ highest rated — book at hostelworld.com</div></div><span class="ct ct-book">Book Now</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Anne Frank House — Amsterdam</div><div class="ci-note">annefrank.org — SELLS OUT weeks ahead in July</div></div><span class="ct ct-book">Book Now</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Van Gogh Museum — Amsterdam</div><div class="ci-note">vangoghmuseum.nl — pre-book to skip queues</div></div><span class="ct ct-book">Book Now</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Reichstag Dome — Berlin</div><div class="ci-note">reichstag.de — free but must reserve slot online</div></div><span class="ct ct-book">Book Now</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Prague → Berlin EuroCity train</div><div class="ci-note">bahn.com — book for €19 early bird</div></div><span class="ct ct-book">Book Now</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Berlin → Amsterdam overnight FlixBus</div><div class="ci-note">flixbus.com — departs ~23:00, arrives ~06:00</div></div><span class="ct ct-book">Book Now</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Amsterdam → Paris Eurostar</div><div class="ci-note">eurostar.com — €35 early bird, fills fast</div></div><span class="ct ct-book">Book Now</span></label>
+      </div>
+    </div>
+    <div class="transport">
+      <span class="transport-icon">🚂</span>
+      <div class="transport-info">
+        <div class="transport-name">Kitzbühel → Prague · Saturday 27 Jun</div>
+        <div>ÖBB train via Salzburg + Linz · Depart 05:57 · Arrive ~14:30 · 1 change</div>
+      </div>
+      <span class="transport-cost">€30–55</span>
+    </div>
+  </div>
+
+    <div class="sec-label">
+    <div class="sec-label-line"></div>
+    <span class="sec-label-text">Personal Travel</span>
+    <div class="sec-label-line"></div>
+  </div>
+
+    <div class="day-block" id="day9">
+    <div class="day-header" onclick="tog('day9')">
+      <div class="day-num" style="color:var(--prague)">9–11</div>
+      <div class="day-content">
+        <div class="day-weekday">Saturday–Monday · 27–29 June 2026</div>
+        <div class="day-date">Prague · 3 Days</div>
+        <div class="day-city">Czech Republic 🇨🇿</div>
+      </div>
+      <span class="day-badge badge-prague">Prague</span>
+      <span class="day-chevron">▼</span>
+    </div>
+    <div class="checklist-body">
+      <div class="cl-section">
+        <div class="cl-title">Day 9 — Saturday 27 Jun · Arrival</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Arrive Prague, check in Czech Inn Hostel</div><div class="ci-note">Buy 24hr transit pass at station (€3)</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Charles Bridge at golden hour (4–5pm)</div><div class="ci-note">Most beautiful bridge in Europe — film walking across slowly</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Old Town Square + Astronomical Clock show</div><div class="ci-note">Watch the hourly show — free. Buy Trdelník (chimney cake €2)</div></div><span class="ct ct-free">Free</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">First Czech beer — Pilsner Urquell (€1.50)</div><div class="ci-note">Film the price reveal — Indian audience loves this content</div></div><span class="ct ct-food">Food</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Dinner at Lokál — svíčková or goulash</div><div class="ci-note">Huge portions for €7. Very filling, similar to Indian gravy.</div></div><span class="ct ct-food">Food</span></label>
+      </div>
+      <div class="cl-section">
+        <div class="cl-title">Day 10 — Sunday 28 Jun · Castle Day</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Prague Castle complex — world's largest castle</div><div class="ci-note">Take Tram 22. St. Vitus Cathedral inside is jaw-dropping.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Strahov Monastery Brewery lunch</div><div class="ci-note">Monk-brewed beer + Czech lunch with a view. ~€12 total.</div></div><span class="ct ct-food">Food</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Free walking tour — Old Town</div><div class="ci-note">Sandeman's / Sam's Free Tours. Tip-based (~€5). Best for meeting people.</div></div><span class="ct ct-free">Free</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Letná Park panorama at sunset</div><div class="ci-note">Best free view in Prague. Buy Pilsner from shop (€1.50).</div></div><span class="ct ct-free">Free</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Prague nightlife — Nebe club or Hemingway Bar</div><div class="ci-note">Entry often free before midnight. Cheapest big night in Europe.</div></div><span class="ct ct-night">Night</span></label>
+      </div>
+      <div class="cl-section">
+        <div class="cl-title">Day 11 — Monday 29 Jun · Last morning + depart</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Kafka Museum or Lennon Wall visit</div><div class="ci-note">Lennon Wall is free — colourful tribute wall near Charles Bridge</div></div><span class="ct ct-free">Free</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Indian restaurant if homesick — Taj Mahal Old Town</div><div class="ci-note">Dal, naan, curry ~€12. Optional but good to know.</div></div><span class="ct ct-food">Food</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Head to Praha Holešovice station for Berlin train</div><div class="ci-note">Not the main station — Praha Holešovice! Important.</div></div><span class="ct ct-must">Must</span></label>
+      </div>
+    </div>
+    <div class="transport">
+      <span class="transport-icon">🚂</span>
+      <div class="transport-info">
+        <div class="transport-name">Prague → Berlin · Monday 29 Jun (evening)</div>
+        <div>EuroCity direct · Praha Holešovice → Berlin Hbf · 3h 48m</div>
+      </div>
+      <span class="transport-cost">€19–35</span>
+    </div>
+  </div>
+
+    <div class="day-block" id="day12">
+    <div class="day-header" onclick="tog('day12')">
+      <div class="day-num" style="color:var(--berlin)">12–14</div>
+      <div class="day-content">
+        <div class="day-weekday">Monday–Wednesday · 29 Jun – 2 Jul 2026</div>
+        <div class="day-date">Berlin · 3 Days</div>
+        <div class="day-city">Germany 🇩🇪</div>
+      </div>
+      <span class="day-badge badge-berlin">Berlin</span>
+      <span class="day-chevron">▼</span>
+    </div>
+    <div class="checklist-body">
+      <div class="cl-section">
+        <div class="cl-title">Day 12 — Monday 29 Jun · Arrival evening</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Arrive Berlin Hbf · Check in The Circus Hostel</div><div class="ci-note">Buy 24hr transit pass €9.90 — covers all U-Bahn, S-Bahn, trams</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">East Side Gallery — 1.3km Berlin Wall murals</div><div class="ci-note">Free. Most powerful free sight in Europe. Film walking alongside.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Döner kebab at Mustafa's (Mehringdamm)</div><div class="ci-note">Berlin's most famous kebab. €5. Queue is worth it.</div></div><span class="ct ct-food">Food</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Späti beer by the Spree river (€1.20)</div><div class="ci-note">Buy from corner store, sit by river. Very Berlin.</div></div><span class="ct ct-night">Night</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Watergate Club</div><div class="ci-note">World-class electronic club on Spree river. Floor-to-ceiling windows over water. Very Indian-traveller friendly door. Go after midnight.</div></div><span class="ct ct-night">Night</span></label>
+      </div>
+      <div class="cl-section">
+        <div class="cl-title">Day 13 — Tuesday 30 Jun · History day</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Brandenburg Gate + Holocaust Memorial</div><div class="ci-note">Free. Walk through the 2,711 concrete slabs — haunting and powerful.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Reichstag Dome — pre-booked slot</div><div class="ci-note">Free. Panoramic view. Arrive 15 mins early.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Checkpoint Charlie</div><div class="ci-note">Free exterior. Famous Cold War crossing point.</div></div><span class="ct ct-free">Free</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Museum Island day pass</div><div class="ci-note">€18 covers 5 world-class museums. Pergamon has Indian trade route artefacts.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Falafel wrap near Checkpoint Charlie (€4)</div></div><span class="ct ct-food">Food</span></label>
+      </div>
+      <div class="cl-section">
+        <div class="cl-title">Day 14 — Wednesday 1 Jul · Big night + overnight bus</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Prater Biergarten — pre-game drinks</div><div class="ci-note">Berlin's oldest beer garden. Massive outdoor space.</div></div><span class="ct ct-night">Night</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Berghain attempt — world's most exclusive club</div><div class="ci-note">Go alone, wear all black, be calm at door. Whether in or out — this is your best viral video.</div></div><span class="ct ct-must">Must Try</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Backup: Tresor or Rote Sonne if Berghain rejects</div><div class="ci-note">Equally great music, easier door. Don't let Berghain ruin the night.</div></div><span class="ct ct-night">Night</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Collect bags from hostel before 22:00</div><div class="ci-note">Overnight bus departs ~23:00 from Berlin ZOB bus station</div></div><span class="ct ct-must">Must</span></label>
+      </div>
+    </div>
+    <div class="transport">
+      <span class="transport-icon">🚌</span>
+      <div class="transport-info">
+        <div class="transport-name">Berlin → Amsterdam · Overnight FlixBus · Wed 1 Jul ~23:00</div>
+        <div>Arrive Amsterdam ~06:00 Thu · Saves one hostel night (~€25)</div>
+      </div>
+      <span class="transport-cost">€20–35</span>
+    </div>
+  </div>
+
+    <div class="day-block" id="day15">
+    <div class="day-header" onclick="tog('day15')">
+      <div class="day-num" style="color:var(--amsterdam)">15–16</div>
+      <div class="day-content">
+        <div class="day-weekday">Thursday–Friday · 2–4 Jul 2026</div>
+        <div class="day-date">Amsterdam · 2 Days</div>
+        <div class="day-city">Netherlands 🇳🇱</div>
+      </div>
+      <span class="day-badge badge-amsterdam">Amsterdam</span>
+      <span class="day-chevron">▼</span>
+    </div>
+    <div class="checklist-body">
+      <div class="cl-section">
+        <div class="cl-title">Day 15 — Thursday 2 Jul · Arrive + culture</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Arrive Amsterdam, drop bags at The Elephant Hostel</div><div class="ci-note">Buy OV-chipkaart (€1.08/ride). Early check-in unlikely — store bags.</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Jordaan canal walk at golden hour</div><div class="ci-note">Buy Heineken from Albert Heijn (€1.50), walk the canals. Free and magical.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Anne Frank House — pre-booked ticket</div><div class="ci-note">Arrive 10 mins early. Most emotionally powerful experience of the trip.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Van Gogh Museum — pre-booked ticket</div><div class="ci-note">World's best collection. Pre-book to skip queues.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Surinamese food — Roopram Roti (Albert Cuypstraat)</div><div class="ci-note">Roti + curry + dal for €8. Tastes exactly like home. Indian must-visit.</div></div><span class="ct ct-food">Food</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Brouwerij 't IJ — craft beer in a windmill</div><div class="ci-note">Most uniquely Amsterdam experience. €4 craft beers. Magical at sunset.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Paradiso club — music in a converted church</div><div class="ci-note">Check resident-advisor.net for what's on. Legendary venue.</div></div><span class="ct ct-night">Night</span></label>
+      </div>
+      <div class="cl-section">
+        <div class="cl-title">Day 16 — Friday 3 Jul · Bike day + depart</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Rent bike from hostel (€10/day)</div><div class="ci-note">Non-negotiable. Cycling Amsterdam is the defining experience.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Cycle Jordaan → NDSM Wharf via free ferry</div><div class="ci-note">Industrial-cool North Amsterdam. Free ferry from behind Centraal.</div></div><span class="ct ct-free">Free</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">A'DAM Tower rooftop swing (€5)</div><div class="ci-note">100m above Amsterdam. Film your genuine fear/joy reaction — great content.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Rijksmuseum garden (free) + Dam Square</div></div><span class="ct ct-free">Free</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Vondelpark sunset picnic</div><div class="ci-note">Albert Heijn supplies. Free. Most relaxing hour of the trip.</div></div><span class="ct ct-free">Free</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Shelter Amsterdam — final big night out</div><div class="ci-note">Underground club beneath A'DAM Tower. Techno + house till 6am.</div></div><span class="ct ct-night">Night</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Buy stroopwafels from Albert Heijn (€4/tin)</div><div class="ci-note">Best gift for family back in India. Buy 3–4 tins.</div></div><span class="ct ct-food">Food</span></label>
+      </div>
+    </div>
+    <div class="transport">
+      <span class="transport-icon">🚂</span>
+      <div class="transport-info">
+        <div class="transport-name">Amsterdam → Paris · Sunday 5 Jul · Eurostar direct</div>
+        <div>Amsterdam Centraal → Paris Gare du Nord · 3h 20m · 10 daily departures</div>
+      </div>
+      <span class="transport-cost">€35–60</span>
+    </div>
+  </div>
+
+    <div class="day-block" id="day16">
+    <div class="day-header" onclick="tog('day16')">
+      <div class="day-num" style="color:var(--paris)">16</div>
+      <div class="day-content">
+        <div class="day-weekday">Sunday · 5 July 2026</div>
+        <div class="day-date">Paris Day Trip + Fly Home</div>
+        <div class="day-city">France 🇫🇷 → India 🇮🇳</div>
+      </div>
+      <span class="day-badge badge-paris">Paris</span>
+      <span class="day-chevron">▼</span>
+    </div>
+    <div class="checklist-body">
+      <div class="cl-section">
+        <div class="cl-title">Morning — Paris</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Arrive Paris Gare du Nord from Amsterdam</div><div class="ci-note">Take RER B or Metro to Eiffel Tower (30–35 mins, €4)</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Eiffel Tower — pre-booked timed entry</div><div class="ci-note">Go up to 2nd floor for the view. Book at toureiffel.paris — sells out in July!</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Champ de Mars picnic lunch</div><div class="ci-note">Buy baguette + cheese + wine from nearby shop (€6 total). Most Parisian moment.</div></div><span class="ct ct-food">Food</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Walk along Seine river</div><div class="ci-note">Free. Bridges, bouquinistes (book sellers), incredible views.</div></div><span class="ct ct-free">Free</span></label>
+      </div>
+      <div class="cl-section">
+        <div class="cl-title">Afternoon — before airport</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Arc de Triomphe exterior walk</div><div class="ci-note">Free from outside. Walk down Champs-Élysées — iconic.</div></div><span class="ct ct-free">Free</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Louvre pyramid exterior photo</div><div class="ci-note">Free from outside — instantly recognisable shot for your grid.</div></div><span class="ct ct-free">Free</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Head to Charles de Gaulle Airport (CDG)</div><div class="ci-note">RER B from central Paris — 35 mins, €12. Arrive 3hrs before international flight.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Duty free — buy Champagne or perfume</div><div class="ci-note">CDG duty free is excellent. Good gifts for family.</div></div></label>
+      </div>
+      <div class="cl-section">
+        <div class="cl-title">Departure</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Fly Paris CDG → India ✈</div><div class="ci-note">Air France, Air India or IndiGo codeshare. Direct to Delhi/Mumbai.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Post final Europe Reel on the plane</div><div class="ci-note">"16 days, 5 countries, ₹1.5 lakh. Honest review." — your best performing post.</div></div></label>
+      </div>
+    </div>
+  </div>
+
+      <div class="sec-label">
+    <div class="sec-label-line"></div>
+    <span class="sec-label-text">City & Country Guides</span>
+    <div class="sec-label-line"></div>
+  </div>
+
+    <!-- Summary (mobile only — shows below days) -->
+    <div class="summary" style="display:block;" id="summary-mobile">
+      <div class="summary-header">
+        <div class="summary-title">Trip at a <em>glance</em></div>
+      </div>
+      <div class="summary-grid">
+        <div class="summary-stat"><div class="summary-num">16</div><div class="summary-label">Days</div></div>
+        <div class="summary-stat"><div class="summary-num">5</div><div class="summary-label">Countries</div></div>
+        <div class="summary-stat"><div class="summary-num">6</div><div class="summary-label">Cities</div></div>
+        <div class="summary-stat"><div class="summary-num">₹1.5L</div><div class="summary-label">Budget</div></div>
+      </div>
+      <button class="reset-btn" onclick="resetAll()">↺  Reset All Checkboxes</button>
+    </div>
+
+  </div>
+
+  <!-- RIGHT SIDEBAR (desktop) / Below days (mobile) -->
+  <div class="page-right">
+
+    <div class="sec-label" style="margin-top:0">
+      <div class="sec-label-line"></div>
+      <span class="sec-label-text">City & Country Guides</span>
+      <div class="sec-label-line"></div>
+    </div>
+
+    <div class="city-section">
+      <div class="city-tabs">
+        <button class="ctab act-austria"    onclick="showCity('austria',this)">🇦🇹 Austria</button>
+        <button class="ctab"               onclick="showCity('munich',this)">🇩🇪 Munich</button>
+        <button class="ctab"               onclick="showCity('czech',this)">🇨🇿 Prague</button>
+        <button class="ctab"               onclick="showCity('germany',this)">🇩🇪 Berlin</button>
+        <button class="ctab"               onclick="showCity('netherlands',this)">🇳🇱 Amsterdam</button>
+        <button class="ctab"               onclick="showCity('france',this)">🇫🇷 Paris</button>
+        <button class="ctab"               onclick="showCity('india',this)">🇮🇳 Pre-trip</button>
+      </div>
+<div class="city-tabs">
+      <button class="ctab act-austria"    onclick="showCity('austria',this)">🇦🇹 Austria</button>
+      <button class="ctab"               onclick="showCity('munich',this)">🇩🇪 Munich</button>
+      <button class="ctab"               onclick="showCity('czech',this)">🇨🇿 Prague</button>
+      <button class="ctab"               onclick="showCity('germany',this)">🇩🇪 Berlin</button>
+      <button class="ctab"               onclick="showCity('netherlands',this)">🇳🇱 Amsterdam</button>
+      <button class="ctab"               onclick="showCity('france',this)">🇫🇷 Paris</button>
+      <button class="ctab"               onclick="showCity('india',this)">🇮🇳 Pre-trip</button>
+    </div>
+<div class="city-tabs">
+      <button class="ctab act-austria" onclick="showCity('austria',this)">🇦🇹 Austria</button>
+      <button class="ctab" onclick="showCity('munich',this)">🇩🇪 Munich</button>
+      <button class="ctab" onclick="showCity('czech',this)">🇨🇿 Prague</button>
+      <button class="ctab" onclick="showCity('germany',this)">🇩🇪 Berlin</button>
+      <button class="ctab" onclick="showCity('netherlands',this)">🇳🇱 Amsterdam</button>
+      <button class="ctab" onclick="showCity('france',this)">🇫🇷 Paris</button>
+      <button class="ctab" onclick="showCity('india',this)">🇮🇳 Pre-trip</button>
+    </div>
+
+    <div id="city-austria" class="city-panel" style="display:block;padding:1.25rem;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
+        <div style="background:var(--surface2);border-radius:4px;padding:12px;">
+          <div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--kitzbuhel);margin-bottom:8px;font-weight:600;">Country Info</div>
+          <div style="font-size:12px;color:var(--ink);line-height:2;">💶 Currency: Euro (€)<br>📱 Dialling: +43<br>🗣️ Language: German<br>🚨 Emergency: 112<br>🏥 Police: 133<br>⏰ Timezone: CEST (IST -3:30)</div>
+        </div>
+        <div style="background:var(--surface2);border-radius:4px;padding:12px;">
+          <div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--kitzbuhel);margin-bottom:8px;font-weight:600;">Kitzbühel Quick Info</div>
+          <div style="font-size:12px;color:var(--ink);line-height:2;">📍 Region: Tyrol, Alps<br>🏔️ Altitude: 762m<br>🌡️ June temp: 18–24°C<br>🚂 Station: Hahnenkamm<br>🏨 Hotel: Grand Hotel<br>📶 SIM: A1 or Magenta</div>
+        </div>
+      </div>
+      <div class="city-cl cl-section" style="class-replacedmargin-bottom:10px;">
+        <div class="cl-title">Kitzbühel — Must Do ✅</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Hahnenkamm Cable Car — ride to 1,665m summit</div><div class="ci-note">Best panoramic Alpine view. Film for Instagram. ~€25 return.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Kitzbühel Old Town medieval walk</div><div class="ci-note">Colourful Austrian facades, flower balconies, cobblestones. Free.</div></div><span class="ct ct-free">Free</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Schwarzsee Lake swim</div><div class="ci-note">Warm Alpine lake in June. 15 min walk. Free.</div></div><span class="ct ct-free">Free</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">St. Andreas Church — gilded altar</div><div class="ci-note">Free entry. Baroque interior worth seeing.</div></div><span class="ct ct-free">Free</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Hornweg trail — evening mountain walk</div><div class="ci-note">Flat, scenic path around town. Sunset views.</div></div><span class="ct ct-free">Free</span></label>
+      </div>
+      <div class="city-cl cl-section" style="class-replacedmargin-bottom:10px;">
+        <div class="cl-title">Kitzbühel — Must Eat 🍽️</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Käsespätzle — Austrian cheesy noodles</div><div class="ci-note">Like mac & cheese but better. ~€10 at any gasthaus.</div></div><span class="ct ct-food">Food</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Wiener Schnitzel — classic Austrian dish</div><div class="ci-note">Huberbräu Stüberl is the best spot in Kitzbühel. ~€15.</div></div><span class="ct ct-food">Food</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Pretzel + Obatzda (Bavarian cheese dip)</div><div class="ci-note">Classic Austrian snack. Any beer hall. ~€5.</div></div><span class="ct ct-food">Food</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Local Austrian beer — Weissbier or Helles</div><div class="ci-note">Order at Stamperl Bar or hotel bar. ~€4–5.</div></div><span class="ct ct-food">Food</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Apfelstrudel — Austrian apple pastry</div><div class="ci-note">Best dessert in Austria. Any café. ~€4.</div></div><span class="ct ct-food">Food</span></label>
+      </div>
+      <div class="city-cl cl-section" style="class-replaced">
+        <div class="cl-title">Kitzbühel — Transport & Tips</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Train station: Kitzbühel Hahnenkamm</div><div class="ci-note">Used for ÖBB trains to Salzburg and beyond</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Town is fully walkable — no transport needed</div><div class="ci-note">Everything within 15 min walk</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Tip: German is the language — learn basic phrases</div><div class="ci-note">Danke (thanks), Bitte (please), Entschuldigung (excuse me)</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Indian Embassy Vienna: +43 1 5053666</div></div></label>
+      </div>
+    </div>
+
+        <div id="city-munich" class="city-panel" style="display:none;padding:1.25rem;">
+      <div style="background:rgba(184,134,11,0.08);border:1px solid rgba(184,134,11,0.2);border-radius:4px;padding:12px;margin-bottom:1rem;">
+        <div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;font-weight:600;">Transit Stop — 27th June (Saturday)</div>
+        <div style="font-size:12px;color:#5A3A10;">You arrive from Kitzbühel by car (~2.5hrs). Depending on your train time to Prague, you could have 2–6 hours in Munich. Make the most of it!</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
+        <div style="background:var(--surface2);border-radius:4px;padding:12px;">
+          <div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--transit);margin-bottom:8px;font-weight:600;">Munich Quick Info</div>
+          <div style="font-size:12px;color:var(--ink);line-height:2;">💶 Currency: Euro (€)<br>📱 Dialling: +49<br>🗣️ Language: German<br>🚨 Emergency: 112<br>🚂 Station: München Hbf<br>⏰ Timezone: CEST (IST -3:30)</div>
+        </div>
+        <div style="background:var(--surface2);border-radius:4px;padding:12px;">
+          <div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--transit);margin-bottom:8px;font-weight:600;">Transit Tips</div>
+          <div style="font-size:12px;color:var(--ink);line-height:2;">🚂 Train to Prague: München Hbf<br>⏱️ Prague train: ~6hrs<br>🎫 Buy ticket: oebb.at / bahn.com<br>🧳 Left luggage at Hbf: €5<br>🚇 S-Bahn from airport: 40 min<br>📍 Centre: 15 min walk from Hbf</div>
+        </div>
+      </div>
+      <div class="city-cl cl-section" style="class-replacedmargin-bottom:10px;">
+        <div class="cl-title">Munich — If you have 2–3 hours (nearby Hbf)</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Store luggage at München Hbf left luggage lockers</div><div class="ci-note">€5–8. Walk freely without bags. Essential for transit.</div></div><span class="ct ct-must">First</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Marienplatz — Munich's iconic central square</div><div class="ci-note">15 min walk from Hbf. New Town Hall + Glockenspiel clock. Free.</div></div><span class="ct ct-free">Free</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Viktualienmarkt — open air food market</div><div class="ci-note">Next to Marienplatz. Pretzel (€1.50), currywurst (€4), beer (€5). Free to browse.</div></div><span class="ct ct-food">Food</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Hofbräuhaus — world's most famous beer hall</div><div class="ci-note">5 min from Marienplatz. Order 1L Masskrug (€11). Live oompah band.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Film Munich content — great for Instagram Stories</div><div class="ci-note">"Quick stop in Munich before heading to Prague" — authentic travel content.</div></div></label>
+      </div>
+      <div class="city-cl cl-section" style="class-replacedmargin-bottom:10px;">
+        <div class="cl-title">Munich — If you have 4–6 hours (more time)</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">English Garden — Europe's largest urban park</div><div class="ci-note">Watch surfers on Eisbach river wave (bizarre and brilliant). Beer garden inside. Free.</div></div><span class="ct ct-free">Free</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Nymphenburg Palace gardens</div><div class="ci-note">Free gardens. Former royal summer residence. Beautiful baroque architecture.</div></div><span class="ct ct-free">Free</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Augustiner Keller beer garden (locals' favourite)</div><div class="ci-note">Much more authentic than Hofbräuhaus. Dark lager under chestnut trees. Arnulfstrasse 52.</div></div><span class="ct ct-food">Food</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">BMW Museum — if interested in cars</div><div class="ci-note">€10 entry. Near Olympic Park. Only if you have 5–6 hours.</div></div></label>
+      </div>
+      <div class="city-cl cl-section" style="class-replacedmargin-bottom:10px;">
+        <div class="cl-title">Munich — Must Eat 🍽️</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Weisswurst — traditional Bavarian white sausage</div><div class="ci-note">Munich's breakfast speciality. Eaten before noon. ~€6 at Augustiner.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Pretzel (Brezel) — fresh from Viktualienmarkt</div><div class="ci-note">€1.50. Soft, salted, enormous. Classic Munich street food.</div></div><span class="ct ct-food">Food</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Currywurst with fries — Munich street snack</div><div class="ci-note">€4–5. Near Hauptbahnhof. Filling quick meal before train.</div></div><span class="ct ct-food">Food</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Käsespätzle — Bavarian cheesy noodles</div><div class="ci-note">Vegetarian. Like mac & cheese. Any gasthaus near Marienplatz. ~€9.</div></div><span class="ct ct-food">Food</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Mittagsmenü (lunch menu) — best budget deal</div><div class="ci-note">Full meal + drink for €8–9. Available 12–2pm at any restaurant. Look for signs outside.</div></div><span class="ct ct-food">Budget</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Lidl/REWE supermarket — budget breakfast</div><div class="ci-note">Next to Hbf. Full breakfast items for €4. Best budget hack.</div></div><span class="ct ct-food">Budget</span></label>
+      </div>
+      <div class="city-cl cl-section" style="class-replaced">
+        <div class="cl-title">Munich — Transport & Train to Prague</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Arrive München Hbf from Kitzbühel (~2.5hrs by car/train)</div><div class="ci-note">McKinsey car drops you at Munich. Head to Hbf for Prague train.</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Prague train departs München Hbf (NOT airport)</div><div class="ci-note">ÖBB train via Salzburg + Linz. ~8.5hrs. Depart early morning for best arrival time.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Buy Bayern Ticket if doing day trip (€29)</div><div class="ci-note">Covers all trains in Bavaria all day — great value if exploring more.</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">S-Bahn from city centre to Hbf (10 min, €3.70)</div><div class="ci-note">Or just walk — Marienplatz to Hbf is 15 min on foot.</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Indian Embassy Munich: +49 89 2102690</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">⚠️ 2026 note: Passau–Nuremberg route closed for trackwork</div><div class="ci-note">Prague train goes via Salzburg + Linz instead. Check oebb.at for exact timetable.</div></div><span class="ct ct-must">Important</span></label>
+      </div>
+    </div>
+
+     CZECH REPUBLIC /
+    <div id="city-czech" class="city-panel" style="display:none;padding:1.25rem;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
+        <div style="background:var(--surface2);border-radius:4px;padding:12px;">
+          <div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--prague);margin-bottom:8px;font-weight:600;">Country Info</div>
+          <div style="font-size:12px;color:var(--ink);line-height:2;">💴 Currency: Czech Koruna (CZK)<br>💱 Rate: €1 = ~25 CZK<br>📱 Dialling: +420<br>🗣️ Language: Czech<br>🚨 Emergency: 112<br>⏰ Timezone: CEST (IST -3:30)</div>
+        </div>
+        <div style="background:var(--surface2);border-radius:4px;padding:12px;">
+          <div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--prague);margin-bottom:8px;font-weight:600;">Prague Quick Info</div>
+          <div style="font-size:12px;color:var(--ink);line-height:2;">🚇 Metro: Lines A, B, C<br>🎫 24hr pass: ~€3<br>🍺 Beer: €1.50/pint<br>🏨 Hostel: Czech Inn<br>📍 Old Town: Centre<br>📶 SIM: T-Mobile CZ / O2</div>
+        </div>
+      </div>
+      <div class="city-cl cl-section" style="class-replacedmargin-bottom:10px;">
+        <div class="cl-title">Prague — Must See 👁️</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Charles Bridge — golden hour walk</div><div class="ci-note">Most beautiful bridge in Europe. Go 4–5pm for magic light. Free.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Prague Castle + St. Vitus Cathedral</div><div class="ci-note">World's largest castle. Take Tram 22. €15 entry.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Old Town Square + Astronomical Clock</div><div class="ci-note">Watch hourly show. Free. Buy Trdelník (chimney cake €2).</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Letná Park — panoramic Prague skyline</div><div class="ci-note">Free hilltop view. Best sunset spot. Buy beer from shop (€1.50).</div></div><span class="ct ct-free">Free</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Lennon Wall — colourful tribute wall</div><div class="ci-note">Near Charles Bridge. Free. Great photo spot.</div></div><span class="ct ct-free">Free</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Wenceslas Square — historic centre</div><div class="ci-note">Free walk. Site of Velvet Revolution 1989.</div></div><span class="ct ct-free">Free</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Jewish Quarter (Josefov) — walk through</div><div class="ci-note">Oldest Jewish cemetery in Europe. Free from outside.</div></div><span class="ct ct-free">Free</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Sandeman's free walking tour</div><div class="ci-note">Tip-based (~€5). Best way to meet people and learn the city.</div></div><span class="ct ct-free">Free</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Strahov Monastery Brewery — lunch with a view</div><div class="ci-note">Monk-brewed beer + Czech food. €10–12. Stunning panorama.</div></div><span class="ct ct-food">Food</span></label>
+      </div>
+      <div class="city-cl cl-section" style="class-replacedmargin-bottom:10px;">
+        <div class="cl-title">Prague — Must Eat 🍽️</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Svíčková — beef in cream sauce with bread dumplings</div><div class="ci-note">Czech national dish. Lokál restaurant. ~€8. Very filling.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Czech goulash with bread dumplings</div><div class="ci-note">Similar to Indian gravy — you'll love it. ~€7.</div></div><span class="ct ct-food">Food</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Trdelník — chimney cake street snack</div><div class="ci-note">Sweet doughy pastry. €2. Every street corner. Very Instagram.</div></div><span class="ct ct-food">Food</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Pilsner Urquell — cheapest beer in Europe (€1.50)</div><div class="ci-note">Film the price reveal — viral content for Indian audience.</div></div><span class="ct ct-food">Food</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Smazeny syr — fried cheese sandwich</div><div class="ci-note">Vegetarian street food. €3. Surprisingly delicious.</div></div><span class="ct ct-food">Food</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Indian food (if homesick) — Taj Mahal Old Town</div><div class="ci-note">Dal, naan, curry. ~€12 meal. Decent quality.</div></div><span class="ct ct-food">Food</span></label>
+      </div>
+      <div class="city-cl cl-section" style="class-replacedmargin-bottom:10px;">
+        <div class="cl-title">Prague — Nightlife 🌙</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Nebe club — popular dance club</div><div class="ci-note">Multiple floors, house/commercial music. Entry often free before midnight.</div></div><span class="ct ct-night">Night</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Hemingway Bar — world-class cocktails</div><div class="ci-note">€7 cocktails — expensive but worth one drink. Art deco interior.</div></div><span class="ct ct-night">Night</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Cross Club — industrial underground club</div><div class="ci-note">Wild steampunk décor. Techno/electronic. Very unique.</div></div><span class="ct ct-night">Night</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Charles Bridge at night — magical atmosphere</div><div class="ci-note">Free. Completely different vibe from daytime. Few crowds after 10pm.</div></div><span class="ct ct-free">Free</span></label>
+      </div>
+      <div class="city-cl cl-section" style="class-replaced">
+        <div class="cl-title">Prague — Transport & Tips</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Buy 24hr transit pass on arrival (€3)</div><div class="ci-note">Covers metro, trams, buses. Much cheaper than singles.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Use Wise card — NOT airport exchange</div><div class="ci-note">Airport exchange loses 20–30%. ATMs and Wise give fair rates.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Train departs from Praha Holešovice (NOT main station)</div><div class="ci-note">EuroCity to Berlin departs Holešovice — very important!</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Indian Embassy Prague: +420 257 533 490</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Learn basic Czech: Díky (thanks), Prosím (please)</div></div></label>
+      </div>
+    </div>
+
+     GERMANY /
+    <div id="city-germany" class="city-panel" style="display:none;padding:1.25rem;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
+        <div style="background:var(--surface2);border-radius:4px;padding:12px;">
+          <div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--berlin);margin-bottom:8px;font-weight:600;">Country Info</div>
+          <div style="font-size:12px;color:var(--ink);line-height:2;">💶 Currency: Euro (€)<br>📱 Dialling: +49<br>🗣️ Language: German<br>🚨 Emergency: 112<br>🏥 Police: 110<br>⏰ Timezone: CEST (IST -3:30)</div>
+        </div>
+        <div style="background:var(--surface2);border-radius:4px;padding:12px;">
+          <div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--berlin);margin-bottom:8px;font-weight:600;">Berlin Quick Info</div>
+          <div style="font-size:12px;color:var(--ink);line-height:2;">🚇 Transit: U-Bahn + S-Bahn<br>🎫 24hr pass: €9.90<br>🍺 Späti beer: €1.20<br>🏨 Hostel: The Circus<br>🕐 Clubs open: midnight<br>📶 SIM: O2 / Vodafone DE</div>
+        </div>
+      </div>
+      <div class="city-cl cl-section" style="class-replacedmargin-bottom:10px;">
+        <div class="cl-title">Berlin — Must See 👁️</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">East Side Gallery — 1.3km Berlin Wall murals</div><div class="ci-note">Free. Most emotionally powerful free sight in Europe. Film walking alongside.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Brandenburg Gate — Berlin's iconic landmark</div><div class="ci-note">Free. Best at golden hour — silhouette shot is iconic.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Holocaust Memorial — 2,711 concrete slabs</div><div class="ci-note">Free. Walk through slowly — haunting and unforgettable.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Reichstag Dome — Germany's Parliament</div><div class="ci-note">Free but pre-book at reichstag.de. Spiral ramp inside is spectacular.</div></div><span class="ct ct-book">Pre-book</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Museum Island — day pass 5 museums</div><div class="ci-note">€18. Pergamon has ancient Indian trade route artefacts.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Checkpoint Charlie — Cold War crossing</div><div class="ci-note">Free exterior. Historic crossing between East and West Berlin.</div></div><span class="ct ct-free">Free</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Hackescher Markt — trendy neighbourhood walk</div><div class="ci-note">Free. Cool cafes, street art, great evening atmosphere.</div></div><span class="ct ct-free">Free</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Prenzlauer Berg — local neighbourhood explore</div><div class="ci-note">Sunday flea market at Mauerpark (free). Very local Berlin.</div></div><span class="ct ct-free">Free</span></label>
+      </div>
+      <div class="city-cl cl-section" style="class-replacedmargin-bottom:10px;">
+        <div class="cl-title">Berlin — Must Eat 🍽️</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Döner kebab at Mustafa's (Mehringdamm)</div><div class="ci-note">Berlin's most famous kebab. €5. Queue 20–30 mins but worth it.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Currywurst at Curry 36</div><div class="ci-note">Berlin street food institution. €3.50. Mehringdamm station.</div></div><span class="ct ct-food">Food</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Späti (corner store) beer by Spree river</div><div class="ci-note">€1.20 beer. Sit by the river. Most Berlin thing you can do.</div></div><span class="ct ct-food">Food</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Falafel wrap near Checkpoint Charlie</div><div class="ci-note">€4. Berlin has a huge Middle Eastern food scene.</div></div><span class="ct ct-food">Food</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Markthalle Neun street food market</div><div class="ci-note">Tuesday/Saturdays. World food stalls. Very Instagram-worthy.</div></div><span class="ct ct-food">Food</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">REWE/Aldi supermarket meal deal</div><div class="ci-note">Sandwich + drink + snack for €4. Budget hack for breakfast/lunch.</div></div><span class="ct ct-food">Food</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Indian food in Neukölln area</div><div class="ci-note">Huge Indian/South Asian community. Many authentic restaurants.</div></div><span class="ct ct-food">Food</span></label>
+      </div>
+      <div class="city-cl cl-section" style="class-replacedmargin-bottom:10px;">
+        <div class="cl-title">Berlin — Nightlife 🌙</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Berghain — world's most exclusive club</div><div class="ci-note">Go alone, all black, calm at door. In or out — best viral video of trip.</div></div><span class="ct ct-must">Must Try</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Watergate — superclub on Spree river</div><div class="ci-note">Floor-to-ceiling windows over water. Very Indian-traveller friendly. €12–15.</div></div><span class="ct ct-night">Night</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Tresor — legendary 30-year-old techno club</div><div class="ci-note">Underground vault in former power plant. €10–15. More accessible than Berghain.</div></div><span class="ct ct-night">Night</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Rote Sonne — electronic/house backup option</div><div class="ci-note">Great music, easier entry. Good alternative.</div></div><span class="ct ct-night">Night</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Prater Biergarten — Berlin's oldest beer garden</div><div class="ci-note">Massive outdoor space. Great for pre-game. Free entry.</div></div><span class="ct ct-night">Night</span></label>
+      </div>
+      <div class="city-cl cl-section" style="class-replaced">
+        <div class="cl-title">Berlin — Transport & Tips</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Buy 24hr transit pass on arrival (€9.90)</div><div class="ci-note">Covers all U-Bahn, S-Bahn, trams, buses. Essential.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Bolt/Uber app for late night return from clubs</div><div class="ci-note">Never take unlicensed taxis outside clubs.</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Overnight FlixBus from Berlin ZOB station ~23:00</div><div class="ci-note">Not Berlin Hbf — ZOB is the central bus station. 10 min from Hbf.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Indian Embassy Berlin: +49 30 25795 0</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Ohne Fleisch = without meat (useful for ordering)</div></div></label>
+      </div>
+    </div>
+
+     NETHERLANDS /
+    <div id="city-netherlands" class="city-panel" style="display:none;padding:1.25rem;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
+        <div style="background:var(--surface2);border-radius:4px;padding:12px;">
+          <div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--amsterdam);margin-bottom:8px;font-weight:600;">Country Info</div>
+          <div style="font-size:12px;color:var(--ink);line-height:2;">💶 Currency: Euro (€)<br>📱 Dialling: +31<br>🗣️ Language: Dutch<br>🚨 Emergency: 112<br>🏥 Police: 0900-8844<br>⏰ Timezone: CEST (IST -3:30)</div>
+        </div>
+        <div style="background:var(--surface2);border-radius:4px;padding:12px;">
+          <div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--amsterdam);margin-bottom:8px;font-weight:600;">Amsterdam Quick Info</div>
+          <div style="font-size:12px;color:var(--ink);line-height:2;">🚋 Transit: Tram + Metro<br>🎫 OV-chipkaart: €1.08/ride<br>🚲 Bike rental: €10/day<br>🏨 Hostel: The Elephant<br>✈️ Airport: Schiphol (AMS)<br>📶 SIM: KPN / T-Mobile NL</div>
+        </div>
+      </div>
+      <div class="city-cl cl-section" style="class-replacedmargin-bottom:10px;">
+        <div class="cl-title">Amsterdam — Must See 👁️</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Anne Frank House — pre-booked</div><div class="ci-note">annefrank.org — SELLS OUT in July. Most powerful museum in Amsterdam.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Van Gogh Museum — pre-booked</div><div class="ci-note">vangoghmuseum.nl — world's best collection. Even non-art people love this.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Jordaan canal walk at golden hour</div><div class="ci-note">Most beautiful neighbourhood. Free. Buy Heineken from AH (€1.50).</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Cycle the canals — rent bike from hostel</div><div class="ci-note">Non-negotiable. €10/day. Mount phone on handlebar for POV reel.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Brouwerij 't IJ — craft beer in a windmill</div><div class="ci-note">Most uniquely Amsterdam spot. €4 craft beers. Funenkade 7.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">A'DAM Tower — rooftop swing (€5)</div><div class="ci-note">Swing 100m above Amsterdam. Film your reaction — great content.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Rijksmuseum — garden free, museum €22.50</div><div class="ci-note">Dutch Golden Age masterpieces. Free garden with sculptures.</div></div><span class="ct ct-free">Garden Free</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">NDSM Wharf — free ferry from Centraal</div><div class="ci-note">Industrial-cool North Amsterdam. Free ferry, very local vibe.</div></div><span class="ct ct-free">Free</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Vondelpark — sunset picnic</div><div class="ci-note">Amsterdam's central park. Free. Albert Heijn supplies for picnic.</div></div><span class="ct ct-free">Free</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Dam Square — Amsterdam's central square</div><div class="ci-note">Free. Royal Palace, National Monument, always buzzing.</div></div><span class="ct ct-free">Free</span></label>
+      </div>
+      <div class="city-cl cl-section" style="class-replacedmargin-bottom:10px;">
+        <div class="cl-title">Amsterdam — Must Eat 🍽️</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Surinamese roti at Roopram Roti</div><div class="ci-note">Albert Cuypstraat. Roti + curry + dal for €8. Tastes like home!</div></div><span class="ct ct-must">Indian Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Stroopwafel — Dutch caramel waffle cookie</div><div class="ci-note">€2 from street vendor. Buy tins (€4) from Albert Heijn as gifts.</div></div><span class="ct ct-food">Food</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Poffertjes — mini Dutch pancakes</div><div class="ci-note">€5 with butter and sugar. Albert Cuypmarkt. Very Dutch.</div></div><span class="ct ct-food">Food</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Gouda cheese from Jordaan market</div><div class="ci-note">€3 for big chunk. Try aged (old) variety — intense flavour.</div></div><span class="ct ct-food">Food</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Albert Heijn lunch box (€3.99)</div><div class="ci-note">Sandwich + fruit + drink. Best budget hack in Amsterdam.</div></div><span class="ct ct-food">Food</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Heineken from Albert Heijn (€1.50)</div><div class="ci-note">Drink by the canal. Most Amsterdam thing possible.</div></div><span class="ct ct-food">Food</span></label>
+      </div>
+      <div class="city-cl cl-section" style="class-replacedmargin-bottom:10px;">
+        <div class="cl-title">Amsterdam — Nightlife 🌙</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Paradiso — legendary club in converted church</div><div class="ci-note">Check resident-advisor.net for lineup. €15–20 entry.</div></div><span class="ct ct-night">Night</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Shelter Amsterdam — underground below A'DAM Tower</div><div class="ci-note">Techno + house. €10–18 entry. Go up tower first then underground.</div></div><span class="ct ct-night">Night</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Bitterzoet — live jazz/soul/funk</div><div class="ci-note">Intimate venue, easy to meet people solo. €8 entry.</div></div><span class="ct ct-night">Night</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Rembrandtplein bar crawl</div><div class="ci-note">10+ bars around the square. Very international crowd. Free.</div></div><span class="ct ct-night">Night</span></label>
+      </div>
+      <div class="city-cl cl-section" style="class-replaced">
+        <div class="cl-title">Amsterdam — Transport & Tips</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Buy OV-chipkaart on arrival (€1.08/ride)</div><div class="ci-note">Tram + metro. €3.20 for single tickets — OV saves a lot.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Train to Schiphol from Centraal (€4.50, 17 mins)</div><div class="ci-note">Direct. Arrive at airport 3hrs before international flight.</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Eurostar to Paris departs Amsterdam Centraal</div><div class="ci-note">Also stops at Schiphol Airport — board at either.</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Indian Embassy Amsterdam: +31 70 3469771</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Dank je wel = Thank you in Dutch</div></div></label>
+      </div>
+    </div>
+
+     FRANCE /
+    <div id="city-france" class="city-panel" style="display:none;padding:1.25rem;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
+        <div style="background:var(--surface2);border-radius:4px;padding:12px;">
+          <div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--paris);margin-bottom:8px;font-weight:600;">Country Info</div>
+          <div style="font-size:12px;color:var(--ink);line-height:2;">💶 Currency: Euro (€)<br>📱 Dialling: +33<br>🗣️ Language: French<br>🚨 Emergency: 112<br>🏥 Police: 17<br>⏰ Timezone: CEST (IST -3:30)</div>
+        </div>
+        <div style="background:var(--surface2);border-radius:4px;padding:12px;">
+          <div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--paris);margin-bottom:8px;font-weight:600;">Paris Quick Info</div>
+          <div style="font-size:12px;color:var(--ink);line-height:2;">🚇 Metro: Lines 1–14<br>🎫 Single ticket: €2.15<br>✈️ Airport: CDG (RER B)<br>🗼 Eiffel Tower: Pre-book!<br>⏰ Day trip only (5 Jul)<br>📶 SIM: Orange / SFR</div>
+        </div>
+      </div>
+      <div class="city-cl cl-section" style="class-replacedmargin-bottom:10px;">
+        <div class="cl-title">Paris — Must See (Day Trip) 👁️</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Eiffel Tower — pre-booked timed entry</div><div class="ci-note">toureiffel.paris — MUST pre-book, sells out July. Go 2nd floor for best view. ~€29.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Champ de Mars picnic below Eiffel Tower</div><div class="ci-note">Buy baguette + cheese + wine nearby (€6). Most Parisian moment possible.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Arc de Triomphe exterior walk</div><div class="ci-note">Free from outside. Walk down Champs-Élysées — iconic boulevard.</div></div><span class="ct ct-free">Free</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Louvre pyramid exterior photo</div><div class="ci-note">Free from outside. One of the most recognisable shots in the world.</div></div><span class="ct ct-free">Free</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Seine river walk</div><div class="ci-note">Free. Walk between Eiffel Tower and Louvre along the river. Beautiful.</div></div><span class="ct ct-free">Free</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Notre-Dame Cathedral exterior</div><div class="ci-note">Free from outside. Restored after 2019 fire — stunning.</div></div><span class="ct ct-free">Free</span></label>
+      </div>
+      <div class="city-cl cl-section" style="class-replacedmargin-bottom:10px;">
+        <div class="cl-title">Paris — Must Eat 🍽️</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Fresh baguette + French cheese (€4)</div><div class="ci-note">From any boulangerie. Eat by the Seine. Peak Paris experience.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Café au lait at a street terrace</div><div class="ci-note">€3. Sit outside, people-watch. Very French.</div></div><span class="ct ct-food">Food</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Croissant from a boulangerie</div><div class="ci-note">€1.50. Best in the world in Paris. Eat warm.</div></div><span class="ct ct-food">Food</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Crêpe from a street vendor (€4)</div><div class="ci-note">Sweet (Nutella) or savoury (cheese + ham). Near Eiffel Tower area.</div></div><span class="ct ct-food">Food</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Duty free at CDG — Champagne or perfume</div><div class="ci-note">Excellent duty free. Good gifts for family. Buy before boarding.</div></div><span class="ct ct-food">Gift</span></label>
+      </div>
+      <div class="city-cl cl-section" style="class-replaced">
+        <div class="cl-title">Paris — Transport & Tips</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Arrive Paris Gare du Nord — take RER B or Metro</div><div class="ci-note">Metro Line 4 or RER B. Single ticket €2.15. 30–35 min to Eiffel area.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">RER B to CDG airport (€12, 35 mins direct)</div><div class="ci-note">From any central Paris station. Arrive 3hrs before international flight.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Download Paris metro map offline</div><div class="ci-note">Google Maps works well. Also download RATP app.</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Merci (thank you), Bonjour (hello), S'il vous plaît (please)</div><div class="ci-note">French people appreciate when you try basic French!</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Indian Embassy Paris: +33 1 40507070</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Leave Paris by 16:00 latest for CDG for evening flight</div><div class="ci-note">Build in buffer time — Paris traffic can be heavy on Sundays.</div></div><span class="ct ct-must">Must</span></label>
+      </div>
+    </div>
+
+        <div id="city-india" class="city-panel" style="display:none;padding:1.25rem;">
+      <div style="background:linear-gradient(135deg,rgba(255,153,0,0.08),rgba(19,136,8,0.05));border:1px solid rgba(255,153,0,0.2);border-radius:4px;padding:12px;margin-bottom:1rem;">
+        <div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#FF9900;margin-bottom:6px;font-weight:600;">Before You Leave India</div>
+        <div style="font-size:12px;color:#5A3A10;">Complete these before 20th June. Missing any of these can ruin the trip.</div>
+      </div>
+      <div class="city-cl cl-section" style="class-replacedmargin-bottom:10px;">
+        <div class="cl-title">Documents & Visa</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Schengen visa (Austrian) — valid + printed</div><div class="ci-note">Carry original + 2 photocopies. Check validity dates carefully.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Passport valid 6+ months beyond travel dates</div><div class="ci-note">Must be valid till at least January 2027.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">McKinsey invitation letter (official training)</div><div class="ci-note">Carry original + copy. May be asked at immigration.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">NOC from McKinsey GCPL (personal travel)</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Hotel/hostel booking confirmations — all cities</div><div class="ci-note">Print or screenshot all confirmations offline.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Travel insurance policy — printed</div><div class="ci-note">Mandatory for Schengen visa. Carry policy document.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Return flight ticket — printed</div></div><span class="ct ct-must">Must</span></label>
+      </div>
+      <div class="city-cl cl-section" style="class-replacedmargin-bottom:10px;">
+        <div class="cl-title">Money & Banking</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Wise card — load €800 equivalent</div><div class="ci-note">Best zero-forex card. Saves ₹3,000–5,000 vs standard cards.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Inform Indian bank before travel</div><div class="ci-note">HDFC/ICICI/SBI — call and inform to avoid card blocks abroad.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Carry €50 cash for emergencies</div><div class="ci-note">ATMs are fine for rest. Never exchange at airport.</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Note Czech Koruna — Prague uses CZK not Euro</div><div class="ci-note">€1 = ~25 CZK. Don't get confused with exchange rates.</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Note Hungarian Forint — if Budapest is added</div><div class="ci-note">€1 = ~390 HUF. Everything is very cheap.</div></div></label>
+      </div>
+      <div class="city-cl cl-section" style="class-replacedmargin-bottom:10px;">
+        <div class="cl-title">Phone, Apps & Tech</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Airtel/Jio international roaming pack OR EU SIM</div><div class="ci-note">EU SIM (Lebara/Lycamobile, €10) works across all Schengen countries via EU roaming.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Google Maps offline — all 5 cities downloaded</div><div class="ci-note">Download: Kitzbühel, Prague, Berlin, Amsterdam, Paris.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Google Translate offline packs — German, Czech, Dutch, French</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Install: FlixBus, DB Navigator, Wise, Hostelworld, Citymapper</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Install: Bolt/Uber for late night transport</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Universal EU Type C/F adapter</div><div class="ci-note">India uses Type D — Europe uses C/F. Buy before leaving.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">20,000mAh power bank fully charged</div></div><span class="ct ct-must">Must</span></label>
+      </div>
+      <div class="city-cl cl-section" style="class-replacedmargin-bottom:10px;">
+        <div class="cl-title">What to Pack</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">T-shirts (5–6) + 1 light jacket</div><div class="ci-note">June/July is 20–26°C days, 12–15°C evenings. Light jacket essential.</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Comfortable walking shoes (broken in)</div><div class="ci-note">You'll walk 15–20km/day. New shoes = blisters. Break them in first.</div></div><span class="ct ct-must">Must</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Smart-casual outfit for clubs (1–2)</div><div class="ci-note">Dark plain clothes for Berlin clubs. No sportswear for Munich/Amsterdam.</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Quick-dry travel towel</div><div class="ci-note">Hostels charge for towels (€2–5). Bring your own.</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Compact umbrella</div><div class="ci-note">June/July has occasional heavy showers. Clears quickly.</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Sunscreen SPF 50</div><div class="ci-note">10–13 hours sunshine daily in June/July. Stronger than India expects.</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Neck pillow + eye mask + earplugs</div><div class="ci-note">For flight to Europe + overnight FlixBus Berlin→Amsterdam.</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Small padlock for hostel lockers</div><div class="ci-note">Most hostels have lockers but no padlock. Buy one before.</div></div></label>
+      </div>
+      <div class="city-cl cl-section" style="class-replacedmargin-bottom:10px;">
+        <div class="cl-title">Pre-Book Before Leaving India</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Anne Frank House — annefrank.org</div><div class="ci-note">Sells out weeks ahead in July. Book ASAP.</div></div><span class="ct ct-must">Book Now</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Van Gogh Museum — vangoghmuseum.nl</div></div><span class="ct ct-must">Book Now</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Reichstag Dome Berlin — reichstag.de</div><div class="ci-note">Free but limited slots — book now.</div></div><span class="ct ct-must">Book Now</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Eiffel Tower — toureiffel.paris</div><div class="ci-note">Sells out in July. Book timed entry.</div></div><span class="ct ct-must">Book Now</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Amsterdam → Paris Eurostar — eurostar.com</div><div class="ci-note">€35 early bird. Fills fast for July.</div></div><span class="ct ct-must">Book Now</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Prague → Berlin EuroCity — bahn.com</div><div class="ci-note">€19 early bird from Praha Holešovice.</div></div><span class="ct ct-must">Book Now</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Berlin → Amsterdam overnight FlixBus — flixbus.com</div><div class="ci-note">Departs ~23:00. Saves hostel night.</div></div><span class="ct ct-must">Book Now</span></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">All hostels — hostelworld.com</div><div class="ci-note">Czech Inn Prague · The Circus Berlin · The Elephant Amsterdam</div></div><span class="ct ct-must">Book Now</span></label>
+      </div>
+      <div class="city-cl cl-section" style="class-replaced">
+        <div class="cl-title">Emergency Contacts</div>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">EU Emergency number: 112</div><div class="ci-note">Works in all 5 countries — police, ambulance, fire</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Indian Embassy Austria (Vienna): +43 1 5053666</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Indian Embassy Czech Republic (Prague): +420 257 533 490</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Indian Embassy Germany (Berlin): +49 30 25795 0</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Indian Embassy Netherlands (The Hague): +31 70 3469771</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Indian Embassy France (Paris): +33 1 40507070</div></div></label>
+        <label class="ci"><input type="checkbox"><div class="ci-box"></div><div class="ci-body"><div class="ci-title">Screenshot all contacts offline before travel</div></div><span class="ct ct-must">Must</span></label>
+      </div>
+    </div>
+  </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function tog(id){
+  document.getElementById(id).classList.toggle('open');
+  updateProg();
+}
+
+document.querySelectorAll('.ci').forEach(el=>{
+  el.addEventListener('click',function(e){
+    if(e.target.tagName==='INPUT') return;
+    const cb=this.querySelector('input');
+    cb.checked=!cb.checked;
+    this.classList.toggle('checked',cb.checked);
+    save(); updateProg();
+  });
+});
+
+function updateProg(){
+  const all=document.querySelectorAll('.ci input');
+  const done=[...all].filter(c=>c.checked).length;
+  const pct=all.length?(done/all.length*100):0;
+  document.getElementById('fill').style.width=pct+'%';
+  document.getElementById('cnt').textContent=done+' / '+all.length;
+}
+
+function save(){
+  const s={};
+  document.querySelectorAll('.ci input').forEach((cb,i)=>s[i]=cb.checked);
+  try{localStorage.setItem('eu26v5',JSON.stringify(s));}catch(e){}
+}
+
+function load(){
+  try{
+    const s=JSON.parse(localStorage.getItem('eu26v5')||'{}');
+    document.querySelectorAll('.ci input').forEach((cb,i)=>{
+      if(s[i]){cb.checked=true;cb.closest('.ci').classList.add('checked');}
+    });
+  }catch(e){}
+  updateProg();
+}
+
+function resetAll(){
+  if(!confirm('Reset all checkboxes?'))return;
+  document.querySelectorAll('.ci input').forEach(cb=>{
+    cb.checked=false;cb.closest('.ci').classList.remove('checked');
+  });
+  try{localStorage.removeItem('eu26v5');}catch(e){}
+  updateProg();
+}
+
+function showCity(city,btn){
+  document.querySelectorAll('.city-panel').forEach(p=>{
+    p.style.display='none'; p.classList.remove('active');
+  });
+  const panel=document.getElementById('city-'+city);
+  if(panel){panel.style.display='block'; panel.classList.add('active');}
+  document.querySelectorAll('.ctab').forEach(t=>t.className='ctab');
+  if(btn){
+    btn.classList.add('act-'+city);
+    setTimeout(()=>btn.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'}),50);
+  }
+}
+
+// Hide mobile summary on desktop
+function handleLayout(){
+  const mob=document.getElementById('summary-mobile');
+  if(!mob) return;
+  mob.style.display = window.innerWidth>=960 ? 'none' : 'block';
+}
+window.addEventListener('resize', handleLayout);
+handleLayout();
+
+// Init
+document.getElementById('day1').classList.add('open');
+const ap=document.querySelector('#city-austria');
+if(ap){ap.style.display='block'; ap.classList.add('active');}
+load();
+updateProg();
+</script>
+</body>
+</html>
