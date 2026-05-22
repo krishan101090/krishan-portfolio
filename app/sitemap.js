@@ -1,4 +1,5 @@
 import { listProfileSlugs, DEFAULT_PROFILE_SLUG, getProfile } from '@/lib/profiles'
+import { isProfileIndexed } from '@/lib/seo-helpers'
 
 export default function sitemap() {
   const slugs = listProfileSlugs()
@@ -8,13 +9,13 @@ export default function sitemap() {
     defaultProfile?.seo?.siteUrl ||
     'https://krishanmohan.dev'
   ).replace(/\/$/, '')
-  const now = new Date()
+  const lastModified = new Date(defaultProfile?.seo?.lastModified || Date.now())
 
   const entries = [
     {
       url: `${base}/`,
-      lastModified: now,
-      changeFrequency: 'monthly',
+      lastModified,
+      changeFrequency: 'weekly',
       priority: 1.0,
       alternates: {
         languages: {
@@ -27,26 +28,19 @@ export default function sitemap() {
 
   for (const slug of slugs) {
     if (slug === DEFAULT_PROFILE_SLUG) continue
+    const profile = getProfile(slug)
+    if (!isProfileIndexed(profile)) continue
     entries.push({
       url: `${base}/${slug}`,
-      lastModified: now,
+      lastModified,
       changeFrequency: 'monthly',
-      priority: 0.8,
+      priority: 0.5,
       alternates: {
         languages: {
           'en-US': `${base}/${slug}`,
           'x-default': `${base}/${slug}`,
         },
       },
-    })
-  }
-
-  for (const resume of defaultProfile?.resumes || []) {
-    entries.push({
-      url: `${base}${resume.href}`,
-      lastModified: now,
-      changeFrequency: 'yearly',
-      priority: 0.6,
     })
   }
 

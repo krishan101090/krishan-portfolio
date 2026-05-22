@@ -1,7 +1,10 @@
 import ResumeDownloads from './ResumeDownloads'
+import { sortByPeriod } from '@/lib/recency'
 import styles from './Achievements.module.css'
 
 export default function Achievements({ achievements, certifications, resumes }) {
+  const items = sortByPeriod(achievements.items || [])
+
   return (
     <section id="achievements" className={styles.section} aria-labelledby="achievements-title">
       <div className={styles.head}>
@@ -16,7 +19,7 @@ export default function Achievements({ achievements, certifications, resumes }) 
 
       <div className={styles.metrics}>
         {achievements.metrics.map((m) => (
-          <div key={m.label} className={`${styles.metric} reveal`}>
+          <div key={m.label} className={`${styles.metric} hud-panel reveal`}>
             <div className={styles.metricValue}>{m.value}</div>
             <div className={styles.metricLabel}>{m.label}</div>
           </div>
@@ -24,10 +27,10 @@ export default function Achievements({ achievements, certifications, resumes }) 
       </div>
 
       <div className={styles.grid}>
-        {achievements.items.map((item, i) => (
+        {items.map((item, i) => (
           <article
             key={item.title}
-            className={`${styles.card} reveal`}
+            className={`${styles.card} hud-panel reveal`}
             style={{ '--i': i }}
           >
             {item.metric && (

@@ -9,7 +9,7 @@ export default function Services({ services, email }) {
           Technical focus across <span className={styles.emphasis}>enterprise product engineering</span>.
         </h2>
         <p className={styles.subtitle}>
-          Core strengths from 10+ years delivering web platforms for McKinsey, BlackRock, and global brands.
+          Core strengths from 10+ years delivering web platforms for McKinsey, BlackRock, and global brands — React and Next.js on the frontend, Python and FastAPI on the backend.
         </p>
       </div>
 
@@ -17,7 +17,7 @@ export default function Services({ services, email }) {
         {services.map((s, i) => (
           <article
             key={s.title}
-            className={`${styles.card} reveal`}
+            className={`${styles.card} hud-panel reveal`}
             style={{ '--i': i }}
             aria-label={s.title}
           >
@@ -38,7 +38,7 @@ export default function Services({ services, email }) {
         ))}
       </div>
 
-      <div className={`${styles.banner} reveal`}>
+      <div className={`${styles.banner} hud-panel hud-scanline reveal`}>
         <div>
           <span className={styles.bannerLabel}>Professional inquiries welcome</span>
           <p className={styles.bannerText}>

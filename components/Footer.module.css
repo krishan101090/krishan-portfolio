@@ -18,30 +18,7 @@
 .left {
   display: flex;
   align-items: center;
-  gap: 14px;
-}
-
-.mark {
-  display: flex;
-  gap: 3px;
-}
-
-.dot {
-  width: 5px;
-  height: 5px;
-  background: var(--cyan);
-  border-radius: 50%;
-  box-shadow: 0 0 8px var(--cyan);
-}
-
-.dot:nth-child(2) {
-  background: var(--lime);
-  box-shadow: 0 0 8px var(--lime);
-}
-
-.dot:nth-child(3) {
-  background: var(--magenta);
-  box-shadow: 0 0 8px var(--magenta);
+  gap: 12px;
 }
 
 .copy {

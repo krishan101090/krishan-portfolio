@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { STARTER_PROMPTS } from '@/lib/krishan-bot-prompts'
+import JarvisOrb from './JarvisOrb'
+import ProfileAvatar from './ProfileAvatar'
 import styles from './KrishanGPT.module.css'
 
 function linkify(text) {
@@ -19,7 +21,7 @@ function linkify(text) {
 }
 
 function welcomeMessage(firstName) {
-  return `Hi — I'm KrishanGPT. Ask me about ${firstName}'s work, experience, skills, wins, or how to connect.`
+  return `Signal acquired. I am KrishanGPT — a neural mirror of ${firstName}'s portfolio. Ask about work, wins, skills, or how to connect.`
 }
 
 export default function KrishanGPT({ profileSlug, person }) {
@@ -85,7 +87,7 @@ export default function KrishanGPT({ profileSlug, person }) {
     } catch {
       setMessages((prev) => [
         ...prev,
-        { role: 'bot', text: 'I could not reach the server. Please try again in a moment.' },
+        { role: 'bot', text: 'Signal lost. Retry transmission in a moment.' },
       ])
       setSuggestions(STARTER_PROMPTS)
     } finally {
@@ -101,92 +103,133 @@ export default function KrishanGPT({ profileSlug, person }) {
   return (
     <div className={styles.root}>
       {open ? (
-        <div className={styles.panel} role="dialog" aria-label="KrishanGPT chat">
-          <div className={styles.header}>
-            <div className={styles.headerInfo}>
-              <div className={styles.avatar} aria-hidden="true">
-                GPT
-              </div>
-              <div>
-                <div className={styles.headerTitle}>KrishanGPT</div>
-                <div className={styles.headerSub}>Answers from {person.name}&apos;s portfolio</div>
-              </div>
-            </div>
-            <button
-              type="button"
-              className={styles.closeBtn}
-              onClick={() => setOpen(false)}
-              aria-label="Close chat"
-            >
-              ✕
-            </button>
+        <div
+          id="krishangpt-panel"
+          className={styles.panel}
+          role="dialog"
+          aria-label="KrishanGPT chat"
+        >
+          <div className={styles.panelFx} aria-hidden="true">
+            <span className={styles.fxRing} />
+            <span className={styles.fxNebula} />
+            <span className={styles.fxGrid} />
+            <span className={styles.fxScan} />
+            <span className={styles.fxOrb1} />
+            <span className={styles.fxOrb2} />
+            <span className={styles.fxOrb3} />
           </div>
 
-          <div className={styles.messages} ref={listRef} aria-live="polite">
-            {messages.map((msg, i) => (
-              <div
-                key={`${msg.role}-${i}`}
-                className={`${styles.message} ${msg.role === 'user' ? styles.user : styles.bot}`}
-              >
-                {msg.role === 'bot' ? linkify(msg.text) : msg.text}
+          <div className={styles.panelInner}>
+            <div className={styles.header}>
+              <div className={styles.headerInfo}>
+                {person.photo ? (
+                  <ProfileAvatar person={person} size="sm" active={typing} />
+                ) : (
+                  <JarvisOrb active={typing} size="sm" />
+                )}
+                <div>
+                  <div className={styles.headerTag}>NEURAL UPLINK</div>
+                  <div className={styles.headerTitle}>KrishanGPT</div>
+                  <div className={styles.headerSub}>
+                    <span className={styles.statusDot} />
+                    Entity mirror · {person.name}
+                  </div>
+                </div>
               </div>
-            ))}
-            {typing ? (
-              <div className={styles.typing} aria-label="KrishanGPT is typing">
-                <span />
-                <span />
-                <span />
+              <button
+                type="button"
+                className={styles.closeBtn}
+                onClick={() => setOpen(false)}
+                aria-label="Close chat"
+              >
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+
+            <div className={styles.messages} ref={listRef} aria-live="polite">
+              {messages.map((msg, i) => (
+                <div
+                  key={`${msg.role}-${i}`}
+                  className={`${styles.message} ${msg.role === 'user' ? styles.user : styles.bot}`}
+                >
+                  <span className={styles.msgLabel}>{msg.role === 'user' ? 'YOU' : 'NODE'}</span>
+                  <div className={styles.msgBody}>
+                    {msg.role === 'bot' ? linkify(msg.text) : msg.text}
+                  </div>
+                </div>
+              ))}
+              {typing ? (
+                <div className={styles.typing} aria-label="KrishanGPT is typing">
+                  <div className={styles.typingOrb}>
+                    <span className={styles.typingRing} />
+                    <span className={styles.typingCore} />
+                  </div>
+                  <span className={styles.typingText}>Decoding response...</span>
+                </div>
+              ) : null}
+            </div>
+
+            {suggestions.length ? (
+              <div className={styles.suggestions}>
+                <span className={styles.suggestLabel}>Quick probes</span>
+                <div className={styles.chipRow}>
+                  {suggestions.map((prompt) => (
+                    <button
+                      key={prompt}
+                      type="button"
+                      className={styles.chip}
+                      onClick={() => sendMessage(prompt)}
+                      disabled={typing}
+                    >
+                      <span className={styles.chipGlyph} aria-hidden="true">◇</span>
+                      {prompt}
+                    </button>
+                  ))}
+                </div>
               </div>
             ) : null}
-          </div>
 
-          {suggestions.length ? (
-            <div className={styles.suggestions}>
-              {suggestions.map((prompt) => (
-                <button
-                  key={prompt}
-                  type="button"
-                  className={styles.chip}
-                  onClick={() => sendMessage(prompt)}
+            <form className={styles.composer} onSubmit={onSubmit}>
+              <label className={styles.composerLabel} htmlFor="krishangpt-input">
+                Transmit signal
+              </label>
+              <div className={styles.composerRow}>
+                <input
+                  ref={inputRef}
+                  id="krishangpt-input"
+                  className={styles.input}
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  placeholder="Ask the neural mirror..."
+                  aria-label="Message KrishanGPT"
                   disabled={typing}
+                  maxLength={500}
+                />
+                <button
+                  type="submit"
+                  className={styles.sendBtn}
+                  disabled={typing || !input.trim()}
+                  aria-label="Send"
                 >
-                  {prompt}
+                  <span className={styles.sendIcon} aria-hidden="true">↗</span>
                 </button>
-              ))}
-            </div>
-          ) : null}
-
-          <form className={styles.composer} onSubmit={onSubmit}>
-            <input
-              ref={inputRef}
-              className={styles.input}
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              placeholder="Ask about Krishan..."
-              aria-label="Message KrishanGPT"
-              disabled={typing}
-              maxLength={500}
-            />
-            <button type="submit" className={styles.sendBtn} disabled={typing || !input.trim()} aria-label="Send">
-              →
-            </button>
-          </form>
+              </div>
+            </form>
+          </div>
         </div>
       ) : null}
 
       <button
         type="button"
-        className={styles.launcher}
+        className={`${styles.launcher} ${open ? styles.launcherOpen : ''}`}
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
         aria-controls="krishangpt-panel"
       >
-        <span className={styles.launcherIcon} aria-hidden="true">
-          GPT
-        </span>
+        <JarvisOrb active={open || typing} />
         <span className={styles.launcherText}>
           <span className={styles.launcherTitle}>KrishanGPT</span>
-          <span className={styles.launcherSub}>Ask about me</span>
+          <span className={styles.launcherSub}>Open neural link</span>
         </span>
       </button>
     </div>

@@ -56,7 +56,7 @@ export default function Contact({ person, contact }) {
         </div>
 
         <div className={`${styles.right} reveal`}>
-          <div className={styles.console}>
+          <div className={`${styles.console} hud-panel hud-scanline`}>
             {submitted ? (
               <div className={styles.success}>
                 <div className={styles.successArt} aria-hidden="true">

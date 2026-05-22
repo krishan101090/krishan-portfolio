@@ -11,11 +11,12 @@
 
 .track {
   position: relative;
-  width: 1px;
+  width: 2px;
   height: 280px;
-  background: var(--border);
+  background: rgba(0, 229, 255, 0.08);
   overflow: hidden;
   margin-top: 8px;
+  box-shadow: 0 0 12px rgba(0, 229, 255, 0.08);
 }
 
 .fill {
@@ -24,7 +25,7 @@
   left: 0;
   width: 100%;
   background: linear-gradient(180deg, var(--cyan), var(--lime));
-  box-shadow: 0 0 12px var(--cyan);
+  box-shadow: 0 0 16px var(--cyan), 0 0 24px rgba(0, 229, 255, 0.25);
   transition: height 0.15s linear;
 }
 
@@ -55,12 +56,13 @@
 }
 
 .dot {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background: currentColor;
-  opacity: 0.4;
-  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+  border: 1px solid currentColor;
+  background: transparent;
+  opacity: 0.5;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s, border-color 0.2s;
   flex-shrink: 0;
 }
 
@@ -86,9 +88,12 @@
 
 .active .dot {
   background: var(--cyan);
+  border-color: var(--cyan);
   opacity: 1;
-  box-shadow: 0 0 12px var(--cyan);
-  transform: scale(1.25);
+  box-shadow:
+    0 0 12px var(--cyan),
+    0 0 0 3px rgba(0, 229, 255, 0.12);
+  transform: scale(1.15);
 }
 
 .active .label {

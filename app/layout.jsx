@@ -1,10 +1,32 @@
 import './globals.css'
+import { Syne, JetBrains_Mono, Inter } from 'next/font/google'
 import { getProfile, DEFAULT_PROFILE_SLUG } from '@/lib/profiles'
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ||
   getProfile(DEFAULT_PROFILE_SLUG)?.seo?.siteUrl ||
   'https://krishanmohan.dev'
+
+const syne = Syne({
+  subsets: ['latin'],
+  weight: ['600', '700', '800'],
+  variable: '--font-syne',
+  display: 'swap',
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  variable: '--font-jetbrains',
+  display: 'swap',
+})
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  variable: '--font-inter',
+  display: 'swap',
+})
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -57,21 +79,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" dir="ltr">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-        <link
-          rel="preload"
-          as="style"
-          href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=JetBrains+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=JetBrains+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html lang="en-US" dir="ltr" className={`${syne.variable} ${jetbrainsMono.variable} ${inter.variable}`}>
       <body>{children}</body>
     </html>
   )

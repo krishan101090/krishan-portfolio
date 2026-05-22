@@ -18,22 +18,15 @@
     linear-gradient(90deg, rgba(0, 229, 255, 0.05) 1px, transparent 1px);
   background-size: 48px 48px;
   pointer-events: none;
-  mask-image: radial-gradient(ellipse at 70% 50%, black 0%, transparent 65%);
+  mask-image: radial-gradient(ellipse at 72% 42%, black 0%, transparent 68%);
   z-index: -1;
 }
 
-.bgOrb {
-  position: absolute;
-  right: -200px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 700px;
-  height: 700px;
-  background: radial-gradient(circle, rgba(0, 229, 255, 0.18), rgba(139, 92, 246, 0.08), transparent 70%);
-  filter: blur(40px);
-  pointer-events: none;
-  z-index: -1;
-  animation: float 6s ease-in-out infinite;
+.visual {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
 .badge {
@@ -41,12 +34,12 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 13px;
+  font-family: var(--font-mono);
+  font-size: 11px;
   font-weight: 500;
-  letter-spacing: 0.02em;
-  text-transform: none;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   color: var(--cyan);
-  border: 1px solid rgba(0, 229, 255, 0.25);
   padding: 8px 16px;
   border-radius: 100px;
   width: fit-content;
@@ -77,20 +70,26 @@
 .last {
   font-size: clamp(60px, 9vw, 140px);
   font-weight: 800;
-  background: linear-gradient(180deg, #ffffff 0%, #8c9bbd 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--text);
 }
 
-.last {
-  background: linear-gradient(90deg, var(--cyan), var(--lime), var(--cyan));
-  background-size: 200% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: shimmer 6s linear infinite;
-  filter: drop-shadow(0 0 30px rgba(0, 229, 255, 0.35));
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .first {
+    background: linear-gradient(180deg, #ffffff 0%, #8c9bbd 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .last {
+    background: linear-gradient(90deg, var(--cyan), var(--lime), var(--cyan));
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmer 6s linear infinite;
+    filter: drop-shadow(0 0 30px rgba(0, 229, 255, 0.35));
+  }
 }
 
 .role {
@@ -117,16 +116,13 @@
 }
 
 .highlights {
-  grid-column: 2;
   display: flex;
   flex-direction: column;
   gap: 14px;
-  animation: fadeUp 0.8s 0.3s ease both;
 }
 
 .highlightCard {
   background: rgba(8, 10, 20, 0.85);
-  border: 1px solid var(--border2);
   border-radius: 12px;
   padding: 22px 26px;
   backdrop-filter: blur(12px);
@@ -149,7 +145,6 @@
 
 .currentRole {
   background: rgba(8, 10, 20, 0.85);
-  border: 1px solid rgba(0, 229, 255, 0.2);
   border-radius: 12px;
   padding: 22px 26px;
   display: flex;
@@ -204,18 +199,17 @@
   color: var(--cyan);
   text-decoration: none;
   padding: 14px 24px;
-  border: 1px solid rgba(0, 229, 255, 0.3);
   border-radius: 8px;
   width: fit-content;
   background: rgba(0, 229, 255, 0.04);
-  transition: background 0.25s, border-color 0.25s, transform 0.25s;
+  transition: background 0.25s, transform 0.25s, box-shadow 0.25s;
   animation: fadeUp 0.8s 0.5s ease both;
 }
 
 .scrollCta:hover {
   background: rgba(0, 229, 255, 0.12);
-  border-color: var(--cyan);
   transform: translateY(2px);
+  box-shadow: 0 0 24px rgba(0, 229, 255, 0.12);
 }
 
 .scrollCta svg {
@@ -230,11 +224,19 @@
   }
 
   .main,
-  .highlights,
+  .visual,
   .tagline,
   .actions,
   .scrollCta {
     grid-column: 1;
+  }
+
+  .main {
+    order: 1;
+  }
+
+  .visual {
+    order: 2;
   }
 
   .first,

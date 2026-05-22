@@ -12,12 +12,12 @@ export default function robots() {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/travel', '/travel/'],
+        disallow: ['/api/', '/travel', '/travel/', '/jane'],
       },
       {
         userAgent: 'Googlebot',
         allow: '/',
-        disallow: ['/api/', '/travel', '/travel/'],
+        disallow: ['/api/', '/travel', '/travel/', '/jane'],
       },
       {
         userAgent: 'Googlebot-Image',
@@ -27,7 +27,7 @@ export default function robots() {
       {
         userAgent: 'Bingbot',
         allow: '/',
-        disallow: ['/api/', '/travel', '/travel/'],
+        disallow: ['/api/', '/travel', '/travel/', '/jane'],
       },
     ],
     sitemap: `${base}/sitemap.xml`,

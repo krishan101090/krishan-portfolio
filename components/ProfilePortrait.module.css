@@ -1,0 +1,219 @@
+.portrait {
+  position: relative;
+  width: min(380px, 100%);
+  margin: 0 auto;
+  animation: portraitIn 0.9s cubic-bezier(0.2, 0.9, 0.2, 1) both;
+}
+
+.fx {
+  position: absolute;
+  inset: -24px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.fxRing,
+.fxRing2 {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid transparent;
+}
+
+.fxRing {
+  border-top-color: rgba(0, 229, 255, 0.55);
+  border-right-color: rgba(0, 229, 255, 0.12);
+  animation: spin 10s linear infinite;
+}
+
+.fxRing2 {
+  inset: 14px;
+  border-bottom-color: rgba(180, 255, 57, 0.4);
+  border-left-color: rgba(255, 46, 154, 0.25);
+  animation: spin 14s linear infinite reverse;
+}
+
+.fxArcs {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  animation: spin 22s linear infinite;
+}
+
+.tickRing {
+  stroke: rgba(0, 229, 255, 0.1);
+  stroke-width: 1;
+  stroke-dasharray: 3 8;
+}
+
+.arc {
+  stroke: rgba(0, 229, 255, 0.45);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 6px rgba(0, 229, 255, 0.5));
+}
+
+.frame {
+  position: relative;
+  z-index: 1;
+  padding: 14px;
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 30% 0%, rgba(0, 229, 255, 0.1), transparent 55%),
+    rgba(4, 8, 18, 0.82);
+  backdrop-filter: blur(12px);
+}
+
+.imageShell {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  clip-path: polygon(
+    0 16px,
+    16px 0,
+    calc(100% - 16px) 0,
+    100% 16px,
+    100% calc(100% - 16px),
+    calc(100% - 16px) 100%,
+    16px 100%,
+    0 calc(100% - 16px)
+  );
+  border: 1px solid rgba(0, 229, 255, 0.18);
+}
+
+.image {
+  object-fit: cover;
+  object-position: 58% 18%;
+  transform: scale(1.02);
+}
+
+.colorGrade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0, 229, 255, 0.08) 0%, transparent 35%),
+    linear-gradient(0deg, rgba(4, 5, 10, 0.92) 0%, transparent 42%),
+    linear-gradient(90deg, rgba(4, 5, 10, 0.55) 0%, transparent 28%, transparent 72%, rgba(4, 5, 10, 0.45) 100%);
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.scan {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(0, 229, 255, 0.05) 46%,
+    rgba(180, 255, 57, 0.18) 50%,
+    rgba(0, 229, 255, 0.05) 54%,
+    transparent 100%
+  );
+  background-size: 100% 220%;
+  animation: scanMove 5s linear infinite;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 80px rgba(4, 5, 10, 0.55);
+  pointer-events: none;
+}
+
+.caption {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 14px;
+  padding: 0 4px;
+}
+
+.captionTag {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--lime);
+  text-shadow: 0 0 10px rgba(180, 255, 57, 0.35);
+}
+
+.captionMeta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.readout {
+  position: absolute;
+  left: -8px;
+  bottom: 72px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(0, 229, 255, 0.55);
+  pointer-events: none;
+}
+
+.readout span {
+  padding: 4px 8px;
+  clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
+  background: rgba(4, 8, 18, 0.75);
+  border: 1px solid rgba(0, 229, 255, 0.12);
+}
+
+.portrait.priority {
+  animation: none;
+}
+
+.portrait.priority .scan {
+  animation: none;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scanMove {
+  to {
+    background-position: 0 220%;
+  }
+}
+
+@keyframes portraitIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 900px) {
+  .readout {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portrait,
+  .fxRing,
+  .fxRing2,
+  .fxArcs,
+  .scan {
+    animation: none;
+  }
+}

@@ -3,8 +3,25 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
+  images: {
+    formats: ['image/avif', 'image/webp'],
+  },
   experimental: {
     optimizePackageImports: ['react', 'react-dom'],
+  },
+  async redirects() {
+    return [
+      {
+        source: '/krishan',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/krishan/',
+        destination: '/',
+        permanent: true,
+      },
+    ]
   },
   async headers() {
     return [

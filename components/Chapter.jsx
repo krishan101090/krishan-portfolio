@@ -7,7 +7,7 @@ export default function Chapter({ chapter, specWorkflow, aiStack }) {
 
   return (
     <section id={`chapter-${num}`} className={styles.chapter} aria-label={`Chapter ${num}: ${title}`}>
-      <div className={styles.marker}>
+      <div className={`${styles.marker} hud-panel`}>
         <span className={styles.chapterNum}>{num}</span>
         <span className={styles.divider} />
         <span className={styles.year}>{year}</span>

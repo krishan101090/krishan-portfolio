@@ -1,3 +1,4 @@
+import JarvisOrb from './JarvisOrb'
 import styles from './Footer.module.css'
 
 export default function Footer({ person }) {
@@ -6,11 +7,7 @@ export default function Footer({ person }) {
     <footer className={styles.footer} role="contentinfo">
       <div className={styles.inner}>
         <div className={styles.left}>
-          <span className={styles.mark}>
-            <span className={styles.dot} />
-            <span className={styles.dot} />
-            <span className={styles.dot} />
-          </span>
+          <JarvisOrb size="xs" />
           <p className={styles.copy}>
             © {year} <span>{person.name}</span> · {person.currentRole || person.jobTitle} · {person.currentCompany}
           </p>

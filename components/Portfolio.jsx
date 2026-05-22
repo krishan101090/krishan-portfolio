@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic'
 import Achievements from './Achievements'
 import Nav from './Nav'
 import Hero from './Hero'
@@ -6,13 +7,14 @@ import Timeline from './Timeline'
 import Services from './Services'
 import Contact from './Contact'
 import Footer from './Footer'
-import NeuralBg from './NeuralBg'
-import ScrollRail from './ScrollRail'
-import RevealObserver from './RevealObserver'
 import JsonLd from './JsonLd'
 import FAQ from './FAQ'
-import KrishanGPT from './KrishanGPT'
 import { buildSchemas } from '@/lib/schema'
+
+const NeuralBg = dynamic(() => import('./NeuralBg'), { ssr: false })
+const ScrollRail = dynamic(() => import('./ScrollRail'), { ssr: false })
+const KrishanGPT = dynamic(() => import('./KrishanGPT'), { ssr: false })
+const RevealObserver = dynamic(() => import('./RevealObserver'), { ssr: false })
 
 export default function Portfolio({ profile, path = '/' }) {
   const {

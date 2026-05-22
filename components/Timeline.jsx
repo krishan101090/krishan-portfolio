@@ -1,6 +1,9 @@
+import { sortTimeline } from '@/lib/recency'
 import styles from './Timeline.module.css'
 
 export default function Timeline({ timeline }) {
+  const items = sortTimeline(timeline || [])
+
   return (
     <section id="timeline" className={styles.section} aria-labelledby="timeline-title">
       <div className={styles.head}>
@@ -10,7 +13,7 @@ export default function Timeline({ timeline }) {
         </h2>
       </div>
       <ol className={styles.list}>
-        {timeline.map((item, i) => (
+        {items.map((item, i) => (
           <li key={`${item.year}-${i}`} className={`${styles.item} reveal`} style={{ '--i': i }}>
             <div className={styles.year}>{item.year}</div>
             <div className={styles.connector}>

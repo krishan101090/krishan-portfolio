@@ -1,14 +1,11 @@
+import JarvisOrb from './JarvisOrb'
 import styles from './Nav.module.css'
 
 export default function Nav({ person }) {
   return (
     <nav className={styles.nav} aria-label="Primary navigation">
       <a href="#boot" className={styles.logo} aria-label={`${person.name} – home`}>
-        <span className={styles.logoMark}>
-          <span className={styles.logoDot} />
-          <span className={styles.logoDot} />
-          <span className={styles.logoDot} />
-        </span>
+        <JarvisOrb size="xs" />
         <span className={styles.logoText}>
           {person.firstName}<em> Mohan</em>
         </span>

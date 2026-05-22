@@ -4,7 +4,7 @@ export default function FAQ({ faqs }) {
   return (
     <section id="faq" className={styles.section} aria-labelledby="faq-title">
       <header className={styles.header}>
-        <span className={styles.eyebrow}>Common questions</span>
+        <span className="kicker">Common questions</span>
         <h2 id="faq-title" className={styles.title}>
           Frequently asked<span className={styles.dot}>.</span>
         </h2>
@@ -15,7 +15,7 @@ export default function FAQ({ faqs }) {
 
       <ol className={styles.list} role="list">
         {faqs.map((f, i) => (
-          <li key={i} className={styles.item}>
+          <li key={i} className={`${styles.item} hud-panel`}>
             <details className={styles.details}>
               <summary className={styles.summary}>
                 <span className={styles.qMark}>Q{String(i + 1).padStart(2, '0')}</span>

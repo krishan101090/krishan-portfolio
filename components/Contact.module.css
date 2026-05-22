@@ -88,7 +88,6 @@
 
 .console {
   background: rgba(8, 10, 20, 0.9);
-  border: 1px solid var(--border2);
   border-radius: 10px;
   overflow: hidden;
   box-shadow:

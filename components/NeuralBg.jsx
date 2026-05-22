@@ -39,6 +39,7 @@ export default function NeuralBg() {
     }
 
     function tick() {
+      if (!running) return
       ctx.clearRect(0, 0, w, h)
 
       for (let i = 0; i < nodes.length; i++) {
@@ -79,7 +80,25 @@ export default function NeuralBg() {
     }
 
     resize()
-    if (!reduced) tick()
+    let running = !reduced
+
+    function start() {
+      if (running || reduced) return
+      running = true
+      tick()
+    }
+
+    function stop() {
+      running = false
+      cancelAnimationFrame(raf)
+    }
+
+    function onVisibility() {
+      if (document.hidden) stop()
+      else start()
+    }
+
+    if (!reduced) start()
     else {
       ctx.clearRect(0, 0, w, h)
       for (const n of nodes) {
@@ -91,9 +110,11 @@ export default function NeuralBg() {
     }
 
     window.addEventListener('resize', resize)
+    document.addEventListener('visibilitychange', onVisibility)
     return () => {
-      cancelAnimationFrame(raf)
+      stop()
       window.removeEventListener('resize', resize)
+      document.removeEventListener('visibilitychange', onVisibility)
     }
   }, [])
 

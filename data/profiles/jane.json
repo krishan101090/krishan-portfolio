@@ -15,7 +15,8 @@
     ],
     "twitter": "@janedoe",
     "ogAlt": "Jane Doe — AI-Native Full-Stack Engineer",
-    "locale": "en_US"
+    "locale": "en_US",
+    "indexed": false
   },
   "person": {
     "name": "Jane Doe",

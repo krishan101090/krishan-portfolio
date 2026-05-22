@@ -8,7 +8,7 @@ export default function manifest() {
 
   return {
     name: `${name} — ${profile?.person?.jobTitle || ''}`.trim(),
-    short_name: shortName,
+    short_name: profile?.person?.firstName || 'Krishan',
     description,
     start_url: '/',
     display: 'standalone',

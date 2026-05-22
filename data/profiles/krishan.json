@@ -4,11 +4,12 @@
     "siteUrl": "https://krishanmohan.dev",
     "title": "Krishan Mohan — Senior Software Engineer at McKinsey | Frontend Architect",
     "shortTitle": "Krishan Mohan · Senior Software Engineer",
-    "description": "Professional portfolio of Krishan Mohan — Senior Software Engineer at McKinsey & Company, with 10+ years building enterprise web products for McKinsey, BlackRock, and global brands. React, Next.js, AI engineering, and frontend architecture.",
+    "description": "Professional portfolio of Krishan Mohan — Senior Software Engineer at McKinsey & Company in Gurugram, India, with 10+ years building enterprise web products for McKinsey, BlackRock, and global brands. React, Next.js, Python, FastAPI, AI engineering, and frontend architecture.",
     "keywords": [
       "Krishan Mohan",
       "Krishan Mohan portfolio",
-      "Senior Software Engineer McKinsey",
+      "Senior Software Engineer McKinsey India",
+      "software engineer Gurugram India",
       "frontend architect India",
       "React developer Gurugram",
       "Next.js architect",
@@ -18,13 +19,18 @@
       "Core Web Vitals expert",
       "spec-driven development",
       "LangChain developer",
+      "Python developer",
+      "FastAPI developer",
+      "full-stack engineer McKinsey",
       "AWS Solutions Architect",
       "BlackRock Preqin frontend",
       "pricing platform engineer"
     ],
     "twitter": "@krishanmohan",
-    "ogAlt": "Krishan Mohan — Senior Software Engineer at McKinsey & Company. Frontend architecture, React, Next.js, and AI-powered product engineering.",
-    "locale": "en_US"
+    "ogAlt": "Krishan Mohan — Senior Software Engineer at McKinsey & Company. React, Next.js, Python, FastAPI, and AI-powered product engineering.",
+    "locale": "en_US",
+    "lastModified": "2026-05-22",
+    "indexed": true
   },
   "person": {
     "name": "Krishan Mohan",
@@ -32,10 +38,12 @@
     "firstName": "Krishan",
     "lastName": "Mohan",
     "jobTitle": "Senior Software Engineer",
-    "professionalHeadline": "Frontend Architect · Enterprise Web & AI Products",
-    "tagline": "Senior Software Engineer at McKinsey & Company — building pricing, analytics, and AI-powered products for global enterprises.",
+    "professionalHeadline": "Senior Software Engineer · McKinsey & Company · India",
+    "tagline": "Senior Software Engineer at McKinsey & Company in Gurugram, India — building pricing, analytics, and AI-powered products for global enterprises.",
     "initials": "KM",
     "handle": "krishan",
+    "photo": "/images/krishan-mohan.png",
+    "photoAlt": "Krishan Mohan — Senior Software Engineer at McKinsey & Company",
     "email": "krishan101090@gmail.com",
     "phone": "+919873429311",
     "phoneDisplay": "+91 98734 29311",
@@ -43,8 +51,8 @@
     "linkedinHandle": "krishan-m-4755239b",
     "github": "https://github.com/krishan101090",
     "githubHandle": "krishan101090",
-    "location": "New Delhi, India",
-    "locality": "New Delhi",
+    "location": "Gurugram, India",
+    "locality": "Gurugram",
     "region": "Haryana",
     "country": "IN",
     "countryName": "India",
@@ -58,6 +66,8 @@
       "React",
       "Next.js",
       "TypeScript",
+      "Python",
+      "FastAPI",
       "GraphQL",
       "Tailwind CSS",
       "Micro-frontends",
@@ -76,23 +86,23 @@
   "faqs": [
     {
       "q": "What does Krishan do?",
-      "a": "He is a Senior Software Engineer at McKinsey & Company, where he architects frontend systems for pricing and analytics platforms used by Fortune 100 clients. Over 10+ years, he has built web products across consulting, finance, media, and e-commerce."
+      "a": "He is a Senior Software Engineer at McKinsey & Company in Gurugram, India, where he architects full-stack systems for pricing and analytics platforms used by global enterprise clients. Over 10+ years, he has built web products across consulting, finance, media, and e-commerce — from India to Europe and the US."
     },
     {
       "q": "How much experience does he have?",
-      "a": "Over 10 years building production web products for companies including McKinsey & Company, Preqin (now part of BlackRock), Publicis Sapient, and Arts Consolidated in Denmark. He is currently a Senior Software Engineer at McKinsey, working on pricing and analytics platforms for Fortune 100 clients."
+      "a": "Over 10 years building production web products for companies including McKinsey & Company, Preqin (now part of BlackRock), Publicis Sapient, and Arts Consolidated in Denmark. He is currently a Senior Software Engineer at McKinsey, working on pricing and analytics platforms for global enterprise clients."
     },
     {
       "q": "What kind of results has he delivered?",
-      "a": "At Operabase, he drove 30% revenue growth through SEO, paywall redesign, and better onboarding across 130+ countries — plus 20% faster product decisions via analytics dashboards. At Preqin (BlackRock), he led a full platform rebuild used by thousands of institutional investors. At McKinsey, he builds pricing tools supporting multi-billion-dollar decisions for Fortune 100 clients, and previously built credit analysis tools for major banking engagements."
+      "a": "At Operabase, he drove 30% revenue growth through SEO, paywall redesign, and better onboarding across 130+ countries — plus 20% faster product decisions via analytics dashboards. At Preqin (BlackRock), he led a full platform rebuild used by thousands of institutional investors. At McKinsey, he builds enterprise pricing tools and previously delivered credit analysis products for major banking engagements."
     },
     {
       "q": "Does he work with international teams?",
-      "a": "Yes. He has collaborated with teams in Denmark, the US, and across Europe and Asia — including remote work at Arts Consolidated (Operabase) and enterprise delivery at McKinsey and BlackRock."
+      "a": "Yes. He is based in Gurugram, India and has collaborated with teams in Denmark, the US, and across Europe and Asia — including remote work at Arts Consolidated (Operabase) and enterprise delivery at McKinsey and BlackRock."
     },
     {
       "q": "What technologies does he specialize in?",
-      "a": "React, Next.js, TypeScript, GraphQL, micro-frontends, and AI-assisted product engineering. He also focuses on Core Web Vitals, WCAG accessibility, and spec-driven delivery workflows."
+      "a": "React, Next.js, TypeScript, Python, FastAPI, GraphQL, micro-frontends, and AI-assisted product engineering. He uses Python and FastAPI daily for APIs and backend services. He also focuses on Core Web Vitals, WCAG accessibility, and spec-driven delivery workflows."
     },
     {
       "q": "Does he use AI in his work?",
@@ -100,13 +110,13 @@
     }
   ],
   "boot": {
-    "intro": "I build fast, reliable web products for global companies — from e-commerce and finance to consulting and media. Today I work at McKinsey & Company, and I use modern tech plus AI to deliver more, without cutting corners.",
+    "intro": "I build fast, reliable web products for global companies — from e-commerce and finance to consulting and media. Based in Gurugram, India, I use Python and FastAPI daily for APIs and backend services, alongside React and Next.js on the frontend. Today at McKinsey & Company, I use modern tech plus AI to deliver more, without cutting corners.",
     "highlights": [
       { "value": "10+", "label": "Years building web products" },
       { "value": "30%", "label": "Revenue growth at Operabase" },
       { "value": "130+", "label": "Countries reached (Operabase)" }
     ],
-    "tagline": "Trusted by teams at McKinsey, BlackRock, and global brands.",
+    "tagline": "Based in Gurugram, India. Trusted by teams at McKinsey, BlackRock, and global brands.",
     "scrollHint": "See my wins"
   },
   "achievements": {
@@ -157,13 +167,14 @@
         ]
       },
       {
-        "metric": "Fortune 100",
-        "title": "Pricing platform for a global technology leader",
+        "metric": "Enterprise",
+        "title": "Pricing platform for a global technology client",
         "company": "McKinsey & Company",
         "period": "2025 — Present",
-        "description": "Architecting the frontend for a pricing and discount optimization platform that powers multi-billion-dollar B2B and B2C decisions for one of the world's largest technology companies.",
+        "description": "Architecting full-stack delivery for a pricing and discount optimization platform that powers large-scale B2B and B2C decisions for a leading global technology company.",
         "highlights": [
           "Complex pricing workflows and discount simulations at enterprise scale",
+          "Python and FastAPI APIs for pricing logic, integrations, and data services — used daily",
           "AI-powered features — natural-language queries and ML-driven recommendations in the UI",
           "Analytics dashboards connected to Apache Spark and data lake pipelines",
           "WCAG 2.1 accessibility and Core Web Vitals targets on all customer-facing surfaces",
@@ -340,7 +351,7 @@
       "year": "2025",
       "title": "The tools behind the work.",
       "paragraphs": [
-        "I use the best tool for each job — AI assistants for drafting code, modern frameworks like React and Next.js for the product, and cloud platforms like AWS for reliability.",
+        "I use the best tool for each job — Python and FastAPI daily for APIs and backend work, React and Next.js for the product UI, AI assistants for drafting code, and AWS for reliability.",
         "The tools change. The standard does not: fast, accessible, and built to last."
       ],
       "artifact": { "kind": "ai-stack" }
@@ -352,7 +363,7 @@
       "title": "Building at McKinsey.",
       "paragraphs": [
         "I am a Senior Software Engineer at McKinsey & Company in Gurugram, working on pricing and discount optimization platforms for global enterprise clients.",
-        "I design the interfaces for complex pricing workflows, analytics dashboards, and AI-powered features that help business teams make better decisions faster.",
+        "I build APIs and backend services with Python and FastAPI every day, and design the React interfaces for complex pricing workflows, analytics dashboards, and AI-powered features that help business teams make better decisions faster.",
         "It is the most demanding work I have done — and the kind of problem I love solving."
       ],
       "artifact": {
@@ -381,6 +392,7 @@
     { "name": "Cursor", "role": "AI-powered coding", "tag": "Build" },
     { "name": "Claude", "role": "Complex problem solving", "tag": "Think" },
     { "name": "ChatGPT", "role": "Quick drafts & ideas", "tag": "Draft" },
+    { "name": "Python & FastAPI", "role": "APIs & backend services — daily", "tag": "Core" },
     { "name": "React & Next.js", "role": "Product development", "tag": "Core" },
     { "name": "TypeScript", "role": "Reliable code", "tag": "Core" },
     { "name": "AWS", "role": "Cloud & deployment", "tag": "Cloud" },
@@ -388,21 +400,21 @@
     { "name": "GitHub Copilot", "role": "Day-to-day assistance", "tag": "Assist" }
   ],
   "timeline": [
-    { "year": "2016", "event": "UI Developer · Pronto IT Labs (Rent It Bae) · New Delhi", "range": "Feb 2016 — Oct 2017" },
-    { "year": "2017", "event": "Senior Associate · Publicis Sapient · Noida — global brand e-commerce", "range": "Oct 2017 — Aug 2019" },
-    { "year": "2019", "event": "Senior Frontend Developer · McKinsey & Company · Bengaluru — banking & credit tools", "range": "Oct 2019 — Nov 2020" },
-    { "year": "2020", "event": "Senior Engineer · Preqin (BlackRock) · Bengaluru — investor dashboards", "range": "Nov 2020 — Oct 2022" },
+    { "year": "2016", "event": "UI Developer · Pronto IT Labs (Rent It Bae) · New Delhi, India", "range": "Feb 2016 — Oct 2017" },
+    { "year": "2017", "event": "Senior Associate · Publicis Sapient · Noida, India — global brand e-commerce", "range": "Oct 2017 — Aug 2019" },
+    { "year": "2019", "event": "Senior Frontend Developer · McKinsey & Company · Bengaluru, India — banking & credit tools", "range": "Oct 2019 — Nov 2020" },
+    { "year": "2020", "event": "Senior Engineer · Preqin (BlackRock) · Bengaluru, India — investor dashboards", "range": "Nov 2020 — Oct 2022" },
     { "year": "2022", "event": "Senior Frontend Developer · Arts Consolidated (Operabase) · Denmark · Remote — +30% revenue growth", "range": "Oct 2022 — Apr 2025" },
     { "year": "2023", "event": "Started using AI tools seriously in daily development" },
     { "year": "2024", "event": "Adopted plan-first, AI-assisted delivery workflow" },
     { "year": "2025", "event": "AWS Certified Solutions Architect" },
-    { "year": "2025", "event": "Senior Software Engineer · McKinsey & Company · Gurugram", "range": "Jul 2025 — Present" }
+    { "year": "2025", "event": "Senior Software Engineer · McKinsey & Company · Gurugram, India", "range": "Jul 2025 — Present" }
   ],
   "services": [
     {
       "title": "Enterprise Web Products",
-      "desc": "Customer-facing and internal applications with React and Next.js — scalable, accessible, and built for long-term maintainability.",
-      "tags": ["React", "Next.js", "TypeScript", "Enterprise UX"]
+      "desc": "Customer-facing and internal applications with React and Next.js — backed by Python and FastAPI APIs, scalable, accessible, and built for long-term maintainability.",
+      "tags": ["React", "Next.js", "Python", "FastAPI", "TypeScript"]
     },
     {
       "title": "AI-Powered Product Features",
@@ -426,8 +438,8 @@
     },
     {
       "title": "Technical Leadership",
-      "desc": "Architecture reviews, mentoring, and cross-team alignment for complex frontend and full-stack initiatives.",
-      "tags": ["Architecture", "Mentoring", "Cross-team delivery"]
+      "desc": "Architecture reviews, mentoring, and cross-team alignment for complex frontend and full-stack initiatives — including Python, FastAPI, and React systems.",
+      "tags": ["Architecture", "Python", "FastAPI", "Cross-team delivery"]
     }
   ],
   "contact": {
