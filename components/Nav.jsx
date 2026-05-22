@@ -14,6 +14,7 @@ export default function Nav({ person }) {
         </span>
       </a>
       <ul className={styles.links} role="list">
+        <li><a href="#resume-downloads">Resume</a></li>
         <li><a href="#achievements">Wins</a></li>
         <li><a href="#chapter-01">About</a></li>
         <li><a href="#timeline">Experience</a></li>

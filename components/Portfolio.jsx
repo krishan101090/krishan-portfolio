@@ -22,6 +22,7 @@ export default function Portfolio({ profile, path = '/' }) {
     aiStack,
     achievements,
     certifications,
+    resumes,
     timeline,
     services,
     contact,
@@ -31,6 +32,7 @@ export default function Portfolio({ profile, path = '/' }) {
   const railItems = [
     { id: 'boot', num: '•', label: 'Home' },
     { id: 'achievements', num: '★', label: 'Wins' },
+    { id: 'resume-downloads', num: '↓', label: 'Resume' },
     ...chapters.map((c) => ({ id: `chapter-${c.num}`, num: c.num, label: c.label })),
     { id: 'timeline', num: '•', label: 'Experience' },
     { id: 'services', num: '•', label: 'Services' },
@@ -48,9 +50,13 @@ export default function Portfolio({ profile, path = '/' }) {
       <Nav person={person} />
       <ScrollRail items={railItems} />
       <main id="main-content">
-        <Hero person={person} boot={boot} />
+        <Hero person={person} boot={boot} resumes={resumes} />
         {achievements ? (
-          <Achievements achievements={achievements} certifications={certifications} />
+          <Achievements
+            achievements={achievements}
+            certifications={certifications}
+            resumes={resumes}
+          />
         ) : null}
         {chapters.map((chapter) => (
           <Chapter

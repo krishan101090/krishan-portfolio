@@ -1,7 +1,10 @@
+import ScrollLink from './ScrollLink'
+import ResumeDownloads from './ResumeDownloads'
 import styles from './Hero.module.css'
 
-export default function Hero({ person, boot }) {
+export default function Hero({ person, boot, resumes }) {
   const highlights = boot?.highlights ?? []
+
   return (
     <section id="boot" className={styles.hero} aria-labelledby="hero-heading">
       <div className={styles.bgGrid} aria-hidden="true" />
@@ -22,12 +25,15 @@ export default function Hero({ person, boot }) {
         <p className={styles.intro}>{boot?.intro}</p>
         <p className={styles.tagline}>{boot?.tagline}</p>
 
-        <a href="#achievements" className={styles.scrollCta}>
-          <span>{boot?.scrollHint ?? 'See my wins'}</span>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M12 4v16m0 0l-6-6m6 6l6-6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </a>
+        <div className={styles.actions}>
+          <ScrollLink href="#achievements" className={styles.scrollCta}>
+            <span>{boot?.scrollHint ?? 'See my wins'}</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 4v16m0 0l-6-6m6 6l6-6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </ScrollLink>
+          <ResumeDownloads resumes={resumes} variant="hero" />
+        </div>
       </div>
 
       <div className={styles.highlights} aria-label="Key highlights">

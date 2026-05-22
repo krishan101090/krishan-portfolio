@@ -229,6 +229,20 @@
       "valid": "Issued Jan 2025 · Valid through Jan 2028"
     }
   ],
+  "resumes": [
+    {
+      "label": "US Resume",
+      "format": "DOCX",
+      "region": "United States",
+      "href": "/resumes/krishan-mohan-resume-us.docx"
+    },
+    {
+      "label": "UK CV",
+      "format": "PDF",
+      "region": "United Kingdom",
+      "href": "/resumes/krishan-mohan-cv-uk.pdf"
+    }
+  ],
   "chapters": [
     {
       "num": "01",

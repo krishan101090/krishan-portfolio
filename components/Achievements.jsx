@@ -1,6 +1,7 @@
+import ResumeDownloads from './ResumeDownloads'
 import styles from './Achievements.module.css'
 
-export default function Achievements({ achievements, certifications }) {
+export default function Achievements({ achievements, certifications, resumes }) {
   return (
     <section id="achievements" className={styles.section} aria-labelledby="achievements-title">
       <div className={styles.head}>
@@ -63,6 +64,8 @@ export default function Achievements({ achievements, certifications }) {
           </ul>
         </div>
       )}
+
+      <ResumeDownloads resumes={resumes} variant="panel" />
     </section>
   )
 }
