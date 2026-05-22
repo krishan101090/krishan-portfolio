@@ -11,6 +11,7 @@ import ScrollRail from './ScrollRail'
 import RevealObserver from './RevealObserver'
 import JsonLd from './JsonLd'
 import FAQ from './FAQ'
+import KrishanGPT from './KrishanGPT'
 import { buildSchemas } from '@/lib/schema'
 
 export default function Portfolio({ profile, path = '/' }) {
@@ -72,6 +73,7 @@ export default function Portfolio({ profile, path = '/' }) {
         <Contact person={person} contact={contact} />
       </main>
       <Footer person={person} />
+      <KrishanGPT profileSlug={profile.slug} person={person} />
       <RevealObserver />
     </>
   )

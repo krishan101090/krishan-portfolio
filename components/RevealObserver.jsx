@@ -4,6 +4,8 @@ import { useEffect } from 'react'
 
 export default function RevealObserver() {
   useEffect(() => {
+    document.documentElement.classList.add('js')
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -18,7 +20,7 @@ export default function RevealObserver() {
 
     const items = document.querySelectorAll('.reveal')
     items.forEach((el, i) => {
-      el.style.transitionDelay = `${i * 40}ms`
+      el.style.transitionDelay = `${Math.min(i, 12) * 40}ms`
       observer.observe(el)
     })
 
