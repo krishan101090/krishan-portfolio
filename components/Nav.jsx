@@ -18,12 +18,12 @@ export default function Nav({ person }) {
         <li><a href="#achievements">Wins</a></li>
         <li><a href="#chapter-01">About</a></li>
         <li><a href="#timeline">Experience</a></li>
-        <li><a href="#services">Services</a></li>
+        <li><a href="#services">Expertise</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
       <a href="#contact" className={styles.cta}>
         <span className={styles.ctaDot} />
-        Contact me
+        Connect
       </a>
     </nav>
   )

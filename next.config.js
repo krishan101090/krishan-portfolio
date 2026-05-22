@@ -9,7 +9,16 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: '/:path*',
+        source: '/travel',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex, nofollow, noarchive, nosnippet, noimageindex',
+          },
+        ],
+      },
+      {
+        source: '/travel/:path*',
         headers: [
           {
             key: 'X-Robots-Tag',

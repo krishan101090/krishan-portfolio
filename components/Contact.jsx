@@ -13,7 +13,7 @@ export default function Contact({ person, contact }) {
 
   function send(e) {
     e.preventDefault()
-    const subject = encodeURIComponent(`${form.service || 'Project inquiry'} — ${form.name}`)
+    const subject = encodeURIComponent(`${form.service || 'Professional inquiry'} — ${form.name}`)
     const body = encodeURIComponent(
       `Name: ${form.name}\nEmail: ${form.email}\nService: ${form.service}\n\n${form.message}`,
     )
@@ -25,7 +25,7 @@ export default function Contact({ person, contact }) {
     <section id="contact" className={styles.section} aria-labelledby="contact-title">
       <div className={styles.grid}>
         <div className={`${styles.left} reveal`}>
-          <span className="kicker">Get in touch</span>
+          <span className="kicker">Connect</span>
           <h2 className={styles.headline} id="contact-title">
             {contact.headline[0]}<br />
             <span>{contact.headline[1]}</span>
@@ -104,7 +104,7 @@ export default function Contact({ person, contact }) {
                 </div>
 
                 <div className={styles.field}>
-                  <label htmlFor="service">What do you need help with?</label>
+                  <label htmlFor="service">Topic</label>
                   <select
                     id="service"
                     name="service"
@@ -113,7 +113,7 @@ export default function Contact({ person, contact }) {
                     required
                   >
                     <option value="" disabled>
-                      Choose a service
+                      Choose a topic
                     </option>
                     {contact.serviceOptions.map((opt) => (
                       <option key={opt} value={opt}>
@@ -124,7 +124,7 @@ export default function Contact({ person, contact }) {
                 </div>
 
                 <div className={styles.field}>
-                  <label htmlFor="message">Tell me about your project</label>
+                  <label htmlFor="message">Your message</label>
                   <textarea
                     id="message"
                     name="message"

@@ -19,7 +19,7 @@ export default function Hero({ person, boot, resumes }) {
         <h1 className={styles.identity} id="hero-heading">
           <span className={styles.first}>{person.firstName}</span>
           <span className={styles.last}>{person.lastName}</span>
-          <span className={styles.role}>{person.jobTitle}</span>
+          <span className={styles.role}>{person.professionalHeadline || person.currentRole || person.jobTitle}</span>
         </h1>
 
         <p className={styles.intro}>{boot?.intro}</p>

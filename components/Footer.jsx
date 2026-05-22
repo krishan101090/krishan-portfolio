@@ -12,7 +12,7 @@ export default function Footer({ person }) {
             <span className={styles.dot} />
           </span>
           <p className={styles.copy}>
-            © {year} <span>{person.name}</span> · {person.jobTitle}
+            © {year} <span>{person.name}</span> · {person.currentRole || person.jobTitle} · {person.currentCompany}
           </p>
         </div>
         <p className={styles.note}>

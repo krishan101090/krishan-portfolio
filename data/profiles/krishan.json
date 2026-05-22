@@ -2,29 +2,28 @@
   "slug": "krishan",
   "seo": {
     "siteUrl": "https://krishanmohan.dev",
-    "title": "Krishan Mohan — Frontend Architect | 10+ Years Building Web Products",
-    "shortTitle": "Krishan Mohan · Frontend Architect",
-    "description": "Krishan Mohan is a Frontend Architect with 10+ years building fast, reliable web products for McKinsey, BlackRock, and global brands. Available for product builds, AI features, and consulting.",
+    "title": "Krishan Mohan — Senior Software Engineer at McKinsey | Frontend Architect",
+    "shortTitle": "Krishan Mohan · Senior Software Engineer",
+    "description": "Professional portfolio of Krishan Mohan — Senior Software Engineer at McKinsey & Company, with 10+ years building enterprise web products for McKinsey, BlackRock, and global brands. React, Next.js, AI engineering, and frontend architecture.",
     "keywords": [
-      "hire AI engineer",
-      "hire Next.js developer India",
-      "hire React developer",
-      "AI-native software engineer",
-      "spec-driven development consultant",
-      "LLM integration developer",
-      "RAG chatbot developer",
-      "micro-frontend architect",
-      "fractional AI CTO",
-      "Cursor AI engineer",
-      "LangChain developer India",
-      "Core Web Vitals audit",
-      "Next.js performance expert",
       "Krishan Mohan",
       "Krishan Mohan portfolio",
-      "senior frontend engineer Gurugram"
+      "Senior Software Engineer McKinsey",
+      "frontend architect India",
+      "React developer Gurugram",
+      "Next.js architect",
+      "enterprise web development",
+      "AI product engineering",
+      "micro-frontend architect",
+      "Core Web Vitals expert",
+      "spec-driven development",
+      "LangChain developer",
+      "AWS Solutions Architect",
+      "BlackRock Preqin frontend",
+      "pricing platform engineer"
     ],
     "twitter": "@krishanmohan",
-    "ogAlt": "Krishan Mohan — Frontend Architect with 10+ years building web products for global companies.",
+    "ogAlt": "Krishan Mohan — Senior Software Engineer at McKinsey & Company. Frontend architecture, React, Next.js, and AI-powered product engineering.",
     "locale": "en_US"
   },
   "person": {
@@ -32,8 +31,9 @@
     "alternateName": "Krishan",
     "firstName": "Krishan",
     "lastName": "Mohan",
-    "jobTitle": "Frontend Architect",
-    "tagline": "I help companies build web products that are fast, easy to use, and ready for the AI era.",
+    "jobTitle": "Senior Software Engineer",
+    "professionalHeadline": "Frontend Architect · Enterprise Web & AI Products",
+    "tagline": "Senior Software Engineer at McKinsey & Company — building pricing, analytics, and AI-powered products for global enterprises.",
     "initials": "KM",
     "handle": "krishan",
     "email": "krishan101090@gmail.com",
@@ -50,10 +50,9 @@
     "countryName": "India",
     "currentCompany": "McKinsey & Company",
     "currentCompanyUrl": "https://www.mckinsey.com",
-    "currentCompanyVia": "Periscope",
     "currentRole": "Senior Software Engineer",
     "yearsExperience": 10,
-    "availability": "Available for new projects",
+    "availability": "McKinsey & Company",
     "languages": ["English", "Hindi"],
     "skills": [
       "React",
@@ -77,7 +76,7 @@
   "faqs": [
     {
       "q": "What does Krishan do?",
-      "a": "He builds and improves web products — from customer-facing apps to internal business tools. That includes new product development, adding AI features like smart search and assistants, fixing slow websites, and helping teams work faster with modern tools."
+      "a": "He is a Senior Software Engineer at McKinsey & Company, where he architects frontend systems for pricing and analytics platforms used by Fortune 100 clients. Over 10+ years, he has built web products across consulting, finance, media, and e-commerce."
     },
     {
       "q": "How much experience does he have?",
@@ -88,12 +87,12 @@
       "a": "At Operabase, he drove 30% revenue growth through SEO, paywall redesign, and better onboarding across 130+ countries — plus 20% faster product decisions via analytics dashboards. At Preqin (BlackRock), he led a full platform rebuild used by thousands of institutional investors. At McKinsey, he builds pricing tools supporting multi-billion-dollar decisions for Fortune 100 clients, and previously built credit analysis tools for major banking engagements."
     },
     {
-      "q": "Does he work with international clients?",
-      "a": "Yes. He has worked remotely with teams in Denmark, the US, and across Europe and Asia. He is comfortable collaborating across time zones on short projects or longer engagements."
+      "q": "Does he work with international teams?",
+      "a": "Yes. He has collaborated with teams in Denmark, the US, and across Europe and Asia — including remote work at Arts Consolidated (Operabase) and enterprise delivery at McKinsey and BlackRock."
     },
     {
-      "q": "How quickly can a project start?",
-      "a": "Usually within a week of an initial call. He typically starts with a short discovery phase to understand the goal, then moves into building."
+      "q": "What technologies does he specialize in?",
+      "a": "React, Next.js, TypeScript, GraphQL, micro-frontends, and AI-assisted product engineering. He also focuses on Core Web Vitals, WCAG accessibility, and spec-driven delivery workflows."
     },
     {
       "q": "Does he use AI in his work?",
@@ -160,7 +159,7 @@
       {
         "metric": "Fortune 100",
         "title": "Pricing platform for a global technology leader",
-        "company": "McKinsey & Company (Periscope)",
+        "company": "McKinsey & Company",
         "period": "2025 — Present",
         "description": "Architecting the frontend for a pricing and discount optimization platform that powers multi-billion-dollar B2B and B2C decisions for one of the world's largest technology companies.",
         "highlights": [
@@ -352,7 +351,7 @@
       "year": "2025 — Present",
       "title": "Building at McKinsey.",
       "paragraphs": [
-        "I am a Senior Software Engineer at McKinsey & Company in Gurugram, working on Periscope — a pricing and discount platform used by a Fortune 100 global technology company.",
+        "I am a Senior Software Engineer at McKinsey & Company in Gurugram, working on pricing and discount optimization platforms for global enterprise clients.",
         "I design the interfaces for complex pricing workflows, analytics dashboards, and AI-powered features that help business teams make better decisions faster.",
         "It is the most demanding work I have done — and the kind of problem I love solving."
       ],
@@ -360,7 +359,7 @@
         "kind": "highlights",
         "items": [
           { "label": "Role", "value": "Senior Software Engineer" },
-          { "label": "Company", "value": "McKinsey & Company (Periscope)" },
+          { "label": "Company", "value": "McKinsey & Company" },
           { "label": "Location", "value": "Gurugram, India" },
           { "label": "Focus", "value": "Pricing · Analytics · AI features" }
         ]
@@ -397,52 +396,52 @@
     { "year": "2023", "event": "Started using AI tools seriously in daily development" },
     { "year": "2024", "event": "Adopted plan-first, AI-assisted delivery workflow" },
     { "year": "2025", "event": "AWS Certified Solutions Architect" },
-    { "year": "2025", "event": "Senior Software Engineer · McKinsey & Company (Periscope) · Gurugram", "range": "Jul 2025 — Present" }
+    { "year": "2025", "event": "Senior Software Engineer · McKinsey & Company · Gurugram", "range": "Jul 2025 — Present" }
   ],
   "services": [
     {
-      "title": "Web Product Development",
-      "desc": "End-to-end builds with React and Next.js — from idea to launch. Fast, accessible, and built to scale.",
-      "tags": ["React", "Next.js", "TypeScript", "Full-stack"]
+      "title": "Enterprise Web Products",
+      "desc": "Customer-facing and internal applications with React and Next.js — scalable, accessible, and built for long-term maintainability.",
+      "tags": ["React", "Next.js", "TypeScript", "Enterprise UX"]
     },
     {
-      "title": "AI Features for Your Product",
-      "desc": "Add smart search, assistants, and automation to your existing product — safely and in production.",
-      "tags": ["OpenAI", "Smart search", "Chatbots", "Automation"]
+      "title": "AI-Powered Product Features",
+      "desc": "Natural-language interfaces, smart search, and ML-driven recommendations integrated into production web applications.",
+      "tags": ["OpenAI", "Smart search", "ML in UI", "Automation"]
     },
     {
-      "title": "Platform & Architecture",
-      "desc": "Design systems that grow with your team — modular, maintainable, and ready for multiple products.",
-      "tags": ["Scalable design", "Team workflows", "Modern stack"]
+      "title": "Frontend Architecture",
+      "desc": "Micro-frontends, design systems, and modular platforms that support multiple teams and products at scale.",
+      "tags": ["Micro-frontends", "Design systems", "Module Federation"]
     },
     {
-      "title": "Website Performance",
-      "desc": "Make your site faster and more reliable. Better speed means better user experience and search rankings.",
-      "tags": ["Speed", "SEO", "Mobile", "Accessibility"]
+      "title": "Performance & Accessibility",
+      "desc": "Core Web Vitals optimization, SSR, code-splitting, and WCAG 2.1 compliance for enterprise-grade user experiences.",
+      "tags": ["Core Web Vitals", "SSR", "WCAG 2.1", "SEO"]
     },
     {
-      "title": "Team Coaching",
-      "desc": "Help your team adopt modern development practices and AI tools — with hands-on workshops and playbooks.",
-      "tags": ["Workshops", "Best practices", "AI workflows"]
+      "title": "Spec-Driven Delivery",
+      "desc": "Plan-first engineering workflows using AI-assisted development — faster delivery with rigorous review and testing.",
+      "tags": ["Spec-driven", "AI-assisted", "Quality at speed"]
     },
     {
-      "title": "Technical Consulting",
-      "desc": "Architecture reviews, hiring support, and roadmap guidance — especially for startups building their first product.",
-      "tags": ["Strategy", "Reviews", "Roadmap"]
+      "title": "Technical Leadership",
+      "desc": "Architecture reviews, mentoring, and cross-team alignment for complex frontend and full-stack initiatives.",
+      "tags": ["Architecture", "Mentoring", "Cross-team delivery"]
     }
   ],
   "contact": {
-    "placeholder": "Tell me about your project — what you are building, your timeline, and what success looks like.",
+    "placeholder": "Share a brief note — your name, context, and what you would like to discuss.",
     "ctaText": "Send message",
-    "headline": ["Let's", "build", "something great."],
-    "description": "Tell me about your project and I will reply within 24 hours. Most projects start within a week.",
+    "headline": ["Open to", "professional", "connections."],
+    "description": "For speaking, collaboration, or professional inquiries. I typically respond within a few business days.",
     "serviceOptions": [
-      "Web Product Development",
-      "AI Features",
-      "Platform & Architecture",
-      "Website Performance",
-      "Team Coaching",
-      "Technical Consulting",
+      "Enterprise Web Products",
+      "AI-Powered Features",
+      "Frontend Architecture",
+      "Performance & Accessibility",
+      "Spec-Driven Delivery",
+      "Technical Leadership",
       "Other"
     ]
   }

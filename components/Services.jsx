@@ -4,12 +4,12 @@ export default function Services({ services, email }) {
   return (
     <section id="services" className={styles.section} aria-labelledby="services-title">
       <div className={styles.head}>
-        <span className="kicker">What I do</span>
+        <span className="kicker">Areas of expertise</span>
         <h2 className={styles.title} id="services-title">
-          Services built for <span className={styles.emphasis}>real business outcomes</span>.
+          Technical focus across <span className={styles.emphasis}>enterprise product engineering</span>.
         </h2>
         <p className={styles.subtitle}>
-          From new product builds to AI features and performance fixes — here is how I can help.
+          Core strengths from 10+ years delivering web platforms for McKinsey, BlackRock, and global brands.
         </p>
       </div>
 
@@ -31,7 +31,7 @@ export default function Services({ services, email }) {
               ))}
             </div>
             <a href="#contact" className={styles.cardCta}>
-              Get in touch
+              Connect
               <span aria-hidden="true">→</span>
             </a>
           </article>
@@ -40,9 +40,9 @@ export default function Services({ services, email }) {
 
       <div className={`${styles.banner} reveal`}>
         <div>
-          <span className={styles.bannerLabel}>Ready to start?</span>
+          <span className={styles.bannerLabel}>Professional inquiries welcome</span>
           <p className={styles.bannerText}>
-            Most projects begin within <strong>a week</strong> of our first conversation.
+            For collaboration, speaking, or networking — reach out via the form or email.
           </p>
         </div>
         <div className={styles.bannerCtas}>
